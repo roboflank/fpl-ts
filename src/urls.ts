@@ -1,0 +1,28 @@
+export const API_BASE_URL = 'https://fantasy.premierleague.com/api/'
+export const API_URLS = {
+  DYNAMIC: API_BASE_URL.concat('bootstrap-dynamic/'),
+  FIXTURES: API_BASE_URL.concat('fixtures/'),
+  GAMEWEEKS: API_BASE_URL.concat('events/'),
+  GAMEWEEK_FIXTURES: API_BASE_URL.concat('fixtures/?event={}'),
+  GAMEWEEK_LIVE: API_BASE_URL.concat('event/{}/live'),
+  LEAGUE_CLASSIC: API_BASE_URL.concat('leagues-classic/{}/standings/'),
+  LEAGUE_H2H: API_BASE_URL.concat('leagues-h2h/{}/standings/'),
+  LEAGUE_H2H_FIXTURES: API_BASE_URL.concat(
+    'leagues-h2h-matches/league/{}/?{}page={}',
+  ),
+  PLAYERS: API_BASE_URL.concat('elements/'),
+  PLAYER: API_BASE_URL.concat('element-summary/{}/'),
+  SETTINGS: API_BASE_URL.concat('game-settings/'),
+  STATIC: API_BASE_URL.concat('bootstrap-static/'),
+  TEAMS: API_BASE_URL.concat('teams/'),
+  TRANSFERS: API_BASE_URL.concat('transfers/'),
+  USER: API_BASE_URL.concat('entry/{}/'),
+  USER_CUP: API_BASE_URL.concat('entry/{}/cup/'),
+  USER_HISTORY: API_BASE_URL.concat('entry/{}/history/'),
+  USER_PICKS: API_BASE_URL.concat('entry/{}/event/{}/picks/'),
+  USER_TEAM: API_BASE_URL.concat('my-team/{}/'),
+  USER_TRANSFERS: API_BASE_URL.concat('entry/{}/transfers/'),
+  USER_LATEST_TRANSFERS: API_BASE_URL.concat('entry/{}/transfers-latest/'),
+  WATCHLIST: API_BASE_URL.concat('watchlist/'),
+  ME: API_BASE_URL.concat('me/'),
+}
