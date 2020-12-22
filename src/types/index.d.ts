@@ -20,3 +20,39 @@ export type SquadDelegate = {
   last_deadline_total_transfers: number | null
   favourite_team: number | null
 }
+
+export interface SquadProperties {
+  squadId: number | null
+}
+
+export type GWHistoryDelegate = {
+  event: number
+  points: number
+  total_points: number
+  rank: number
+  rank_sort: number
+  overall_rank: number
+  bank: number
+  value: number
+  event_transfers: number
+  event_transfers_cost: number
+  points_on_bench: number
+}
+
+export type TransferDelegate = {
+  element_in: number
+  element_in_cost: number
+  element_out: number
+  element_out_cost: number
+  entry: number
+  event: number
+  time: Date
+}
+
+export type PickDelegate = {
+  element: number
+  position: number
+  multiplier: number
+  is_captain: boolean
+  is_vice_captain: boolean
+}
