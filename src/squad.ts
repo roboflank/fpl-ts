@@ -1,14 +1,18 @@
-import { API_URLS } from './urls'
-import axios, { AxiosResponse } from 'axios'
+import { API_URLS, API_BASE_URL } from './constants'
 import {
   SquadDelegate,
   SquadProperties,
   GWHistoryDelegate,
   TransferDelegate,
+  GWPicksDelegate,
+  PickHistoryDelegate,
   PickDelegate,
 } from './types'
 import FPL from './fpl'
 
+type ResponseDataDelegate = {
+  data: GWPicksDelegate
+}
 /**
  * All user team related queries require TeamID
  * @param team_id
@@ -33,15 +37,13 @@ export class Squad extends FPL implements SquadProperties {
       '{}',
       this.squadId.toString(),
     )
-    const result: AxiosResponse<any> = await axios.get(endpoint, {
-      headers: this.headers,
-    })
-    return result.data
+    const { data } = await this.fetchAPI(endpoint)
+    return data
   }
 
   /**
    * Returns array of requested Gameweek history, if not, returns all gw
-   * @params gw[]
+   * @params gw[] (optional)
    * @returns GWHistoryDelegate[]
    * @example
    * ```
@@ -53,11 +55,9 @@ export class Squad extends FPL implements SquadProperties {
       '{}',
       this.squadId.toString(),
     )
-    const result: AxiosResponse<any> = await axios.get(endpoint, {
-      headers: this.headers,
-    })
+    const { data } = await this.fetchAPI(endpoint)
     try {
-      const currentData = result.data.current
+      const currentData = data.current
       if (!gw || gw?.length == 0) {
         return currentData
       } else {
@@ -80,7 +80,7 @@ export class Squad extends FPL implements SquadProperties {
 
   /**
    * Return user's team transfer history
-   * @params gw[]
+   * @params gw[] (optional)
    * @returns TransferDelegate[]
    * @example
    * ```
@@ -92,11 +92,10 @@ export class Squad extends FPL implements SquadProperties {
       '{}',
       this.squadId.toString(),
     )
-    const result: AxiosResponse<any> = await axios.get(endpoint, {
-      headers: this.headers,
-    })
+    const { data } = await this.fetchAPI(endpoint)
+
     try {
-      const currentData = result.data
+      const currentData = data
       if (!gw || gw?.length == 0) {
         return currentData
       } else {
@@ -118,24 +117,57 @@ export class Squad extends FPL implements SquadProperties {
 
   /**
    * Return user's team player picks history
-   * @params gw[]
-   * @returns PickDelegate[]
+   * @params gw[] (optional)
+   * @returns PickHistoryDelegate
    * @example
    * ```
    * const transfers = await new Squad(1).getPicks([1])
    * ```
+   * @remark Will return picks for the requested GWs. If empty, will return for all GWs
    */
 
-  // TODO: If null gw is passed, get the previous/latest gw
-  public async getPicks(gw: number[]): Promise<PickDelegate[]> {
-    const endpoint: string = API_URLS.USER_PICKS.replace(
-      '{}',
-      this.squadId.toString(),
-    )
-    const result: AxiosResponse<any> = await axios.get(endpoint, {
-      headers: this.headers,
-    })
-    // TODO: Does this really return err
-    return result.data.picks
+  public async getPicks(gw?: number[]): Promise<PickHistoryDelegate> {
+    const entryURL =
+      API_BASE_URL + 'entry/' + this.squadId.toString() + '/event/{}/picks/'
+    const gwPicks: PickHistoryDelegate = {}
+
+    if (!gw || gw?.length == 0) {
+      // TODO: Replace to get last GW
+      const latestGW = 14
+      const gws = Array.from(Array(latestGW).keys()).map((i) => 1 + i * 1)
+      const gwURL: string[] = []
+      gws.forEach((num) => {
+        const endpoint: string = entryURL.replace('{}', num.toString())
+        gwURL.push(endpoint)
+        gwPicks[num] = []
+      })
+      try {
+        const data = await this.fetchMultipleAPI(gwURL)
+        data.forEach(({ data }: ResponseDataDelegate) => {
+          const entryPick: PickDelegate[] = data.picks
+          gwPicks[data.entry_history.event] = entryPick
+        })
+        return gwPicks
+      } catch (err) {
+        return err
+      }
+    } else {
+      const gwURL: string[] = []
+      gw.forEach((num) => {
+        const endpoint: string = entryURL.replace('{}', num.toString())
+        gwURL.push(endpoint)
+        gwPicks[num] = []
+      })
+      try {
+        const data = await this.fetchMultipleAPI(gwURL)
+        data.forEach(({ data }: ResponseDataDelegate) => {
+          const entryPick: PickDelegate[] = data.picks
+          gwPicks[data.entry_history.event] = entryPick
+        })
+        return gwPicks
+      } catch (err) {
+        return err
+      }
+    }
   }
 }

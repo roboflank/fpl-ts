@@ -56,3 +56,22 @@ export type PickDelegate = {
   is_captain: boolean
   is_vice_captain: boolean
 }
+
+export type AutomaticSubsDelegate = {
+  entry: number
+  element_in: number
+  element_out: number
+  event: number
+}
+
+// https://fantasy.premierleague.com/api/entry/91928/event/10/picks/
+export type GWPicksDelegate = {
+  active_chip: string | null
+  automatic_subs: AutomaticSubsDelegate[]
+  entry_history: GWHistoryDelegate
+  picks: PickDelegate[]
+}
+
+export type PickHistoryDelegate = {
+  [key: number]: PickDelegate[]
+}
