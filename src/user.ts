@@ -17,6 +17,7 @@ import {
   CupMatchesDelegate,
   CupRespDelegate,
   CupMatchDelegate,
+  SeasonsHistoryDelegate,
 } from './types'
 import FPL from './fpl'
 
@@ -194,7 +195,7 @@ export class User extends FPL implements UserProperties {
   }
 
   /**
-   * Returns a list containing the user’s active chip for each gw, or the active chip of the given gameweek.
+   * Returns an array containing the user’s active chip for each gw, or the active chip of the given gameweeks.
    * @params gw[] (optional)
    * @returns ActiveChipsDelegate
    * @example
@@ -260,7 +261,7 @@ export class User extends FPL implements UserProperties {
   /**
    * Get Automatic Substitutions
    * @params gw[] (optional)
-   * Returns a list containing the user’s active chip for each gameweek, or the active chip of the given gameweek.
+   * Returns an array containing the user’s active chip for each gameweek, or the active chip of the given gameweeks.
    * @returns AutomaticSubsDelegate
    * @example
    * ```
@@ -335,7 +336,7 @@ export class User extends FPL implements UserProperties {
   }
 
   /**
-   * Returns either a list of all the user’s cup matches, dictionary of the cup match in the given gameweek (gameweek 17 and onwards).
+   * Returns an object of all the user’s cup matches, or of the cup match in the given gameweeks (gameweek 17 and onwards).
    * @params gw[] (optional)
    * @returns CupMatchesDelegate
    * @example
@@ -375,5 +376,23 @@ export class User extends FPL implements UserProperties {
     } catch (err) {
       return err
     }
+  }
+
+  /**
+   * Return user's previous history
+   * @returns ChipsHistoryDelegate
+   * @example
+   * ```
+   * const team = new User(1).getChipsHistory()
+   * ```
+   */
+  public async getSeasonsHistory(): Promise<SeasonsHistoryDelegate[]> {
+    const endpoint: string = API_URLS.USER_HISTORY.replace(
+      '{}',
+      this.userId.toString(),
+    )
+    const { data } = await this.fetchAPI(endpoint)
+    const sznsHist = data.past
+    return sznsHist
   }
 }

@@ -144,3 +144,11 @@ export type CupRespDelegate = {
   cup_matches: CupMatchDelegate[]
   cup_status: CupStatusDelegate
 }
+
+export type SeasonHistoryDelegate = {
+  season_name: string
+  total_points: number
+  rank: number
+}
+
+export type SeasonsHistoryDelegate = SeasonHistoryDelegate[]
