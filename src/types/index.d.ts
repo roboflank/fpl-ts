@@ -103,3 +103,44 @@ export type ResponseDataDelegate = {
 export type AutomaticSubsDelegate = {
   [key: number]: SubstitutionDelegate[]
 }
+
+export type CupStatusDelegate = {
+  qualification_event: number
+  qualification_numbers: number
+  qualification_rank: number
+  qualification_state: string
+}
+
+export type CupMatchDelegate = {
+  id: number
+  entry_1_entry: number
+  entry_1_name: string
+  entry_1_player_name: string
+  entry_1_points: number
+  entry_1_win: number
+  entry_1_draw: number
+  entry_1_loss: number
+  entry_1_total: number
+  entry_2_entry: number
+  entry_2_name: string
+  entry_2_player_name: string
+  entry_2_points: number
+  entry_2_win: number
+  entry_2_draw: number
+  entry_2_loss: number
+  entry_2_total: number
+  is_knockout: boolean | null
+  winner: string | null
+  seed_value: string | null
+  event: number
+  tiebreak: string | null
+}
+
+export type CupMatchesDelegate = {
+  [key: number]: CupMatchDelegate
+}
+
+export type CupRespDelegate = {
+  cup_matches: CupMatchDelegate[]
+  cup_status: CupStatusDelegate
+}

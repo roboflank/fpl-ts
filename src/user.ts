@@ -13,6 +13,10 @@ import {
   ActiveChipDelegate,
   ChipTypesDelegate,
   SubstitutionDelegate,
+  CupStatusDelegate,
+  CupMatchesDelegate,
+  CupRespDelegate,
+  CupMatchDelegate,
 } from './types'
 import FPL from './fpl'
 
@@ -191,6 +195,7 @@ export class User extends FPL implements UserProperties {
 
   /**
    * Returns a list containing the user’s active chip for each gw, or the active chip of the given gameweek.
+   * @params gw[] (optional)
    * @returns ActiveChipsDelegate
    * @example
    * ```
@@ -254,6 +259,7 @@ export class User extends FPL implements UserProperties {
 
   /**
    * Get Automatic Substitutions
+   * @params gw[] (optional)
    * Returns a list containing the user’s active chip for each gameweek, or the active chip of the given gameweek.
    * @returns AutomaticSubsDelegate
    * @example
@@ -274,7 +280,6 @@ export class User extends FPL implements UserProperties {
       gws.forEach((num) => {
         const endpoint: string = entryURL.replace('{}', num.toString())
         gwURL.push(endpoint)
-        // gwSubs[num] = []
       })
       try {
         const data = await this.fetchMultipleAPI(gwURL)
@@ -307,6 +312,68 @@ export class User extends FPL implements UserProperties {
       } catch (err) {
         return err
       }
+    }
+  }
+
+  /**
+   * Returns the user’s cup status.
+   * @returns CupStatusDelegate
+   * @example
+   * ```
+   * const team = new User(1).getCupStatus()
+   * ```
+   */
+
+  public async getCupStatus(): Promise<CupStatusDelegate> {
+    const endpoint: string = API_URLS.USER_CUP.replace(
+      '{}',
+      this.userId.toString(),
+    )
+    const { data } = await this.fetchAPI(endpoint)
+    const cupStat = data.cup_status
+    return cupStat
+  }
+
+  /**
+   * Returns either a list of all the user’s cup matches, dictionary of the cup match in the given gameweek (gameweek 17 and onwards).
+   * @params gw[] (optional)
+   * @returns CupMatchesDelegate
+   * @example
+   * ```
+   * const team = new User(1).getCupMatches()
+   * ```
+   */
+
+  public async getCupMatches(gw?: number[]): Promise<CupMatchesDelegate> {
+    const endpoint: string = API_URLS.USER_CUP.replace(
+      '{}',
+      this.userId.toString(),
+    )
+    const { data } = await this.fetchAPI(endpoint)
+    const cupStat: CupRespDelegate = data
+    const cupMatches: CupMatchesDelegate = {}
+
+    try {
+      if (!gw || gw?.length == 0) {
+        const cupResults: CupMatchDelegate[] = cupStat.cup_matches
+        cupResults.forEach((res) => {
+          cupMatches[res.event] = res
+        })
+        return cupMatches
+      } else {
+        const cupResults: CupMatchDelegate[] = cupStat.cup_matches
+        const gwSet = new Set(gw)
+        cupResults.forEach((res) => {
+          gwSet.forEach((gw) => {
+            if (data.event == gw) {
+              cupMatches[res.event] = res
+            }
+          })
+        })
+        return cupMatches
+      }
+    } catch (err) {
+      return err
     }
   }
 }
