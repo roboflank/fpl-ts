@@ -8,10 +8,11 @@ import {
   PickDelegate,
   ChipsHistoryDelegate,
   ActiveChipsDelegate,
-  ChipHistoryDelegate,
+  AutomaticSubsDelegate,
   ResponseDataDelegate,
   ActiveChipDelegate,
   ChipTypesDelegate,
+  SubstitutionDelegate,
 } from './types'
 import FPL from './fpl'
 
@@ -193,10 +194,10 @@ export class Squad extends FPL implements SquadProperties {
 
   /**
    * Returns a list containing the user’s active chip for each gw, or the active chip of the given gameweek.
-   * @example
    * @returns ActiveChipsDelegate
+   * @example
    * ```
-   * const team = new Squad(1).getChipsHistory()
+   * const team = new Squad(1).getActiveChips()
    * ```
    */
   public async getActiveChips(gw?: number[]): Promise<ActiveChipsDelegate> {
@@ -248,6 +249,64 @@ export class Squad extends FPL implements SquadProperties {
           }
         })
         return chipsHist
+      } catch (err) {
+        return err
+      }
+    }
+  }
+
+  /**
+   * Get Automatic Substitutions
+   * Returns a list containing the user’s active chip for each gameweek, or the active chip of the given gameweek.
+   * @returns AutomaticSubsDelegate
+   * @example
+   * ```
+   * const team = new Squad(1).getAutomaticSubs()
+   * ```
+   */
+  public async getAutomaticSubs(gw?: number[]): Promise<AutomaticSubsDelegate> {
+    const entryURL =
+      API_BASE_URL + 'entry/' + this.squadId.toString() + '/event/{}/picks/'
+    const gwSubs: AutomaticSubsDelegate = {}
+
+    if (!gw || gw?.length == 0) {
+      // TODO: Replace to get last GW
+      const latestGW = 16
+      const gws = Array.from(Array(latestGW).keys()).map((i) => 1 + i * 1)
+      const gwURL: string[] = []
+      gws.forEach((num) => {
+        const endpoint: string = entryURL.replace('{}', num.toString())
+        gwURL.push(endpoint)
+        // gwSubs[num] = []
+      })
+      try {
+        const data = await this.fetchMultipleAPI(gwURL)
+        data.forEach(({ data }: ResponseDataDelegate) => {
+          const autosub: SubstitutionDelegate[] = data.automatic_subs
+          if (autosub.length > 0) {
+            gwSubs[data.entry_history.event] = data.automatic_subs
+          }
+        })
+        return gwSubs
+      } catch (err) {
+        return err
+      }
+    } else {
+      const gwURL: string[] = []
+      gw.forEach((num) => {
+        const endpoint: string = entryURL.replace('{}', num.toString())
+        gwURL.push(endpoint)
+        gwSubs[num] = []
+      })
+      try {
+        const data = await this.fetchMultipleAPI(gwURL)
+        data.forEach(({ data }: ResponseDataDelegate) => {
+          const autosub: SubstitutionDelegate[] = data.automatic_subs
+          if (autosub.length > 0) {
+            gwSubs[data.entry_history.event] = data.automatic_subs
+          }
+        })
+        return gwSubs
       } catch (err) {
         return err
       }
