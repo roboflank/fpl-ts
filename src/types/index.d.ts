@@ -1,6 +1,6 @@
 import { strEnum } from '../utils'
 
-export type SquadDelegate = {
+export type UserDelegate = {
   id: string
   name: string
   current_event: number | null
@@ -23,8 +23,8 @@ export type SquadDelegate = {
   favourite_team: number | null
 }
 
-export interface SquadProperties {
-  squadId: number | null
+export interface UserProperties {
+  userId: number | null
 }
 
 export type GWHistoryDelegate = {

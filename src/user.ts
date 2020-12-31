@@ -1,7 +1,7 @@
 import { API_URLS, API_BASE_URL } from './constants'
 import {
-  SquadDelegate,
-  SquadProperties,
+  UserDelegate,
+  UserProperties,
   GWHistoryDelegate,
   TransferDelegate,
   PickHistoryDelegate,
@@ -19,27 +19,24 @@ import FPL from './fpl'
 /**
  * All user team related queries require TeamID
  * @param team_id
- * @example const team = new Squad(1)
+ * @example const team = new User(1)
  */
-export class Squad extends FPL implements SquadProperties {
-  squadId: number
-  constructor(squadId: number) {
+export class User extends FPL implements UserProperties {
+  userId: number
+  constructor(userId: number) {
     super()
-    this.squadId = squadId
+    this.userId = userId
   }
 
   /**
    * Return user's team details
    * @example
    * ```
-   * const team = new Squad(1).getDetails()
+   * const team = new User(1).getDetails()
    * ```
    */
-  public async getDetails(): Promise<SquadDelegate[]> {
-    const endpoint: string = API_URLS.USER.replace(
-      '{}',
-      this.squadId.toString(),
-    )
+  public async getDetails(): Promise<UserDelegate[]> {
+    const endpoint: string = API_URLS.USER.replace('{}', this.userId.toString())
     const { data } = await this.fetchAPI(endpoint)
     return data
   }
@@ -50,13 +47,13 @@ export class Squad extends FPL implements SquadProperties {
    * @returns GWHistoryDelegate[]
    * @example
    * ```
-   * const history = await new Squad(1).getTransfers([1, 2, 4])
+   * const history = await new User(1).getTransfers([1, 2, 4])
    * ```
    */
   public async gwHistory(gw?: number[]): Promise<GWHistoryDelegate[]> {
     const endpoint: string = API_URLS.USER_HISTORY.replace(
       '{}',
-      this.squadId.toString(),
+      this.userId.toString(),
     )
     const { data } = await this.fetchAPI(endpoint)
     try {
@@ -87,13 +84,13 @@ export class Squad extends FPL implements SquadProperties {
    * @returns TransferDelegate[]
    * @example
    * ```
-   * const transfers = await new Squad(1).getTransfers([1])
+   * const transfers = await new User(1).getTransfers([1])
    * ```
    */
   public async getTransfers(gw?: number[]): Promise<TransferDelegate[]> {
     const endpoint: string = API_URLS.USER_TRANSFERS.replace(
       '{}',
-      this.squadId.toString(),
+      this.userId.toString(),
     )
     const { data } = await this.fetchAPI(endpoint)
 
@@ -124,14 +121,14 @@ export class Squad extends FPL implements SquadProperties {
    * @returns PickHistoryDelegate
    * @example
    * ```
-   * const transfers = await new Squad(1).getPicks([1])
+   * const transfers = await new User(1).getPicks([1])
    * ```
    * @remark Will return picks for the requested GWs. If empty, will return for all GWs
    */
 
   public async getPicks(gw?: number[]): Promise<PickHistoryDelegate> {
     const entryURL =
-      API_BASE_URL + 'entry/' + this.squadId.toString() + '/event/{}/picks/'
+      API_BASE_URL + 'entry/' + this.userId.toString() + '/event/{}/picks/'
     const gwPicks: PickHistoryDelegate = {}
 
     if (!gw || gw?.length == 0) {
@@ -179,13 +176,13 @@ export class Squad extends FPL implements SquadProperties {
    * @returns ChipsHistoryDelegate
    * @example
    * ```
-   * const team = new Squad(1).getChipsHistory()
+   * const team = new User(1).getChipsHistory()
    * ```
    */
   public async getChipsHistory(): Promise<ChipsHistoryDelegate[]> {
     const endpoint: string = API_URLS.USER_HISTORY.replace(
       '{}',
-      this.squadId.toString(),
+      this.userId.toString(),
     )
     const { data } = await this.fetchAPI(endpoint)
     const chipsHist = data.chips
@@ -197,12 +194,12 @@ export class Squad extends FPL implements SquadProperties {
    * @returns ActiveChipsDelegate
    * @example
    * ```
-   * const team = new Squad(1).getActiveChips()
+   * const team = new User(1).getActiveChips()
    * ```
    */
   public async getActiveChips(gw?: number[]): Promise<ActiveChipsDelegate> {
     const entryURL =
-      API_BASE_URL + 'entry/' + this.squadId.toString() + '/event/{}/picks/'
+      API_BASE_URL + 'entry/' + this.userId.toString() + '/event/{}/picks/'
     const chipsHist: ActiveChipsDelegate = []
 
     if (!gw || gw?.length == 0) {
@@ -261,12 +258,12 @@ export class Squad extends FPL implements SquadProperties {
    * @returns AutomaticSubsDelegate
    * @example
    * ```
-   * const team = new Squad(1).getAutomaticSubs()
+   * const team = new User(1).getAutomaticSubs()
    * ```
    */
   public async getAutomaticSubs(gw?: number[]): Promise<AutomaticSubsDelegate> {
     const entryURL =
-      API_BASE_URL + 'entry/' + this.squadId.toString() + '/event/{}/picks/'
+      API_BASE_URL + 'entry/' + this.userId.toString() + '/event/{}/picks/'
     const gwSubs: AutomaticSubsDelegate = {}
 
     if (!gw || gw?.length == 0) {

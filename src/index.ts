@@ -1,2 +1,2 @@
-export * from './squad'
+export * from './user'
 export * from './fpl'
