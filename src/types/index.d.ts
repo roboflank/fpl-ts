@@ -1,3 +1,5 @@
+import { strEnum } from '../utils'
+
 export type SquadDelegate = {
   id: string
   name: string
@@ -64,9 +66,12 @@ export type AutomaticSubsDelegate = {
   event: number
 }
 
+const ChipTypes = strEnum(['wildcard', '3xc', 'freehit', 'benchboost', null])
+export type ChipTypesDelegate = keyof typeof ChipTypes
+
 // https://fantasy.premierleague.com/api/entry/91928/event/10/picks/
 export type GWPicksDelegate = {
-  active_chip: string | null
+  active_chip: ChipTypesDelegate
   automatic_subs: AutomaticSubsDelegate[]
   entry_history: GWHistoryDelegate
   picks: PickDelegate[]
@@ -74,4 +79,23 @@ export type GWPicksDelegate = {
 
 export type PickHistoryDelegate = {
   [key: number]: PickDelegate[]
+}
+
+export type ChipHistoryDelegate = {
+  name: ChipTypesDelegate
+  time: Date | null
+  event: number
+}
+
+export type ChipsHistoryDelegate = ChipHistoryDelegate[]
+
+export type ActiveChipDelegate = {
+  name?: ChipTypesDelegate
+  event: number
+}
+
+type ActiveChipsDelegate = ActiveChipDelegate[]
+
+export type ResponseDataDelegate = {
+  data: GWPicksDelegate
 }

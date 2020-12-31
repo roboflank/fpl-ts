@@ -4,15 +4,17 @@ import {
   SquadProperties,
   GWHistoryDelegate,
   TransferDelegate,
-  GWPicksDelegate,
   PickHistoryDelegate,
   PickDelegate,
+  ChipsHistoryDelegate,
+  ActiveChipsDelegate,
+  ChipHistoryDelegate,
+  ResponseDataDelegate,
+  ActiveChipDelegate,
+  ChipTypesDelegate,
 } from './types'
 import FPL from './fpl'
 
-type ResponseDataDelegate = {
-  data: GWPicksDelegate
-}
 /**
  * All user team related queries require TeamID
  * @param team_id
@@ -133,7 +135,7 @@ export class Squad extends FPL implements SquadProperties {
 
     if (!gw || gw?.length == 0) {
       // TODO: Replace to get last GW
-      const latestGW = 14
+      const latestGW = 16
       const gws = Array.from(Array(latestGW).keys()).map((i) => 1 + i * 1)
       const gwURL: string[] = []
       gws.forEach((num) => {
@@ -165,6 +167,87 @@ export class Squad extends FPL implements SquadProperties {
           gwPicks[data.entry_history.event] = entryPick
         })
         return gwPicks
+      } catch (err) {
+        return err
+      }
+    }
+  }
+
+  /**
+   * Return user's chip history
+   * @returns ChipsHistoryDelegate
+   * @example
+   * ```
+   * const team = new Squad(1).getChipsHistory()
+   * ```
+   */
+  public async getChipsHistory(): Promise<ChipsHistoryDelegate[]> {
+    const endpoint: string = API_URLS.USER_HISTORY.replace(
+      '{}',
+      this.squadId.toString(),
+    )
+    const { data } = await this.fetchAPI(endpoint)
+    const chipsHist = data.chips
+    return chipsHist
+  }
+
+  /**
+   * Returns a list containing the user’s active chip for each gw, or the active chip of the given gameweek.
+   * @example
+   * @returns ActiveChipsDelegate
+   * ```
+   * const team = new Squad(1).getChipsHistory()
+   * ```
+   */
+  public async getActiveChips(gw?: number[]): Promise<ActiveChipsDelegate> {
+    const entryURL =
+      API_BASE_URL + 'entry/' + this.squadId.toString() + '/event/{}/picks/'
+    const chipsHist: ActiveChipsDelegate = []
+
+    if (!gw || gw?.length == 0) {
+      // TODO: Replace to get last GW
+      const latestGW = 16
+      const gws = Array.from(Array(latestGW).keys()).map((i) => 1 + i * 1)
+      const gwURL: string[] = []
+      gws.forEach((num) => {
+        const endpoint: string = entryURL.replace('{}', num.toString())
+        gwURL.push(endpoint)
+      })
+      try {
+        const resp = await this.fetchMultipleAPI(gwURL)
+        resp.forEach(({ data }: ResponseDataDelegate) => {
+          const activeChip: ChipTypesDelegate = data.active_chip
+          const gwChip: ActiveChipDelegate = {
+            event: data.entry_history.event,
+          }
+          if (activeChip) {
+            gwChip.name = activeChip
+            chipsHist.push(gwChip)
+          }
+        })
+        return chipsHist
+      } catch (err) {
+        return err
+      }
+    } else {
+      const gwURL: string[] = []
+      gw.forEach((num) => {
+        const endpoint: string = entryURL.replace('{}', num.toString())
+        gwURL.push(endpoint)
+      })
+      try {
+        const resp = await this.fetchMultipleAPI(gwURL)
+        resp.forEach(({ data }: ResponseDataDelegate) => {
+          const activeChip: ChipTypesDelegate = data.active_chip
+          const gwChip: ActiveChipDelegate = {
+            event: data.entry_history.event,
+          }
+          if (activeChip) {
+            gwChip.name = activeChip
+            chipsHist.push(gwChip)
+          }
+        })
+        return chipsHist
       } catch (err) {
         return err
       }
