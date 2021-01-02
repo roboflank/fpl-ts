@@ -7,7 +7,7 @@ export const API_URLS = {
   LEAGUE_CLASSIC: 'leagues-classic/{}/standings/',
   LEAGUE_H2H: 'leagues-h2h/{}/standings/',
   LEAGUE_H2H_FIXTURES: 'leagues-h2h-matches/league/{}/?{}page={}',
-  PLAYER: 'element-summary/{}/',
+  PLAYER_SUMMARY: 'element-summary/{}/',
   SETTINGS: 'game-settings/',
   STATIC: 'bootstrap-static/',
   TEAMS: 'teams/',

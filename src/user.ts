@@ -45,8 +45,12 @@ export class User extends FPL implements UserProperties {
    */
   public async getDetails(): Promise<UserDelegate[]> {
     const endpoint: string = API_URLS.USER.replace('{}', this.userId.toString())
-    const { data } = await this.fetchAPI(endpoint)
-    return data
+    try {
+      const { data } = await this.fetchAPI(endpoint)
+      return data
+    } catch (error) {
+      return error
+    }
   }
 
   /**
@@ -333,9 +337,13 @@ export class User extends FPL implements UserProperties {
       '{}',
       this.userId.toString(),
     )
-    const { data } = await this.fetchAPI(endpoint)
-    const cupStat = data.cup_status
-    return cupStat
+    try {
+      const { data } = await this.fetchAPI(endpoint)
+      const cupStat = data.cup_status
+      return cupStat
+    } catch (error) {
+      return error
+    }
   }
 
   /**
@@ -353,11 +361,11 @@ export class User extends FPL implements UserProperties {
       '{}',
       this.userId.toString(),
     )
-    const { data } = await this.fetchAPI(endpoint)
-    const cupStat: CupRespDelegate = data
-    const cupMatches: CupMatchesDelegate = {}
 
     try {
+      const { data } = await this.fetchAPI(endpoint)
+      const cupStat: CupRespDelegate = data
+      const cupMatches: CupMatchesDelegate = {}
       if (!gw || gw?.length == 0) {
         const cupResults: CupMatchDelegate[] = cupStat.cup_matches
         cupResults.forEach((res) => {
@@ -394,8 +402,12 @@ export class User extends FPL implements UserProperties {
       '{}',
       this.userId.toString(),
     )
-    const { data } = await this.fetchAPI(endpoint)
-    const sznsHist = data.past
-    return sznsHist
+    try {
+      const { data } = await this.fetchAPI(endpoint)
+      const sznsHist = data.past
+      return sznsHist
+    } catch (err) {
+      return err
+    }
   }
 }

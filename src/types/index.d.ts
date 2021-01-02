@@ -154,65 +154,178 @@ export type SeasonHistoryDelegate = {
 export type SeasonsHistoryDelegate = SeasonHistoryDelegate[]
 
 export type PlayerDelegate = {
-  chance_of_playing_next_round: int | null
-  chance_of_playing_this_round: int | null
-  code: int
-  cost_change_event: int
-  cost_change_event_fall: int
-  cost_change_start: int
-  cost_change_start_fall: int
-  dreamteam_count: int
-  element_type: int
+  chance_of_playing_next_round: number | null
+  chance_of_playing_this_round: number | null
+  code: number
+  cost_change_event: number
+  cost_change_event_fall: number
+  cost_change_start: number
+  cost_change_start_fall: number
+  dreamteam_count: number
+  element_type: number
   ep_next: string | null
   ep_this: string | null
-  event_points: int
+  event_points: number
   first_name: string
   form: string
-  id: int
+  id: number
   in_dreamteam: boolean
   news: sting | null
   news_added: string | null
-  now_cost: int
+  now_cost: number
   photo: string
   points_per_game: string
   second_name: string | null
   selected_by_percent: string
   special: false
-  squad_number: int | null
+  squad_number: number | null
   status: string | null
-  team: int
-  team_code: int
-  total_points: int
-  transfers_in: int
-  transfers_in_event: int
-  transfers_out: int
-  transfers_out_event: int
+  team: number
+  team_code: number
+  total_points: number
+  transfers_in: number
+  transfers_in_event: number
+  transfers_out: number
+  transfers_out_event: number
   value_form: string | null
   value_season: string | nul
   web_name: string
-  minutes: int
-  goals_scored: int
-  assists: int
-  clean_sheets: int
-  goals_conceded: int
-  own_goals: int
-  penalties_saved: int
-  penalties_missed: int
-  yellow_cards: int
-  red_cards: int
-  saves: int
-  bonus: int
-  bps: int
+  minutes: number
+  goals_scored: number
+  assists: number
+  clean_sheets: number
+  goals_conceded: number
+  own_goals: number
+  penalties_saved: number
+  penalties_missed: number
+  yellow_cards: number
+  red_cards: number
+  saves: number
+  bonus: number
+  bps: number
   influence: string | null
   creativity: string | null
   threat: string | null
   ict_index: string | null
-  influence_rank: int
-  influence_rank_type: int | null
-  creativity_rank: int
-  creativity_rank_type: int
-  threat_rank: int
-  threat_rank_type: int
-  ict_index_rank: int
-  ict_index_rank_type: int
+  influence_rank: number
+  influence_rank_type: number | null
+  creativity_rank: number
+  creativity_rank_type: number
+  threat_rank: number
+  threat_rank_type: number
+  ict_index_rank: number
+  ict_index_rank_type: number
+  summary?: PlayerSummaryDelegate | null
+  stats?: PlayerStatsDelegate | null
+}
+
+const IdentifierOpts = strEnum([
+  'goals_scored',
+  'assists',
+  'own_goals',
+  'penalties_saved',
+  'penalties_missed',
+  'yellow_cards',
+  'red_cards',
+  'saves',
+  'bonus',
+  'bps',
+  null,
+])
+
+export type IdentifiersDelegate = keyof typeof IdentifierOpts
+
+export type AwayHomeStatType = {
+  value: number
+  element: number
+}
+
+export type FixStatsItemDelegate = {
+  identifier: IdentifiersDelegate
+  a: AwayHomeStatType[]
+  h: AwayHomeStatType[]
+}
+
+export interface FixturesDelegate {
+  code: number | null
+  event: number | null
+  finished: boolean | null
+  finished_provisional: boolean | null
+  id: number
+  kickoff_time: Date | null
+  minutes: number
+  provisional_start_time: boolean | null
+  started: boolean | null
+  team_a: number | null
+  team_a_score: number | null
+  team_h: number | null
+  team_h_score: number | null
+  stats: FixStatsItemDelegate[]
+  team_h_difficulty: number | null
+  team_a_difficulty: number | null
+  pulse_id: number | null
+}
+
+export interface PlayerFixturesDelegate extends FixturesDelegate {
+  event_name: string | null
+  is_home: boolean
+  difficulty: number
+}
+
+export type PlayerHistPastDelegate = {
+  season_name: string
+  element_code: number
+  start_cost: number
+  end_cost: number
+  total_points: number
+  minutes: number
+  goals_scored: number
+  assists: number
+  clean_sheets: number
+  goals_conceded: number
+  own_goals: number
+  penalties_saved: number
+  penalties_missed: number
+  yellow_cards: number
+  red_cards: number
+  saves: number
+  bonus: number
+  bps: number
+  influence: string
+  creativity: string
+  threat: string
+  ict_index: string
+}
+
+export interface PlayerHistDelegate extends PlayerDelegate {
+  element: number
+  fixture: number | null
+  was_home: boolean
+  kickoff_time: Date | null
+  team_h_score: number | null
+  team_a_score: number | null
+  round: number | null
+  value: number | null
+  transfers_balance: number | null
+  selected: number | null
+}
+
+export type PlayerSummaryDelegate = {
+  fixtures: PlayerFixturesDelegate[]
+  history: PlayerHistDelegate[]
+  history_past: PlayerHistPastDelegate
+}
+
+export type SummaryRespDelegate = {
+  data: PlayerSummaryDelegate
+}
+
+export type GamesPlayedDelegate = {
+  [key: number]: PlayerHistDelegate[]
+}
+
+export type PlayerStatsDelegate = {
+  pp90: number | null
+  vapm: number | null
+  gamesPlayed: number | null
 }
