@@ -152,3 +152,67 @@ export type SeasonHistoryDelegate = {
 }
 
 export type SeasonsHistoryDelegate = SeasonHistoryDelegate[]
+
+export type PlayerDelegate = {
+  chance_of_playing_next_round: int | null
+  chance_of_playing_this_round: int | null
+  code: int
+  cost_change_event: int
+  cost_change_event_fall: int
+  cost_change_start: int
+  cost_change_start_fall: int
+  dreamteam_count: int
+  element_type: int
+  ep_next: string | null
+  ep_this: string | null
+  event_points: int
+  first_name: string
+  form: string
+  id: int
+  in_dreamteam: boolean
+  news: sting | null
+  news_added: string | null
+  now_cost: int
+  photo: string
+  points_per_game: string
+  second_name: string | null
+  selected_by_percent: string
+  special: false
+  squad_number: int | null
+  status: string | null
+  team: int
+  team_code: int
+  total_points: int
+  transfers_in: int
+  transfers_in_event: int
+  transfers_out: int
+  transfers_out_event: int
+  value_form: string | null
+  value_season: string | nul
+  web_name: string
+  minutes: int
+  goals_scored: int
+  assists: int
+  clean_sheets: int
+  goals_conceded: int
+  own_goals: int
+  penalties_saved: int
+  penalties_missed: int
+  yellow_cards: int
+  red_cards: int
+  saves: int
+  bonus: int
+  bps: int
+  influence: string | null
+  creativity: string | null
+  threat: string | null
+  ict_index: string | null
+  influence_rank: int
+  influence_rank_type: int | null
+  creativity_rank: int
+  creativity_rank_type: int
+  threat_rank: int
+  threat_rank_type: int
+  ict_index_rank: int
+  ict_index_rank_type: int
+}

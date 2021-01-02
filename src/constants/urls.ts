@@ -1,6 +1,5 @@
 export const API_BASE_URL = 'https://fantasy.premierleague.com/api/'
 export const API_URLS = {
-  DYNAMIC: 'bootstrap-dynamic/',
   FIXTURES: 'fixtures/',
   GAMEWEEKS: 'events/',
   GAMEWEEK_FIXTURES: 'fixtures/?event={}',
@@ -8,7 +7,6 @@ export const API_URLS = {
   LEAGUE_CLASSIC: 'leagues-classic/{}/standings/',
   LEAGUE_H2H: 'leagues-h2h/{}/standings/',
   LEAGUE_H2H_FIXTURES: 'leagues-h2h-matches/league/{}/?{}page={}',
-  PLAYERS: 'elements/',
   PLAYER: 'element-summary/{}/',
   SETTINGS: 'game-settings/',
   STATIC: 'bootstrap-static/',

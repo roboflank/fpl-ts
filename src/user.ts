@@ -23,8 +23,11 @@ import FPL from './fpl'
 
 /**
  * All user team related queries require TeamID
- * @param team_id
- * @example const team = new User(1)
+ * @param userId
+ * @example
+ * ```
+ * const team = new User(1)
+ * ```
  */
 export class User extends FPL implements UserProperties {
   userId: number
