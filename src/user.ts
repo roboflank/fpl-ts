@@ -67,8 +67,8 @@ export class User extends FPL implements UserProperties {
       '{}',
       this.userId.toString(),
     )
-    const { data } = await this.fetchAPI(endpoint)
     try {
+      const { data } = await this.fetchAPI(endpoint)
       const currentData = data.current
       if (!gw || gw?.length == 0) {
         return currentData
@@ -104,9 +104,9 @@ export class User extends FPL implements UserProperties {
       '{}',
       this.userId.toString(),
     )
-    const { data } = await this.fetchAPI(endpoint)
 
     try {
+      const { data } = await this.fetchAPI(endpoint)
       const currentData = data
       if (!gw || gw?.length == 0) {
         return currentData

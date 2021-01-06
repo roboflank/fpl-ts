@@ -246,7 +246,7 @@ export type FixStatsItemDelegate = {
   h: AwayHomeStatType[]
 }
 
-export interface FixturesDelegate {
+export interface FixtureDelegate {
   code: number | null
   event: number | null
   finished: boolean | null
@@ -266,7 +266,7 @@ export interface FixturesDelegate {
   pulse_id: number | null
 }
 
-export interface PlayerFixturesDelegate extends FixturesDelegate {
+export interface PlayerFixtureDelegate extends FixtureDelegate {
   event_name: string | null
   is_home: boolean
   difficulty: number
@@ -311,7 +311,7 @@ export interface PlayerHistDelegate extends PlayerDelegate {
 }
 
 export type PlayerSummaryDelegate = {
-  fixtures: PlayerFixturesDelegate[]
+  fixtures: PlayerFixtureDelegate[]
   history: PlayerHistDelegate[]
   history_past: PlayerHistPastDelegate
 }
@@ -328,4 +328,8 @@ export type PlayerStatsDelegate = {
   pp90: number | null
   vapm: number | null
   gamesPlayed: number | null
+}
+
+export type FixturesRespDelegate = {
+  data: FixtureDelegate[]
 }

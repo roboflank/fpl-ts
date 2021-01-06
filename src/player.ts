@@ -1,10 +1,8 @@
 import FPL from './fpl'
 import {
-  GamesPlayedDelegate,
   PlayerDelegate,
   PlayerSummaryDelegate,
   SummaryRespDelegate,
-  PlayerHistDelegate,
 } from './types'
 import { API_URLS } from './constants'
 

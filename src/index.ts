@@ -1,3 +1,5 @@
 export * from './user'
 export * from './fpl'
 export * from './player'
+export * from './fixture'
+export * from './fixtures'
