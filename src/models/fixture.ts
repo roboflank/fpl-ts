@@ -6,13 +6,21 @@ import {
   FixStatsItemDelegate,
 } from '../types'
 
+/**
+ * Fixture Class extracted api from https://fantasy.premierleague.com/api/fixtures/
+ * @remark Gameweek filters from https://fantasy.premierleague.com/api/fixtures/?event=1
+ * @example
+ * ```
+ * const fixture = new Fixture(1)
+ * ```
+ */
 export class Fixture extends FPL {
   id: number
   constructor(id: number) {
     super()
     this.id = id
-    // TODO: Fetch Fixture on default call
   }
+
   public async getDetails(): Promise<FixtureDelegate | null> {
     let fixture = null
     try {
@@ -30,7 +38,6 @@ export class Fixture extends FPL {
     }
   }
 
-  // TODO: Replace forEach with above function
   public async getAssisters(): Promise<FixStatsItemDelegate> {
     let assisters: FixStatsItemDelegate = {
       a: [],
@@ -38,16 +45,12 @@ export class Fixture extends FPL {
     }
 
     try {
-      const { data }: FixturesRespDelegate = await this.fetchAPI(
-        API_URLS.FIXTURES,
-      )
-      data.forEach((fixture) => {
-        fixture.stats.forEach((elem) => {
-          if (elem.identifier === 'assists') {
-            delete elem.identifier
-            assisters = elem
-          }
-        })
+      const fixture = await this.getDetails()
+      fixture?.stats.forEach((elem) => {
+        if (elem.identifier === 'assists') {
+          delete elem.identifier
+          assisters = elem
+        }
       })
       return assisters
     } catch (error) {
@@ -62,16 +65,12 @@ export class Fixture extends FPL {
     }
 
     try {
-      const { data }: FixturesRespDelegate = await this.fetchAPI(
-        API_URLS.FIXTURES,
-      )
-      data.forEach((fixture) => {
-        fixture.stats.forEach((elem) => {
-          if (elem.identifier === 'bonus') {
-            delete elem.identifier
-            bonus = elem
-          }
-        })
+      const fixture = await this.getDetails()
+      fixture?.stats.forEach((elem) => {
+        if (elem.identifier === 'bonus') {
+          delete elem.identifier
+          bonus = elem
+        }
       })
       return bonus
     } catch (error) {
@@ -86,16 +85,12 @@ export class Fixture extends FPL {
     }
 
     try {
-      const { data }: FixturesRespDelegate = await this.fetchAPI(
-        API_URLS.FIXTURES,
-      )
-      data.forEach((fixture) => {
-        fixture.stats.forEach((elem) => {
-          if (elem.identifier === 'bps') {
-            delete elem.identifier
-            bps = elem
-          }
-        })
+      const fixture = await this.getDetails()
+      fixture?.stats.forEach((elem) => {
+        if (elem.identifier === 'bps') {
+          delete elem.identifier
+          bps = elem
+        }
       })
       return bps
     } catch (error) {
@@ -110,16 +105,12 @@ export class Fixture extends FPL {
     }
 
     try {
-      const { data }: FixturesRespDelegate = await this.fetchAPI(
-        API_URLS.FIXTURES,
-      )
-      data.forEach((fixture) => {
-        fixture.stats.forEach((elem) => {
-          if (elem.identifier === 'goals_scored') {
-            delete elem.identifier
-            goalscorers = elem
-          }
-        })
+      const fixture = await this.getDetails()
+      fixture?.stats.forEach((elem) => {
+        if (elem.identifier === 'goals_scored') {
+          delete elem.identifier
+          goalscorers = elem
+        }
       })
       return goalscorers
     } catch (error) {
@@ -133,16 +124,12 @@ export class Fixture extends FPL {
     }
 
     try {
-      const { data }: FixturesRespDelegate = await this.fetchAPI(
-        API_URLS.FIXTURES,
-      )
-      data.forEach((fixture) => {
-        fixture.stats.forEach((elem) => {
-          if (elem.identifier === 'own_goals') {
-            delete elem.identifier
-            owngoals = elem
-          }
-        })
+      const fixture = await this.getDetails()
+      fixture?.stats.forEach((elem) => {
+        if (elem.identifier === 'own_goals') {
+          delete elem.identifier
+          owngoals = elem
+        }
       })
       return owngoals
     } catch (error) {
@@ -156,17 +143,14 @@ export class Fixture extends FPL {
     }
 
     try {
-      const { data }: FixturesRespDelegate = await this.fetchAPI(
-        API_URLS.FIXTURES,
-      )
-      data.forEach((fixture) => {
-        fixture.stats.forEach((elem) => {
-          if (elem.identifier === 'penalties_missed') {
-            delete elem.identifier
-            missedpenalties = elem
-          }
-        })
+      const fixture = await this.getDetails()
+      fixture?.stats.forEach((elem) => {
+        if (elem.identifier === 'penalties_missed') {
+          delete elem.identifier
+          missedpenalties = elem
+        }
       })
+
       return missedpenalties
     } catch (error) {
       return error
@@ -179,16 +163,12 @@ export class Fixture extends FPL {
     }
 
     try {
-      const { data }: FixturesRespDelegate = await this.fetchAPI(
-        API_URLS.FIXTURES,
-      )
-      data.forEach((fixture) => {
-        fixture.stats.forEach((elem) => {
-          if (elem.identifier === 'penalties_saved') {
-            delete elem.identifier
-            savedpenalties = elem
-          }
-        })
+      const fixture = await this.getDetails()
+      fixture?.stats.forEach((elem) => {
+        if (elem.identifier === 'penalties_saved') {
+          delete elem.identifier
+          savedpenalties = elem
+        }
       })
       return savedpenalties
     } catch (error) {
@@ -202,16 +182,12 @@ export class Fixture extends FPL {
     }
 
     try {
-      const { data }: FixturesRespDelegate = await this.fetchAPI(
-        API_URLS.FIXTURES,
-      )
-      data.forEach((fixture) => {
-        fixture.stats.forEach((elem) => {
-          if (elem.identifier === 'red_cards') {
-            delete elem.identifier
-            redcards = elem
-          }
-        })
+      const fixture = await this.getDetails()
+      fixture?.stats.forEach((elem) => {
+        if (elem.identifier === 'red_cards') {
+          delete elem.identifier
+          redcards = elem
+        }
       })
       return redcards
     } catch (error) {
@@ -225,16 +201,12 @@ export class Fixture extends FPL {
     }
 
     try {
-      const { data }: FixturesRespDelegate = await this.fetchAPI(
-        API_URLS.FIXTURES,
-      )
-      data.forEach((fixture) => {
-        fixture.stats.forEach((elem) => {
-          if (elem.identifier === 'yellow_cards') {
-            delete elem.identifier
-            yellowcards = elem
-          }
-        })
+      const fixture = await this.getDetails()
+      fixture?.stats.forEach((elem) => {
+        if (elem.identifier === 'yellow_cards') {
+          delete elem.identifier
+          yellowcards = elem
+        }
       })
       return yellowcards
     } catch (error) {
@@ -248,16 +220,12 @@ export class Fixture extends FPL {
     }
 
     try {
-      const { data }: FixturesRespDelegate = await this.fetchAPI(
-        API_URLS.FIXTURES,
-      )
-      data.forEach((fixture) => {
-        fixture.stats.forEach((elem) => {
-          if (elem.identifier === 'saves') {
-            delete elem.identifier
-            saves = elem
-          }
-        })
+      const fixture = await this.getDetails()
+      fixture?.stats.forEach((elem) => {
+        if (elem.identifier === 'saves') {
+          delete elem.identifier
+          saves = elem
+        }
       })
       return saves
     } catch (error) {

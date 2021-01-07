@@ -17,7 +17,7 @@ export class Player extends FPL {
 
   /**
    * Returns array of requested players summary. If none, it returns all players summary
-   * @returns PlayerSummaryDelegate[]
+   * @returns {Promise} PlayerSummaryDelegate[]
    * @example
    * ```
    * const player = await new Player([302]).getSummary()
@@ -48,18 +48,20 @@ export class Player extends FPL {
 
   /**
    * Returns array of requested players. If none, it returns all players
-   * @ remark stats from https://www.reddit.com/r/FantasyPL/comments/6r60fu/exploring_a_key_metric_value_added_per_1m/
+   * @remark stats from https://www.reddit.com/r/FantasyPL/comments/6r60fu/exploring_a_key_metric_value_added_per_1m/
    * @remark set includeSummary to true to return player profile with summary
-   * @params includeSummary
-   * @returns PlayerDelegate[]
+   * @params {boolean} includeStats
+   * @params {boolean} includeSummary
+   * @returns {Promise} PlayerDelegate[]
+   * @remark Return player details with stats
    * @example
    * ```
-   * const player = await new Player([302]).getDetails(false)
+   * const player = await new Player([302]).getDetails(true, false)
    * ```
    * @remark Return player details with summary
    * @example
    * ```
-   * const player = await new Player([302]).getDetails(true)
+   * const player = await new Player([302]).getDetails(false, true)
    * ```
    */
 

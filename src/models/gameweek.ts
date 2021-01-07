@@ -7,12 +7,30 @@ import {
   FixturesRespDelegate,
 } from '../types'
 
+/**
+ * @param {number}
+ * @returns {Promise}
+ */
 export class Gameweek extends FPL {
   id: number[] | number
   constructor(id: number[] | number) {
     super()
     this.id = id
   }
+
+  /**
+   * Returns object of requested gameweek or array of gameweeks.
+   * @returns {Promise} PlayerDelegate[]
+   * @example
+   * ```
+   * const gameweek = await new Gameweek(1).getDetails()
+   * ```
+   * @example
+   * ```
+   * const player = await new Gameweek([1, 2]).getDetails()
+   * ```
+   */
+
   public async getDetails(): Promise<GameweekDelegate | GameweekDelegate[]> {
     let result: GameweekDelegate | GameweekDelegate[] = []
     try {
@@ -40,6 +58,16 @@ export class Gameweek extends FPL {
       return error
     }
   }
+
+  /**
+   * Returns array of fixtures.
+   * @returns {Promise} FixtureDelegate[]
+   * @example
+   * ```
+   * const fixtures = await new Gameweek(1).getFixtures()
+   * ```
+   */
+
   public async getFixtures(): Promise<FixtureDelegate[]> {
     const fixtures: FixtureDelegate[] = []
     try {
@@ -63,7 +91,6 @@ export class Gameweek extends FPL {
           }
         })
       }
-
       return fixtures
     } catch (error) {
       return error
