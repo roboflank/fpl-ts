@@ -1,4 +1,4 @@
-import { API_URLS, API_BASE_URL } from './constants'
+import { API_URLS, API_BASE_URL } from '../constants'
 import {
   UserDelegate,
   UserProperties,
@@ -18,7 +18,7 @@ import {
   CupRespDelegate,
   CupMatchDelegate,
   SeasonsHistoryDelegate,
-} from './types'
+} from '../types'
 import FPL from './fpl'
 
 /**

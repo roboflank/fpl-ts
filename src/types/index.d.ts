@@ -66,7 +66,7 @@ export type SubstitutionDelegate = {
   event: number
 }
 
-const ChipTypes = strEnum(['wildcard', '3xc', 'freehit', 'benchboost', null])
+const ChipTypes = strEnum(['wildcard', '3xc', 'freehit', 'bboost', null])
 export type ChipTypesDelegate = keyof typeof ChipTypes
 
 // https://fantasy.premierleague.com/api/entry/91928/event/10/picks/
@@ -236,12 +236,12 @@ const IdentifierOpts = strEnum([
 export type IdentifiersDelegate = keyof typeof IdentifierOpts
 
 export type AwayHomeStatType = {
-  value: number
-  element: number
+  value?: number
+  element?: number
 }
 
 export type FixStatsItemDelegate = {
-  identifier: IdentifiersDelegate
+  identifier?: IdentifiersDelegate
   a: AwayHomeStatType[]
   h: AwayHomeStatType[]
 }
@@ -332,4 +332,199 @@ export type PlayerStatsDelegate = {
 
 export type FixturesRespDelegate = {
   data: FixtureDelegate[]
+}
+export type ChipsPlayDelegate = {
+  chip_name?: ChipTypesDelegate
+  num_played?: number
+}
+export type GameweekDelegate = {
+  id: number
+  name: string
+  deadline_time: Date
+  average_entry_score: number
+  finished: boolean
+  data_checked: boolean
+  highest_scoring_entry: number | null
+  deadline_time_epoch: number
+  deadline_time_game_offset: number
+  highest_score: number | null
+  is_previous: boolean
+  is_current: boolean
+  is_next: boolean
+  chip_plays: ChipsPlayDelegate[]
+  most_selected: number | null
+  most_transferred_in: number | null
+  top_element: number | null
+  top_element_info: {
+    id: number
+    points: number
+  } | null
+  transfers_made: number | null
+  most_captained: number | null
+  most_vice_captained: number | null
+}
+
+export type TeamDelegate = {
+  code: number
+  draw: number
+  form: string | null
+  id: number
+  loss: number
+  name: string
+  played: number
+  points: number
+  position: number
+  short_name: string
+  strength: number
+  team_division: any | null
+  unavailable: boolean
+  win: number
+  strength_overall_home: number
+  strength_overall_away: number
+  strength_attack_home: number
+  strength_attack_away: number
+  strength_defence_home: number
+  strength_defence_away: number
+  pulse_id: number
+}
+
+type GameSettingsDelegate = {
+  league_join_private_max: number
+  league_join_public_max: number
+  league_max_size_public_classic: number
+  league_max_size_public_h2h: number
+  league_max_size_private_h2h: number
+  league_max_ko_rounds_private_h2h: number
+  league_prefix_public: string
+  league_points_h2h_win: number
+  league_points_h2h_lose: number
+  league_points_h2h_draw: number
+  league_ko_first_instead_of_random: boolean
+  cup_start_event_id: number
+  cup_stop_event_id: number
+  cup_qualifying_method: string
+  cup_type: string
+  squad_squadplay: number
+  squad_squadsize: number
+  squad_team_limit: number
+  squad_total_spend: number
+  ui_currency_multiplier: number
+  ui_use_special_shirts: boolean
+  ui_special_shirt_exclusions: any[]
+  stats_form_days: number
+  sys_vice_captain_enabled: boolean
+  transfers_cap: number
+  transfers_sell_on_fee: number
+  league_h2h_tiebreak_stats: string[]
+  timezone: string
+}
+
+type PhaseDelegate = {
+  id: number
+  name: string
+  start_event: number
+  stop_event: number
+}
+
+const ElementStatsLabel = strEnum([
+  'Minutes played',
+  'Goals scored',
+  'Assists',
+  'Clean sheets',
+  'Goals conceded',
+  'Own goals',
+  'Penalties saved',
+  'Penalties missed',
+  'Yellow cards',
+  'Red cards',
+  'Saves',
+  'Bonus',
+  'Bonus Points System',
+  'Influence',
+  'Creativity',
+  'Threat',
+  'ICT Index',
+  null,
+])
+
+type ElementStatLabel = keyof typeof ElementStatsLabel
+
+const ElementStatsName = strEnum([
+  'minutes',
+  'goals_scored',
+  'assists',
+  'clean_sheets',
+  'goals_conceded',
+  'own_goals',
+  'penalties_saved',
+  'penalties_missed',
+  'yellow_cards',
+  'red_cards',
+  'saves',
+  'bonus',
+  'bps',
+  'influence',
+  'creativity',
+  'threat',
+  'ict_index',
+  null,
+])
+
+type ElementStatName = keyof typeof ElementStatsName
+
+type ElementStatDelegate = {
+  label: ElementStatLabel
+  name: ElementStatName
+}
+
+const PosName = strEnum(['GKP', 'DEF', 'MID', 'FWD', null])
+
+type PositionName = keyof typeof PosName
+
+const PosPluralName = strEnum([
+  'Goalkeepers',
+  'Defenders',
+  'Midfielders',
+  'Forwards',
+  null,
+])
+
+type PositionPluralName = keyof typeof PosPluralName
+
+const PosShortName = strEnum([
+  'Goalkeepers',
+  'Defenders',
+  'Midfielders',
+  'Forwards',
+  null,
+])
+
+type PositionShortName = keyof typeof PosShortName
+
+type ElementTypeDelegate = {
+  id: number
+  plural_name: PositionPluralName
+  plural_name_short: PositionName
+  singular_name: PositionShortName
+  singular_name_short: PositionName
+  squad_select: number
+  squad_min_play: number
+  squad_max_play: number
+  ui_shirt_specific: true
+  sub_positions_locked: number[]
+  element_count: number
+}
+export interface StaticDelegate {
+  events: GameweekDelegate[]
+  game_settings: GameSettingsDelegate
+  phases: PhaseDelegate[]
+  teams: TeamDelegate[]
+  total_players: number
+  elements: PlayerDelegate[]
+  element_stats: ElementStatDelegate[]
+  element_types: ElementTypeDelegate[]
+}
+
+export type StaticResponse = {
+  data: StaticDelegate
 }

@@ -3,8 +3,8 @@ import {
   PlayerDelegate,
   PlayerSummaryDelegate,
   SummaryRespDelegate,
-} from './types'
-import { API_URLS } from './constants'
+} from '../types'
+import { API_URLS } from '../constants'
 
 export class Player extends FPL {
   playersId: number[]
