@@ -1161,6 +1161,11 @@ uri-js@^4.2.2:
   dependencies:
     punycode "^2.1.0"
 
+user-agent-array-ts@^2.1.1:
+  version "2.1.1"
+  resolved "https://registry.yarnpkg.com/user-agent-array-ts/-/user-agent-array-ts-2.1.1.tgz#94bb5484e1d40e26327a7f6e3c876eac69da5a30"
+  integrity sha512-QSUa0bkqG2X/bLUuMsOnmwJYyKtomlro+RExMsUA4d+GF02dhsPu5pw3cLdqROIAtTWHQx8q7tsLi/1NstB+GA==
+
 v8-compile-cache@^2.0.3:
   version "2.2.0"
   resolved "https://registry.yarnpkg.com/v8-compile-cache/-/v8-compile-cache-2.2.0.tgz#9471efa3ef9128d2f7c6a7ca39c4dd6b5055b132"
