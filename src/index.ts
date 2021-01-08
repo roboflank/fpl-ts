@@ -1,6 +1,0 @@
-export * from './models/user'
-export * from './models/fpl'
-export * from './models/player'
-export * from './models/fixture'
-export * from './models/gameweek'
-export * from './models/team'

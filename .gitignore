@@ -1,8 +1,0 @@
-node_modules/
-coverage/
-.vscode/
-tests/*
-npm-debug.log
-package-lock.json
-lib/
-yarn.lock
