@@ -7,8 +7,8 @@ import {
 } from '../types'
 
 /**
- * Fixture Class extracted api from https://fantasy.premierleague.com/api/fixtures/
- * @remark Gameweek filters from https://fantasy.premierleague.com/api/fixtures/?event=1
+ * Fixture Class -> https://fantasy.premierleague.com/api/fixtures/
+ * @remark Gameweek -> https://fantasy.premierleague.com/api/fixtures/?event=1
  * @example
  * ```
  * const fixture = new Fixture(1)

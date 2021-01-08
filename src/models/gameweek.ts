@@ -8,6 +8,7 @@ import {
 } from '../types'
 
 /**
+ * Gameweek Class -> https://fantasy.premierleague.com/api/bootstrap-static/
  * @param {number}
  * @returns {Promise}
  */

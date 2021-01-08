@@ -22,11 +22,12 @@ import {
 import FPL from './fpl'
 
 /**
- * All user team related queries require TeamID
- * @param userId
+ * All user team related queries require userID
+ * User Class from -> https://fantasy.premierleague.com/api/entry/3586135/
+ * @param {string} userId
  * @example
  * ```
- * const team = new User(1)
+ * const user = new User(1)
  * ```
  */
 export class User extends FPL implements UserProperties {
@@ -55,7 +56,7 @@ export class User extends FPL implements UserProperties {
 
   /**
    * Returns array of requested Gameweek history, if not, returns all gw
-   * @params gw[] (optional)
+   * @param {number[]} gw[] (optional)
    * @returns GWHistoryDelegate[]
    * @example
    * ```
@@ -207,7 +208,7 @@ export class User extends FPL implements UserProperties {
    * @returns ActiveChipsDelegate
    * @example
    * ```
-   * const team = new User(1).getActiveChips()
+   * const chips = new User(1).getActiveChips()
    * ```
    */
   public async getActiveChips(gw?: number[]): Promise<ActiveChipsDelegate> {
@@ -328,7 +329,7 @@ export class User extends FPL implements UserProperties {
    * @returns CupStatusDelegate
    * @example
    * ```
-   * const team = new User(1).getCupStatus()
+   * const cupStatus = new User(1).getCupStatus()
    * ```
    */
 

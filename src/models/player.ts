@@ -6,6 +6,13 @@ import {
 } from '../types'
 import { API_URLS } from '../constants'
 
+/**
+ * Player Class -> https://fantasy.premierleague.com/api/bootstrap-static/
+ * @example
+ * ```
+ * const player = new Player(1)
+ * ```
+ */
 export class Player extends FPL {
   playersId: number[]
   constructor(playersId: number[]) {
