@@ -219,6 +219,10 @@ export type PlayerDelegate = {
   stats?: PlayerStatsDelegate | null
 }
 
+export type PlayerTeamDelegate = {
+  [key: number]: PlayerDelegate[]
+}
+
 const IdentifierOpts = strEnum([
   'goals_scored',
   'assists',

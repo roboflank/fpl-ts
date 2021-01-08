@@ -21,14 +21,15 @@ export class Gameweek extends FPL {
 
   /**
    * Returns object of requested gameweek or array of gameweeks.
-   * @returns {Promise} PlayerDelegate[]
+   * @returns {Promise} PlayerDelegate
    * @example
    * ```
    * const gameweek = await new Gameweek(1).getDetails()
    * ```
+   * @returns {Promise} PlayerDelegate[]
    * @example
    * ```
-   * const player = await new Gameweek([1, 2]).getDetails()
+   * const gameweeks = await new Gameweek([1, 2]).getDetails()
    * ```
    */
 
@@ -38,7 +39,7 @@ export class Gameweek extends FPL {
       const { data }: StaticResponse = await this.fetchAPI(API_URLS.STATIC)
       if (Array.isArray(this.id)) {
         const gws: GameweekDelegate[] = []
-        const ids = this.id
+        const ids = new Set(this.id)
         data.events.forEach((gw) => {
           ids.forEach((id) => {
             if (gw.id === id) {
@@ -77,7 +78,7 @@ export class Gameweek extends FPL {
       )
 
       if (Array.isArray(this.id)) {
-        const ids = this.id
+        const ids = new Set(this.id)
         data.forEach((gw) => {
           ids.forEach((res) => {
             if (gw.event === res) {

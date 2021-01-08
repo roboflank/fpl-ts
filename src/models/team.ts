@@ -1,4 +1,9 @@
-import { StaticResponse, TeamDelegate } from '../types'
+import {
+  PlayerDelegate,
+  StaticResponse,
+  TeamDelegate,
+  PlayerTeamDelegate,
+} from '../types'
 import FPL from './fpl'
 import { API_URLS } from '../constants'
 
@@ -38,15 +43,16 @@ export class Team extends FPL {
     try {
       const { data }: StaticResponse = await this.fetchAPI(API_URLS.STATIC)
       if (Array.isArray(this.id)) {
-        const gws: TeamDelegate[] = []
-        const ids = this.id
+        const filteredTeams: TeamDelegate[] = []
+        const ids = new Set(this.id)
         data.teams.forEach((team) => {
           ids.forEach((id) => {
             if (team.id === id) {
-              gws.push(team)
+              filteredTeams.push(team)
             }
           })
         })
+        teams = filteredTeams
       } else {
         data.teams.forEach((team) => {
           if (team.id === this.id) {
@@ -57,6 +63,51 @@ export class Team extends FPL {
       return teams
     } catch (err) {
       return err
+    }
+  }
+
+  /**
+   * Returns array or object of the requested team id(s)
+   * @returns {Promise} PlayerDelegate[]
+   * @example
+   * ```
+   * const players = await new Team(1).getPlayers()
+   * ```
+   * @remark when array is requested
+   * @returns {Promise} PlayerTeamDelegate
+   * @example
+   * ```
+   * const players = await new Team([1]).getPlayers()
+   * ```
+   */
+  public async getPlayers(): Promise<PlayerTeamDelegate | PlayerDelegate[]> {
+    try {
+      const { data }: StaticResponse = await this.fetchAPI(API_URLS.STATIC)
+      if (Array.isArray(this.id)) {
+        const players: PlayerTeamDelegate = {}
+        const ids = new Set(this.id)
+        ids.forEach((id) => {
+          players[id] = []
+        })
+        data.elements.forEach((player) => {
+          ids.forEach((id) => {
+            if (player.team === id) {
+              players[id].push(player)
+            }
+          })
+        })
+        return players
+      } else {
+        const players: PlayerDelegate[] = []
+        data.elements.forEach((player) => {
+          if (player.team === this.id) {
+            players.push(player)
+          }
+        })
+        return players
+      }
+    } catch (error) {
+      return error
     }
   }
 }
