@@ -1,8 +1,8 @@
 ---
-id: doc1
-title: Installation
-sidebar_label: Installation
-slug: /
+id: examples
+title: Examples
+sidebar_label: Examples
+slug: /examples
 ---
 
 You can write content using [GitHub-flavored Markdown syntax](https://github.github.com/gfm/).

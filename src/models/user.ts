@@ -19,35 +19,33 @@ import {
   CupMatchDelegate,
   SeasonsHistoryDelegate,
 } from '../types'
-import FPL from './fpl'
+import { fetchAPI, fetchMultipleAPI } from './fpl'
 
 /**
  * All user team related queries require userID
- * User Class from -> https://fantasy.premierleague.com/api/entry/3586135/
- * @param {string} userId
+ * API https://fantasy.premierleague.com/api/entry/3586135/
  * @example
- * ```
+ * ```js
  * const user = new User(1)
  * ```
  */
-export class User extends FPL implements UserProperties {
+export class User implements UserProperties {
   userId: number
   constructor(userId: number) {
-    super()
     this.userId = userId
   }
 
   /**
    * Return user's team details
    * @example
-   * ```
+   * ```js
    * const team = new User(1).getDetails()
    * ```
    */
   public async getDetails(): Promise<UserDelegate[]> {
     const endpoint: string = API_URLS.USER.replace('{}', this.userId.toString())
     try {
-      const { data } = await this.fetchAPI(endpoint)
+      const { data } = await fetchAPI(endpoint)
       return data
     } catch (error) {
       return error
@@ -56,10 +54,8 @@ export class User extends FPL implements UserProperties {
 
   /**
    * Returns array of requested Gameweek history, if not, returns all gw
-   * @param {number[]} gw[] (optional)
-   * @returns GWHistoryDelegate[]
    * @example
-   * ```
+   * ```js
    * const history = await new User(1).getTransfers([1, 2, 4])
    * ```
    */
@@ -69,7 +65,7 @@ export class User extends FPL implements UserProperties {
       this.userId.toString(),
     )
     try {
-      const { data } = await this.fetchAPI(endpoint)
+      const { data } = await fetchAPI(endpoint)
       const currentData = data.current
       if (!gw || gw?.length == 0) {
         return currentData
@@ -93,10 +89,8 @@ export class User extends FPL implements UserProperties {
 
   /**
    * Return user's team transfer history
-   * @params gw[] (optional)
-   * @returns TransferDelegate[]
    * @example
-   * ```
+   * ```js
    * const transfers = await new User(1).getTransfers([1])
    * ```
    */
@@ -107,7 +101,7 @@ export class User extends FPL implements UserProperties {
     )
 
     try {
-      const { data } = await this.fetchAPI(endpoint)
+      const { data } = await fetchAPI(endpoint)
       const currentData = data
       if (!gw || gw?.length == 0) {
         return currentData
@@ -130,10 +124,8 @@ export class User extends FPL implements UserProperties {
 
   /**
    * Return user's team player picks history
-   * @params gw[] (optional)
-   * @returns PickHistoryDelegate
    * @example
-   * ```
+   * ```js
    * const transfers = await new User(1).getPicks([1])
    * ```
    * @remark Will return picks for the requested GWs. If empty, will return for all GWs
@@ -155,7 +147,7 @@ export class User extends FPL implements UserProperties {
         gwPicks[num] = []
       })
       try {
-        const data = await this.fetchMultipleAPI(gwURL)
+        const data = await fetchMultipleAPI(gwURL)
         data.forEach(({ data }: ResponseDataDelegate) => {
           const entryPick: PickDelegate[] = data.picks
           gwPicks[data.entry_history.event] = entryPick
@@ -172,7 +164,7 @@ export class User extends FPL implements UserProperties {
         gwPicks[num] = []
       })
       try {
-        const data = await this.fetchMultipleAPI(gwURL)
+        const data = await fetchMultipleAPI(gwURL)
         data.forEach(({ data }: ResponseDataDelegate) => {
           const entryPick: PickDelegate[] = data.picks
           gwPicks[data.entry_history.event] = entryPick
@@ -186,9 +178,8 @@ export class User extends FPL implements UserProperties {
 
   /**
    * Return user's chip history
-   * @returns ChipsHistoryDelegate
    * @example
-   * ```
+   * ```js
    * const team = new User(1).getChipsHistory()
    * ```
    */
@@ -197,17 +188,15 @@ export class User extends FPL implements UserProperties {
       '{}',
       this.userId.toString(),
     )
-    const { data } = await this.fetchAPI(endpoint)
+    const { data } = await fetchAPI(endpoint)
     const chipsHist = data.chips
     return chipsHist
   }
 
   /**
    * Returns an array containing the user’s active chip for each gw, or the active chip of the given gameweeks.
-   * @params gw[] (optional)
-   * @returns ActiveChipsDelegate
    * @example
-   * ```
+   * ```js
    * const chips = new User(1).getActiveChips()
    * ```
    */
@@ -226,7 +215,7 @@ export class User extends FPL implements UserProperties {
         gwURL.push(endpoint)
       })
       try {
-        const resp = await this.fetchMultipleAPI(gwURL)
+        const resp = await fetchMultipleAPI(gwURL)
         resp.forEach(({ data }: ResponseDataDelegate) => {
           const activeChip: ChipTypesDelegate = data.active_chip
           const gwChip: ActiveChipDelegate = {
@@ -248,7 +237,7 @@ export class User extends FPL implements UserProperties {
         gwURL.push(endpoint)
       })
       try {
-        const resp = await this.fetchMultipleAPI(gwURL)
+        const resp = await fetchMultipleAPI(gwURL)
         resp.forEach(({ data }: ResponseDataDelegate) => {
           const activeChip: ChipTypesDelegate = data.active_chip
           const gwChip: ActiveChipDelegate = {
@@ -268,11 +257,9 @@ export class User extends FPL implements UserProperties {
 
   /**
    * Get Automatic Substitutions
-   * @params gw[] (optional)
    * Returns an array containing the user’s active chip for each gameweek, or the active chip of the given gameweeks.
-   * @returns AutomaticSubsDelegate
    * @example
-   * ```
+   * ```js
    * const team = new User(1).getAutomaticSubs()
    * ```
    */
@@ -291,7 +278,7 @@ export class User extends FPL implements UserProperties {
         gwURL.push(endpoint)
       })
       try {
-        const data = await this.fetchMultipleAPI(gwURL)
+        const data = await fetchMultipleAPI(gwURL)
         data.forEach(({ data }: ResponseDataDelegate) => {
           const autosub: SubstitutionDelegate[] = data.automatic_subs
           if (autosub.length > 0) {
@@ -310,7 +297,7 @@ export class User extends FPL implements UserProperties {
         gwSubs[num] = []
       })
       try {
-        const data = await this.fetchMultipleAPI(gwURL)
+        const data = await fetchMultipleAPI(gwURL)
         data.forEach(({ data }: ResponseDataDelegate) => {
           const autosub: SubstitutionDelegate[] = data.automatic_subs
           if (autosub.length > 0) {
@@ -326,9 +313,8 @@ export class User extends FPL implements UserProperties {
 
   /**
    * Returns the user’s cup status.
-   * @returns CupStatusDelegate
    * @example
-   * ```
+   * ```js
    * const cupStatus = new User(1).getCupStatus()
    * ```
    */
@@ -339,7 +325,7 @@ export class User extends FPL implements UserProperties {
       this.userId.toString(),
     )
     try {
-      const { data } = await this.fetchAPI(endpoint)
+      const { data } = await fetchAPI(endpoint)
       const cupStat = data.cup_status
       return cupStat
     } catch (error) {
@@ -349,10 +335,8 @@ export class User extends FPL implements UserProperties {
 
   /**
    * Returns an object of all the user’s cup matches, or of the cup match in the given gameweeks (gameweek 17 and onwards).
-   * @params gw[] (optional)
-   * @returns CupMatchesDelegate
    * @example
-   * ```
+   * ```js
    * const team = new User(1).getCupMatches()
    * ```
    */
@@ -364,7 +348,7 @@ export class User extends FPL implements UserProperties {
     )
 
     try {
-      const { data } = await this.fetchAPI(endpoint)
+      const { data } = await fetchAPI(endpoint)
       const cupStat: CupRespDelegate = data
       const cupMatches: CupMatchesDelegate = {}
       if (!gw || gw?.length == 0) {
@@ -392,9 +376,8 @@ export class User extends FPL implements UserProperties {
 
   /**
    * Return user's previous history
-   * @returns ChipsHistoryDelegate
    * @example
-   * ```
+   * ```js
    * const team = new User(1).getChipsHistory()
    * ```
    */
@@ -404,7 +387,7 @@ export class User extends FPL implements UserProperties {
       this.userId.toString(),
     )
     try {
-      const { data } = await this.fetchAPI(endpoint)
+      const { data } = await fetchAPI(endpoint)
       const sznsHist = data.past
       return sznsHist
     } catch (err) {

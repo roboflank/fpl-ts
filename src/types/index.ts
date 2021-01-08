@@ -1,6 +1,6 @@
 import { strEnum } from '../utils'
 
-export type UserDelegate = {
+export interface UserDelegate {
   id: string
   name: string
   current_event: number | null
@@ -16,7 +16,7 @@ export type UserDelegate = {
   summary_overall_rank: number | null
   summary_event_points: number | null
   summary_event_rank: number | null
-  kit: JsonValue | null
+  kit: any | null
   last_deadline_bank: number | null
   last_deadline_value: number | null
   last_deadline_total_transfers: number | null
@@ -66,7 +66,7 @@ export type SubstitutionDelegate = {
   event: number
 }
 
-const ChipTypes = strEnum(['wildcard', '3xc', 'freehit', 'bboost', null])
+const ChipTypes = strEnum(['wildcard', '3xc', 'freehit', 'bboost'])
 export type ChipTypesDelegate = keyof typeof ChipTypes
 
 // https://fantasy.premierleague.com/api/entry/91928/event/10/picks/
@@ -94,7 +94,7 @@ export type ActiveChipDelegate = {
   event: number
 }
 
-type ActiveChipsDelegate = ActiveChipDelegate[]
+export type ActiveChipsDelegate = ActiveChipDelegate[]
 
 export type ResponseDataDelegate = {
   data: GWPicksDelegate
@@ -170,7 +170,7 @@ export type PlayerDelegate = {
   form: string
   id: number
   in_dreamteam: boolean
-  news: sting | null
+  news: string | null
   news_added: string | null
   now_cost: number
   photo: string
@@ -188,7 +188,7 @@ export type PlayerDelegate = {
   transfers_out: number
   transfers_out_event: number
   value_form: string | null
-  value_season: string | nul
+  value_season: string | null
   web_name: string
   minutes: number
   goals_scored: number
@@ -234,10 +234,9 @@ const IdentifierOpts = strEnum([
   'saves',
   'bonus',
   'bps',
-  null,
 ])
 
-export type IdentifiersDelegate = keyof typeof IdentifierOpts
+export type IdentifiersDelegate = keyof typeof IdentifierOpts | null
 
 export type AwayHomeStatType = {
   value?: number
@@ -452,10 +451,9 @@ const ElementStatsLabel = strEnum([
   'Creativity',
   'Threat',
   'ICT Index',
-  null,
 ])
 
-type ElementStatLabel = keyof typeof ElementStatsLabel
+type ElementStatLabel = keyof typeof ElementStatsLabel | null
 
 const ElementStatsName = strEnum([
   'minutes',
@@ -475,39 +473,36 @@ const ElementStatsName = strEnum([
   'creativity',
   'threat',
   'ict_index',
-  null,
 ])
 
-type ElementStatName = keyof typeof ElementStatsName
+type ElementStatName = keyof typeof ElementStatsName | null
 
 type ElementStatDelegate = {
   label: ElementStatLabel
   name: ElementStatName
 }
 
-const PosName = strEnum(['GKP', 'DEF', 'MID', 'FWD', null])
+const PosName = strEnum(['GKP', 'DEF', 'MID', 'FWD'])
 
-type PositionName = keyof typeof PosName
+type PositionName = keyof typeof PosName | null
 
 const PosPluralName = strEnum([
   'Goalkeepers',
   'Defenders',
   'Midfielders',
   'Forwards',
-  null,
 ])
 
-type PositionPluralName = keyof typeof PosPluralName
+type PositionPluralName = keyof typeof PosPluralName | null
 
 const PosShortName = strEnum([
   'Goalkeepers',
   'Defenders',
   'Midfielders',
   'Forwards',
-  null,
 ])
 
-type PositionShortName = keyof typeof PosShortName
+type PositionShortName = keyof typeof PosShortName | null
 
 type ElementTypeDelegate = {
   id: number

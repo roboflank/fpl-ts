@@ -1,4 +1,4 @@
-import FPL from './fpl'
+import { fetchMultipleAPI, fetchAPI } from './fpl'
 import {
   PlayerDelegate,
   PlayerSummaryDelegate,
@@ -7,16 +7,15 @@ import {
 import { API_URLS } from '../constants'
 
 /**
- * Player Class -> https://fantasy.premierleague.com/api/bootstrap-static/
+ * API: https://fantasy.premierleague.com/api/bootstrap-static/
  * @example
- * ```
+ * ```js
  * const player = new Player(1)
  * ```
  */
-export class Player extends FPL {
+export class Player {
   playersId: number[]
   constructor(playersId: number[]) {
-    super()
     this.playersId = playersId
   }
 
@@ -26,7 +25,7 @@ export class Player extends FPL {
    * Returns array of requested players summary. If none, it returns all players summary
    * @returns {Promise} PlayerSummaryDelegate[]
    * @example
-   * ```
+   * ```js
    * const player = await new Player([302]).getSummary()
    * ```
    */
@@ -43,7 +42,7 @@ export class Player extends FPL {
     })
 
     try {
-      const resp = await this.fetchMultipleAPI(gwURL)
+      const resp = await fetchMultipleAPI(gwURL)
       resp.forEach(({ data }: SummaryRespDelegate) => {
         playersSum.push(data)
       })
@@ -57,17 +56,17 @@ export class Player extends FPL {
    * Returns array of requested players. If none, it returns all players
    * @remark stats from https://www.reddit.com/r/FantasyPL/comments/6r60fu/exploring_a_key_metric_value_added_per_1m/
    * @remark set includeSummary to true to return player profile with summary
-   * @params {boolean} includeStats
-   * @params {boolean} includeSummary
+   * @param {boolean} includeStats
+   * @param {boolean} includeSummary
    * @returns {Promise} PlayerDelegate[]
    * @remark Return player details with stats
    * @example
-   * ```
+   * ```js
    * const player = await new Player([302]).getDetails(true, false)
    * ```
    * @remark Return player details with summary
    * @example
-   * ```
+   * ```js
    * const player = await new Player([302]).getDetails(false, true)
    * ```
    */
@@ -78,7 +77,7 @@ export class Player extends FPL {
   ): Promise<PlayerDelegate[]> {
     const endpoint: string = API_URLS.STATIC
     try {
-      const { data } = await this.fetchAPI(endpoint)
+      const { data } = await fetchAPI(endpoint)
       const playersData = data.elements
       if (!this.playersId || this.playersId?.length == 0) {
         return playersData

@@ -9,6 +9,9 @@ module.exports = {
   organizationName: 'wamburu', // Usually your GitHub org/user name.
   projectName: 'fpl-ts', // Usually your repo name.
   themeConfig: {
+    prism: {
+      theme: require('prism-react-renderer/themes/shadesOfPurple'),
+    },
     navbar: {
       title: 'fpl-ts',
       logo: {
@@ -17,12 +20,23 @@ module.exports = {
       },
       items: [
         {
-          to: 'docs/',
+          to: '/',
           activeBasePath: 'docs',
-          label: 'Docs',
+          label: 'Intro',
           position: 'left',
         },
-        { to: 'blog', label: 'Blog', position: 'left' },
+        {
+          to: 'api/',
+          activeBasePath: 'api',
+          label: 'API',
+          position: 'left',
+        },
+        {
+          to: 'examples/',
+          activeBasePath: 'examples',
+          label: 'Examples',
+          position: 'left',
+        },
         {
           href: 'https://github.com/wamburu/fpl-ts',
           label: 'GitHub',
@@ -77,7 +91,7 @@ module.exports = {
           ],
         },
       ],
-      copyright: `Copyright © ${new Date().getFullYear()} My Project, Inc. Built with Docusaurus.`,
+      copyright: `Copyright © ${new Date().getFullYear()} FPL-TS. Built with Docusaurus.`,
     },
   },
   presets: [
@@ -85,15 +99,10 @@ module.exports = {
       '@docusaurus/preset-classic',
       {
         docs: {
+          routeBasePath: '/',
           sidebarPath: require.resolve('./sidebars.js'),
           // Please change this to your repo.
           editUrl: 'https://github.com/wamburu/fpl-ts/edit/master/website/',
-        },
-        blog: {
-          showReadingTime: true,
-          // Please change this to your repo.
-          editUrl:
-            'https://github.com/wamburu/fpl-ts/edit/master/website/blog/',
         },
         theme: {
           customCss: require.resolve('./src/css/custom.css'),
@@ -105,17 +114,13 @@ module.exports = {
     [
       'docusaurus-plugin-typedoc',
       {
-        // TypeDoc options
-        entryPoints: ['../src/index.ts'],
+        entryPoints: ['../src/index.ts', '../src/types/index.ts'],
         tsconfig: '../tsconfig.json',
-        // plugin: ['some-typedoc-plugin'],
-
-        // Plugin options
         docsRoot: 'docs',
         out: 'api',
         sidebar: {
-          sidebarFile: 'some-sidebar.js',
-          fullNames: true,
+          sidebarFile: 'typedoc-sidebar.js',
+          fullNames: false,
           readmeLabel: 'Overview',
         },
       },

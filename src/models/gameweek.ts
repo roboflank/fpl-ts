@@ -1,4 +1,4 @@
-import FPL from './fpl'
+import { fetchAPI } from './fpl'
 import { API_URLS } from '../constants'
 import {
   GameweekDelegate,
@@ -8,27 +8,26 @@ import {
 } from '../types'
 
 /**
- * Gameweek Class -> https://fantasy.premierleague.com/api/bootstrap-static/
- * @param {number}
- * @returns {Promise}
+ * API: https://fantasy.premierleague.com/api/bootstrap-static/
+ *  @example
+ * ```js
+ * const gw = new Gameweek(1)
+ * ```
  */
-export class Gameweek extends FPL {
+export class Gameweek {
   id: number[] | number
   constructor(id: number[] | number) {
-    super()
     this.id = id
   }
 
   /**
    * Returns object of requested gameweek or array of gameweeks.
-   * @returns {Promise} PlayerDelegate
    * @example
-   * ```
+   * ```js
    * const gameweek = await new Gameweek(1).getDetails()
    * ```
-   * @returns {Promise} PlayerDelegate[]
    * @example
-   * ```
+   * ```js
    * const gameweeks = await new Gameweek([1, 2]).getDetails()
    * ```
    */
@@ -36,7 +35,7 @@ export class Gameweek extends FPL {
   public async getDetails(): Promise<GameweekDelegate | GameweekDelegate[]> {
     let result: GameweekDelegate | GameweekDelegate[] = []
     try {
-      const { data }: StaticResponse = await this.fetchAPI(API_URLS.STATIC)
+      const { data }: StaticResponse = await fetchAPI(API_URLS.STATIC)
       if (Array.isArray(this.id)) {
         const gws: GameweekDelegate[] = []
         const ids = new Set(this.id)
@@ -63,9 +62,8 @@ export class Gameweek extends FPL {
 
   /**
    * Returns array of fixtures.
-   * @returns {Promise} FixtureDelegate[]
    * @example
-   * ```
+   * ```js
    * const fixtures = await new Gameweek(1).getFixtures()
    * ```
    */
@@ -73,9 +71,7 @@ export class Gameweek extends FPL {
   public async getFixtures(): Promise<FixtureDelegate[]> {
     const fixtures: FixtureDelegate[] = []
     try {
-      const { data }: FixturesRespDelegate = await this.fetchAPI(
-        API_URLS.FIXTURES,
-      )
+      const { data }: FixturesRespDelegate = await fetchAPI(API_URLS.FIXTURES)
 
       if (Array.isArray(this.id)) {
         const ids = new Set(this.id)

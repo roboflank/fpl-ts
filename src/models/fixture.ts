@@ -1,4 +1,4 @@
-import FPL from './fpl'
+import { fetchAPI } from './fpl'
 import { API_URLS } from '../constants'
 import {
   FixtureDelegate,
@@ -7,26 +7,23 @@ import {
 } from '../types'
 
 /**
- * Fixture Class -> https://fantasy.premierleague.com/api/fixtures/
- * @remark Gameweek -> https://fantasy.premierleague.com/api/fixtures/?event=1
+ * API: https://fantasy.premierleague.com/api/fixtures/
+ * @remark Gameweek API: https://fantasy.premierleague.com/api/fixtures/?event=1
  * @example
- * ```
+ * ```js
  * const fixture = new Fixture(1)
  * ```
  */
-export class Fixture extends FPL {
+export class Fixture {
   id: number
   constructor(id: number) {
-    super()
     this.id = id
   }
 
   public async getDetails(): Promise<FixtureDelegate | null> {
     let fixture = null
     try {
-      const { data }: FixturesRespDelegate = await this.fetchAPI(
-        API_URLS.FIXTURES,
-      )
+      const { data }: FixturesRespDelegate = await fetchAPI(API_URLS.FIXTURES)
       data.forEach((elem) => {
         if (elem.id == this.id) {
           fixture = elem

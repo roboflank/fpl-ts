@@ -7,22 +7,20 @@ import {
   TeamFixturesDelegate,
   FixturesRespDelegate,
 } from '../types'
-import FPL from './fpl'
+import { fetchAPI } from './fpl'
 import { API_URLS } from '../constants'
 
 /**
- * Team Class api from -> https://fantasy.premierleague.com/api/bootstrap-static/
- * @returns {Promise}
+ * API: https://fantasy.premierleague.com/api/bootstrap-static/
  * @example
- * ```
- * const team = await new Team(1)
+ * ```js
+ * const team = new Team(1)
  * ```
  */
 
-export class Team extends FPL {
+export class Team {
   id: number[] | number
   constructor(id: number[] | number) {
-    super()
     this.id = id
   }
 
@@ -30,13 +28,13 @@ export class Team extends FPL {
    * Returns array or object of the requested team id(s)
    * @returns {Promise} TeamDelegate
    * @example
-   * ```
+   * ```js
    * const team = await new Team(1).getDetails()
    * ```
    * @remark when array is requested
    * @returns {Promise} TeamDelegate[]
    * @example
-   * ```
+   * ```js
    * const teams = await new Team([1]).getDetails()
    * ```
    */
@@ -44,7 +42,7 @@ export class Team extends FPL {
   public async getDetails(): Promise<TeamDelegate[] | TeamDelegate> {
     let teams: TeamDelegate[] | TeamDelegate = []
     try {
-      const { data }: StaticResponse = await this.fetchAPI(API_URLS.STATIC)
+      const { data }: StaticResponse = await fetchAPI(API_URLS.STATIC)
       if (Array.isArray(this.id)) {
         const filteredTeams: TeamDelegate[] = []
         const ids = new Set(this.id)
@@ -73,19 +71,19 @@ export class Team extends FPL {
    * Returns array or object containing the players who play for the team. Does not include the player’s summary.
    * @returns {Promise} PlayerDelegate[]
    * @example
-   * ```
+   * ```js
    * const players = await new Team(1).getPlayers()
    * ```
    * @remark when array is requested
    * @returns {Promise} PlayerTeamDelegate
    * @example
-   * ```
+   * ```js
    * const players = await new Team([1]).getPlayers()
    * ```
    */
   public async getPlayers(): Promise<PlayerTeamDelegate | PlayerDelegate[]> {
     try {
-      const { data }: StaticResponse = await this.fetchAPI(API_URLS.STATIC)
+      const { data }: StaticResponse = await fetchAPI(API_URLS.STATIC)
       if (Array.isArray(this.id)) {
         const players: PlayerTeamDelegate = {}
         const ids = new Set(this.id)
@@ -118,13 +116,13 @@ export class Team extends FPL {
    * Returns array or object containing the team’s fixtures.
    * @returns {Promise} PlayerDelegate[]
    * @example
-   * ```
+   * ```js
    * const players = await new Team(1).getFixtures()
    * ```
    * @remark when array is requested
    * @returns {Promise} PlayerTeamDelegate
    * @example
-   * ```
+   * ```js
    * const players = await new Team([1]).getFixtures()
    * ```
    */
@@ -132,9 +130,7 @@ export class Team extends FPL {
     TeamFixturesDelegate | FixtureDelegate[]
   > {
     try {
-      const { data }: FixturesRespDelegate = await this.fetchAPI(
-        API_URLS.FIXTURES,
-      )
+      const { data }: FixturesRespDelegate = await fetchAPI(API_URLS.FIXTURES)
       if (Array.isArray(this.id)) {
         const fixtures: TeamFixturesDelegate = {}
         const ids = new Set(this.id)
