@@ -16,6 +16,7 @@ jobs:
         with:
           node-version: '12.x'
       - name: Test Build
+        working-directory: website
         run: |
           if [ -e yarn.lock ]; then
           yarn install --frozen-lockfile
@@ -36,6 +37,7 @@ jobs:
       - name: Add key to allow access to repository
         env:
           SSH_AUTH_SOCK: /tmp/ssh_agent.sock
+        working-directory: website
         run: |
           mkdir -p ~/.ssh
           ssh-keyscan github.com >> ~/.ssh/known_hosts
@@ -47,6 +49,7 @@ jobs:
           IdentityFile ~/.ssh/id_rsa
           EOT
       - name: Release to GitHub Pages
+        working-directory: website
         env:
           USE_SSH: true
           GIT_USER: git
