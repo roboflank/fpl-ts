@@ -3,6 +3,9 @@ import {
   StaticResponse,
   TeamDelegate,
   PlayerTeamDelegate,
+  FixtureDelegate,
+  TeamFixturesDelegate,
+  FixturesRespDelegate,
 } from '../types'
 import FPL from './fpl'
 import { API_URLS } from '../constants'
@@ -67,7 +70,7 @@ export class Team extends FPL {
   }
 
   /**
-   * Returns array or object of the requested team id(s)
+   * Returns array or object containing the players who play for the team. Does not include the player’s summary.
    * @returns {Promise} PlayerDelegate[]
    * @example
    * ```
@@ -105,6 +108,55 @@ export class Team extends FPL {
           }
         })
         return players
+      }
+    } catch (error) {
+      return error
+    }
+  }
+
+  /**
+   * Returns array or object containing the team’s fixtures.
+   * @returns {Promise} PlayerDelegate[]
+   * @example
+   * ```
+   * const players = await new Team(1).getFixtures()
+   * ```
+   * @remark when array is requested
+   * @returns {Promise} PlayerTeamDelegate
+   * @example
+   * ```
+   * const players = await new Team([1]).getFixtures()
+   * ```
+   */
+  public async getFixtures(): Promise<
+    TeamFixturesDelegate | FixtureDelegate[]
+  > {
+    try {
+      const { data }: FixturesRespDelegate = await this.fetchAPI(
+        API_URLS.FIXTURES,
+      )
+      if (Array.isArray(this.id)) {
+        const fixtures: TeamFixturesDelegate = {}
+        const ids = new Set(this.id)
+        ids.forEach((id) => {
+          fixtures[id] = []
+        })
+        data.forEach((fixture) => {
+          ids.forEach((id) => {
+            if (fixture.team_a === id || fixture.team_h === id) {
+              fixtures[id].push(fixture)
+            }
+          })
+        })
+        return fixtures
+      } else {
+        const fixtures: FixtureDelegate[] = []
+        data.forEach((fixture) => {
+          if (fixture.team_a === this.id || fixture.team_h === this.id) {
+            fixtures.push(fixture)
+          }
+        })
+        return fixtures
       }
     } catch (error) {
       return error

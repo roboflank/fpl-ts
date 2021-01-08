@@ -337,6 +337,10 @@ export type PlayerStatsDelegate = {
 export type FixturesRespDelegate = {
   data: FixtureDelegate[]
 }
+
+export type TeamFixturesDelegate = {
+  [key: number]: FixtureDelegate[]
+}
 export type ChipsPlayDelegate = {
   chip_name?: ChipTypesDelegate
   num_played?: number
