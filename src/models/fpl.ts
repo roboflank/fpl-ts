@@ -27,4 +27,5 @@ export default class FPL {
     return result
   }
   //TODO: Add Gameweek calendars with currentGW, nextGW ,previousGW
+  //TODO: Add FDR
 }
