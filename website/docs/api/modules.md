@@ -11,12 +11,5 @@ hide_title: true
 
 ### Modules
 
-- [models/classic-league](modules/models_classic_league.md)
-- [models/fixture](modules/models_fixture.md)
-- [models/fpl](modules/models_fpl.md)
-- [models/gameweek](modules/models_gameweek.md)
-- [models/h2h-league](modules/models_h2h_league.md)
-- [models/player](modules/models_player.md)
-- [models/team](modules/models_team.md)
-- [models/user](modules/models_user.md)
+- [index](modules/index.md)
 - [types](modules/types.md)

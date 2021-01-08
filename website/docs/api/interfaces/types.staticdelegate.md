@@ -19,7 +19,7 @@ hide_title: true
 
 • **element\_stats**: ElementStatDelegate[]
 
-Defined in: types/index.ts:527
+Defined in: [types/index.ts:527](https://github.com/wamburu/fpl-ts/blob/7bc5b83/src/types/index.ts#L527)
 
 ___
 
@@ -27,7 +27,7 @@ ___
 
 • **element\_types**: ElementTypeDelegate[]
 
-Defined in: types/index.ts:528
+Defined in: [types/index.ts:528](https://github.com/wamburu/fpl-ts/blob/7bc5b83/src/types/index.ts#L528)
 
 ___
 
@@ -35,7 +35,7 @@ ___
 
 • **elements**: [*PlayerDelegate*](../modules/types.md#playerdelegate)[]
 
-Defined in: types/index.ts:526
+Defined in: [types/index.ts:526](https://github.com/wamburu/fpl-ts/blob/7bc5b83/src/types/index.ts#L526)
 
 ___
 
@@ -43,7 +43,7 @@ ___
 
 • **events**: [*GameweekDelegate*](../modules/types.md#gameweekdelegate)[]
 
-Defined in: types/index.ts:521
+Defined in: [types/index.ts:521](https://github.com/wamburu/fpl-ts/blob/7bc5b83/src/types/index.ts#L521)
 
 ___
 
@@ -51,7 +51,7 @@ ___
 
 • **game\_settings**: GameSettingsDelegate
 
-Defined in: types/index.ts:522
+Defined in: [types/index.ts:522](https://github.com/wamburu/fpl-ts/blob/7bc5b83/src/types/index.ts#L522)
 
 ___
 
@@ -59,7 +59,7 @@ ___
 
 • **phases**: PhaseDelegate[]
 
-Defined in: types/index.ts:523
+Defined in: [types/index.ts:523](https://github.com/wamburu/fpl-ts/blob/7bc5b83/src/types/index.ts#L523)
 
 ___
 
@@ -67,7 +67,7 @@ ___
 
 • **teams**: [*TeamDelegate*](../modules/types.md#teamdelegate)[]
 
-Defined in: types/index.ts:524
+Defined in: [types/index.ts:524](https://github.com/wamburu/fpl-ts/blob/7bc5b83/src/types/index.ts#L524)
 
 ___
 
@@ -75,4 +75,4 @@ ___
 
 • **total\_players**: *number*
 
-Defined in: types/index.ts:525
+Defined in: [types/index.ts:525](https://github.com/wamburu/fpl-ts/blob/7bc5b83/src/types/index.ts#L525)

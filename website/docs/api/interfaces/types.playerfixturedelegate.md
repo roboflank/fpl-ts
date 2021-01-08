@@ -23,7 +23,7 @@ hide_title: true
 
 Inherited from: [FixtureDelegate](types.fixturedelegate.md).[code](types.fixturedelegate.md#code)
 
-Defined in: types/index.ts:253
+Defined in: [types/index.ts:253](https://github.com/wamburu/fpl-ts/blob/7bc5b83/src/types/index.ts#L253)
 
 ___
 
@@ -31,7 +31,7 @@ ___
 
 • **difficulty**: *number*
 
-Defined in: types/index.ts:275
+Defined in: [types/index.ts:275](https://github.com/wamburu/fpl-ts/blob/7bc5b83/src/types/index.ts#L275)
 
 ___
 
@@ -41,7 +41,7 @@ ___
 
 Inherited from: [FixtureDelegate](types.fixturedelegate.md).[event](types.fixturedelegate.md#event)
 
-Defined in: types/index.ts:254
+Defined in: [types/index.ts:254](https://github.com/wamburu/fpl-ts/blob/7bc5b83/src/types/index.ts#L254)
 
 ___
 
@@ -49,7 +49,7 @@ ___
 
 • **event\_name**: *null* \| *string*
 
-Defined in: types/index.ts:273
+Defined in: [types/index.ts:273](https://github.com/wamburu/fpl-ts/blob/7bc5b83/src/types/index.ts#L273)
 
 ___
 
@@ -59,7 +59,7 @@ ___
 
 Inherited from: [FixtureDelegate](types.fixturedelegate.md).[finished](types.fixturedelegate.md#finished)
 
-Defined in: types/index.ts:255
+Defined in: [types/index.ts:255](https://github.com/wamburu/fpl-ts/blob/7bc5b83/src/types/index.ts#L255)
 
 ___
 
@@ -69,7 +69,7 @@ ___
 
 Inherited from: [FixtureDelegate](types.fixturedelegate.md).[finished_provisional](types.fixturedelegate.md#finished_provisional)
 
-Defined in: types/index.ts:256
+Defined in: [types/index.ts:256](https://github.com/wamburu/fpl-ts/blob/7bc5b83/src/types/index.ts#L256)
 
 ___
 
@@ -79,7 +79,7 @@ ___
 
 Inherited from: [FixtureDelegate](types.fixturedelegate.md).[id](types.fixturedelegate.md#id)
 
-Defined in: types/index.ts:257
+Defined in: [types/index.ts:257](https://github.com/wamburu/fpl-ts/blob/7bc5b83/src/types/index.ts#L257)
 
 ___
 
@@ -87,7 +87,7 @@ ___
 
 • **is\_home**: *boolean*
 
-Defined in: types/index.ts:274
+Defined in: [types/index.ts:274](https://github.com/wamburu/fpl-ts/blob/7bc5b83/src/types/index.ts#L274)
 
 ___
 
@@ -97,7 +97,7 @@ ___
 
 Inherited from: [FixtureDelegate](types.fixturedelegate.md).[kickoff_time](types.fixturedelegate.md#kickoff_time)
 
-Defined in: types/index.ts:258
+Defined in: [types/index.ts:258](https://github.com/wamburu/fpl-ts/blob/7bc5b83/src/types/index.ts#L258)
 
 ___
 
@@ -107,7 +107,7 @@ ___
 
 Inherited from: [FixtureDelegate](types.fixturedelegate.md).[minutes](types.fixturedelegate.md#minutes)
 
-Defined in: types/index.ts:259
+Defined in: [types/index.ts:259](https://github.com/wamburu/fpl-ts/blob/7bc5b83/src/types/index.ts#L259)
 
 ___
 
@@ -117,7 +117,7 @@ ___
 
 Inherited from: [FixtureDelegate](types.fixturedelegate.md).[provisional_start_time](types.fixturedelegate.md#provisional_start_time)
 
-Defined in: types/index.ts:260
+Defined in: [types/index.ts:260](https://github.com/wamburu/fpl-ts/blob/7bc5b83/src/types/index.ts#L260)
 
 ___
 
@@ -127,7 +127,7 @@ ___
 
 Inherited from: [FixtureDelegate](types.fixturedelegate.md).[pulse_id](types.fixturedelegate.md#pulse_id)
 
-Defined in: types/index.ts:269
+Defined in: [types/index.ts:269](https://github.com/wamburu/fpl-ts/blob/7bc5b83/src/types/index.ts#L269)
 
 ___
 
@@ -137,7 +137,7 @@ ___
 
 Inherited from: [FixtureDelegate](types.fixturedelegate.md).[started](types.fixturedelegate.md#started)
 
-Defined in: types/index.ts:261
+Defined in: [types/index.ts:261](https://github.com/wamburu/fpl-ts/blob/7bc5b83/src/types/index.ts#L261)
 
 ___
 
@@ -147,7 +147,7 @@ ___
 
 Inherited from: [FixtureDelegate](types.fixturedelegate.md).[stats](types.fixturedelegate.md#stats)
 
-Defined in: types/index.ts:266
+Defined in: [types/index.ts:266](https://github.com/wamburu/fpl-ts/blob/7bc5b83/src/types/index.ts#L266)
 
 ___
 
@@ -157,7 +157,7 @@ ___
 
 Inherited from: [FixtureDelegate](types.fixturedelegate.md).[team_a](types.fixturedelegate.md#team_a)
 
-Defined in: types/index.ts:262
+Defined in: [types/index.ts:262](https://github.com/wamburu/fpl-ts/blob/7bc5b83/src/types/index.ts#L262)
 
 ___
 
@@ -167,7 +167,7 @@ ___
 
 Inherited from: [FixtureDelegate](types.fixturedelegate.md).[team_a_difficulty](types.fixturedelegate.md#team_a_difficulty)
 
-Defined in: types/index.ts:268
+Defined in: [types/index.ts:268](https://github.com/wamburu/fpl-ts/blob/7bc5b83/src/types/index.ts#L268)
 
 ___
 
@@ -177,7 +177,7 @@ ___
 
 Inherited from: [FixtureDelegate](types.fixturedelegate.md).[team_a_score](types.fixturedelegate.md#team_a_score)
 
-Defined in: types/index.ts:263
+Defined in: [types/index.ts:263](https://github.com/wamburu/fpl-ts/blob/7bc5b83/src/types/index.ts#L263)
 
 ___
 
@@ -187,7 +187,7 @@ ___
 
 Inherited from: [FixtureDelegate](types.fixturedelegate.md).[team_h](types.fixturedelegate.md#team_h)
 
-Defined in: types/index.ts:264
+Defined in: [types/index.ts:264](https://github.com/wamburu/fpl-ts/blob/7bc5b83/src/types/index.ts#L264)
 
 ___
 
@@ -197,7 +197,7 @@ ___
 
 Inherited from: [FixtureDelegate](types.fixturedelegate.md).[team_h_difficulty](types.fixturedelegate.md#team_h_difficulty)
 
-Defined in: types/index.ts:267
+Defined in: [types/index.ts:267](https://github.com/wamburu/fpl-ts/blob/7bc5b83/src/types/index.ts#L267)
 
 ___
 
@@ -207,4 +207,4 @@ ___
 
 Inherited from: [FixtureDelegate](types.fixturedelegate.md).[team_h_score](types.fixturedelegate.md#team_h_score)
 
-Defined in: types/index.ts:265
+Defined in: [types/index.ts:265](https://github.com/wamburu/fpl-ts/blob/7bc5b83/src/types/index.ts#L265)

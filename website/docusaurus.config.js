@@ -21,7 +21,7 @@ module.exports = {
       items: [
         {
           to: '/',
-          activeBasePath: 'docs',
+          activeBasePath: '/',
           label: 'Intro',
           position: 'left',
         },
@@ -51,12 +51,8 @@ module.exports = {
           title: 'Docs',
           items: [
             {
-              label: 'Style Guide',
-              to: 'docs/',
-            },
-            {
-              label: 'Second Doc',
-              to: 'docs/doc2/',
+              label: 'Introduction',
+              to: '/',
             },
           ],
         },

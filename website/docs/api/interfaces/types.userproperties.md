@@ -15,7 +15,7 @@ hide_title: true
 
 ## Implemented by
 
-* [*User*](../classes/models/user.user.md)
+* [*User*](../classes/index.user.md)
 
 ## Properties
 
@@ -23,4 +23,4 @@ hide_title: true
 
 • **userId**: *null* \| *number*
 
-Defined in: types/index.ts:27
+Defined in: [types/index.ts:27](https://github.com/wamburu/fpl-ts/blob/7bc5b83/src/types/index.ts#L27)

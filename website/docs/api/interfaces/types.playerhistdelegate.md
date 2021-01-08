@@ -21,7 +21,7 @@ hide_title: true
 
 • **assists**: *number*
 
-Defined in: types/index.ts:195
+Defined in: [types/index.ts:195](https://github.com/wamburu/fpl-ts/blob/7bc5b83/src/types/index.ts#L195)
 
 ___
 
@@ -29,7 +29,7 @@ ___
 
 • **bonus**: *number*
 
-Defined in: types/index.ts:204
+Defined in: [types/index.ts:204](https://github.com/wamburu/fpl-ts/blob/7bc5b83/src/types/index.ts#L204)
 
 ___
 
@@ -37,7 +37,7 @@ ___
 
 • **bps**: *number*
 
-Defined in: types/index.ts:205
+Defined in: [types/index.ts:205](https://github.com/wamburu/fpl-ts/blob/7bc5b83/src/types/index.ts#L205)
 
 ___
 
@@ -45,7 +45,7 @@ ___
 
 • **chance\_of\_playing\_next\_round**: *null* \| *number*
 
-Defined in: types/index.ts:157
+Defined in: [types/index.ts:157](https://github.com/wamburu/fpl-ts/blob/7bc5b83/src/types/index.ts#L157)
 
 ___
 
@@ -53,7 +53,7 @@ ___
 
 • **chance\_of\_playing\_this\_round**: *null* \| *number*
 
-Defined in: types/index.ts:158
+Defined in: [types/index.ts:158](https://github.com/wamburu/fpl-ts/blob/7bc5b83/src/types/index.ts#L158)
 
 ___
 
@@ -61,7 +61,7 @@ ___
 
 • **clean\_sheets**: *number*
 
-Defined in: types/index.ts:196
+Defined in: [types/index.ts:196](https://github.com/wamburu/fpl-ts/blob/7bc5b83/src/types/index.ts#L196)
 
 ___
 
@@ -69,7 +69,7 @@ ___
 
 • **code**: *number*
 
-Defined in: types/index.ts:159
+Defined in: [types/index.ts:159](https://github.com/wamburu/fpl-ts/blob/7bc5b83/src/types/index.ts#L159)
 
 ___
 
@@ -77,7 +77,7 @@ ___
 
 • **cost\_change\_event**: *number*
 
-Defined in: types/index.ts:160
+Defined in: [types/index.ts:160](https://github.com/wamburu/fpl-ts/blob/7bc5b83/src/types/index.ts#L160)
 
 ___
 
@@ -85,7 +85,7 @@ ___
 
 • **cost\_change\_event\_fall**: *number*
 
-Defined in: types/index.ts:161
+Defined in: [types/index.ts:161](https://github.com/wamburu/fpl-ts/blob/7bc5b83/src/types/index.ts#L161)
 
 ___
 
@@ -93,7 +93,7 @@ ___
 
 • **cost\_change\_start**: *number*
 
-Defined in: types/index.ts:162
+Defined in: [types/index.ts:162](https://github.com/wamburu/fpl-ts/blob/7bc5b83/src/types/index.ts#L162)
 
 ___
 
@@ -101,7 +101,7 @@ ___
 
 • **cost\_change\_start\_fall**: *number*
 
-Defined in: types/index.ts:163
+Defined in: [types/index.ts:163](https://github.com/wamburu/fpl-ts/blob/7bc5b83/src/types/index.ts#L163)
 
 ___
 
@@ -109,7 +109,7 @@ ___
 
 • **creativity**: *null* \| *string*
 
-Defined in: types/index.ts:207
+Defined in: [types/index.ts:207](https://github.com/wamburu/fpl-ts/blob/7bc5b83/src/types/index.ts#L207)
 
 ___
 
@@ -117,7 +117,7 @@ ___
 
 • **creativity\_rank**: *number*
 
-Defined in: types/index.ts:212
+Defined in: [types/index.ts:212](https://github.com/wamburu/fpl-ts/blob/7bc5b83/src/types/index.ts#L212)
 
 ___
 
@@ -125,7 +125,7 @@ ___
 
 • **creativity\_rank\_type**: *number*
 
-Defined in: types/index.ts:213
+Defined in: [types/index.ts:213](https://github.com/wamburu/fpl-ts/blob/7bc5b83/src/types/index.ts#L213)
 
 ___
 
@@ -133,7 +133,7 @@ ___
 
 • **dreamteam\_count**: *number*
 
-Defined in: types/index.ts:164
+Defined in: [types/index.ts:164](https://github.com/wamburu/fpl-ts/blob/7bc5b83/src/types/index.ts#L164)
 
 ___
 
@@ -141,7 +141,7 @@ ___
 
 • **element**: *number*
 
-Defined in: types/index.ts:304
+Defined in: [types/index.ts:304](https://github.com/wamburu/fpl-ts/blob/7bc5b83/src/types/index.ts#L304)
 
 ___
 
@@ -149,7 +149,7 @@ ___
 
 • **element\_type**: *number*
 
-Defined in: types/index.ts:165
+Defined in: [types/index.ts:165](https://github.com/wamburu/fpl-ts/blob/7bc5b83/src/types/index.ts#L165)
 
 ___
 
@@ -157,7 +157,7 @@ ___
 
 • **ep\_next**: *null* \| *string*
 
-Defined in: types/index.ts:166
+Defined in: [types/index.ts:166](https://github.com/wamburu/fpl-ts/blob/7bc5b83/src/types/index.ts#L166)
 
 ___
 
@@ -165,7 +165,7 @@ ___
 
 • **ep\_this**: *null* \| *string*
 
-Defined in: types/index.ts:167
+Defined in: [types/index.ts:167](https://github.com/wamburu/fpl-ts/blob/7bc5b83/src/types/index.ts#L167)
 
 ___
 
@@ -173,7 +173,7 @@ ___
 
 • **event\_points**: *number*
 
-Defined in: types/index.ts:168
+Defined in: [types/index.ts:168](https://github.com/wamburu/fpl-ts/blob/7bc5b83/src/types/index.ts#L168)
 
 ___
 
@@ -181,7 +181,7 @@ ___
 
 • **first\_name**: *string*
 
-Defined in: types/index.ts:169
+Defined in: [types/index.ts:169](https://github.com/wamburu/fpl-ts/blob/7bc5b83/src/types/index.ts#L169)
 
 ___
 
@@ -189,7 +189,7 @@ ___
 
 • **fixture**: *null* \| *number*
 
-Defined in: types/index.ts:305
+Defined in: [types/index.ts:305](https://github.com/wamburu/fpl-ts/blob/7bc5b83/src/types/index.ts#L305)
 
 ___
 
@@ -197,7 +197,7 @@ ___
 
 • **form**: *string*
 
-Defined in: types/index.ts:170
+Defined in: [types/index.ts:170](https://github.com/wamburu/fpl-ts/blob/7bc5b83/src/types/index.ts#L170)
 
 ___
 
@@ -205,7 +205,7 @@ ___
 
 • **goals\_conceded**: *number*
 
-Defined in: types/index.ts:197
+Defined in: [types/index.ts:197](https://github.com/wamburu/fpl-ts/blob/7bc5b83/src/types/index.ts#L197)
 
 ___
 
@@ -213,7 +213,7 @@ ___
 
 • **goals\_scored**: *number*
 
-Defined in: types/index.ts:194
+Defined in: [types/index.ts:194](https://github.com/wamburu/fpl-ts/blob/7bc5b83/src/types/index.ts#L194)
 
 ___
 
@@ -221,7 +221,7 @@ ___
 
 • **ict\_index**: *null* \| *string*
 
-Defined in: types/index.ts:209
+Defined in: [types/index.ts:209](https://github.com/wamburu/fpl-ts/blob/7bc5b83/src/types/index.ts#L209)
 
 ___
 
@@ -229,7 +229,7 @@ ___
 
 • **ict\_index\_rank**: *number*
 
-Defined in: types/index.ts:216
+Defined in: [types/index.ts:216](https://github.com/wamburu/fpl-ts/blob/7bc5b83/src/types/index.ts#L216)
 
 ___
 
@@ -237,7 +237,7 @@ ___
 
 • **ict\_index\_rank\_type**: *number*
 
-Defined in: types/index.ts:217
+Defined in: [types/index.ts:217](https://github.com/wamburu/fpl-ts/blob/7bc5b83/src/types/index.ts#L217)
 
 ___
 
@@ -245,7 +245,7 @@ ___
 
 • **id**: *number*
 
-Defined in: types/index.ts:171
+Defined in: [types/index.ts:171](https://github.com/wamburu/fpl-ts/blob/7bc5b83/src/types/index.ts#L171)
 
 ___
 
@@ -253,7 +253,7 @@ ___
 
 • **in\_dreamteam**: *boolean*
 
-Defined in: types/index.ts:172
+Defined in: [types/index.ts:172](https://github.com/wamburu/fpl-ts/blob/7bc5b83/src/types/index.ts#L172)
 
 ___
 
@@ -261,7 +261,7 @@ ___
 
 • **influence**: *null* \| *string*
 
-Defined in: types/index.ts:206
+Defined in: [types/index.ts:206](https://github.com/wamburu/fpl-ts/blob/7bc5b83/src/types/index.ts#L206)
 
 ___
 
@@ -269,7 +269,7 @@ ___
 
 • **influence\_rank**: *number*
 
-Defined in: types/index.ts:210
+Defined in: [types/index.ts:210](https://github.com/wamburu/fpl-ts/blob/7bc5b83/src/types/index.ts#L210)
 
 ___
 
@@ -277,7 +277,7 @@ ___
 
 • **influence\_rank\_type**: *null* \| *number*
 
-Defined in: types/index.ts:211
+Defined in: [types/index.ts:211](https://github.com/wamburu/fpl-ts/blob/7bc5b83/src/types/index.ts#L211)
 
 ___
 
@@ -285,7 +285,7 @@ ___
 
 • **kickoff\_time**: *null* \| Date
 
-Defined in: types/index.ts:307
+Defined in: [types/index.ts:307](https://github.com/wamburu/fpl-ts/blob/7bc5b83/src/types/index.ts#L307)
 
 ___
 
@@ -293,7 +293,7 @@ ___
 
 • **minutes**: *number*
 
-Defined in: types/index.ts:193
+Defined in: [types/index.ts:193](https://github.com/wamburu/fpl-ts/blob/7bc5b83/src/types/index.ts#L193)
 
 ___
 
@@ -301,7 +301,7 @@ ___
 
 • **news**: *null* \| *string*
 
-Defined in: types/index.ts:173
+Defined in: [types/index.ts:173](https://github.com/wamburu/fpl-ts/blob/7bc5b83/src/types/index.ts#L173)
 
 ___
 
@@ -309,7 +309,7 @@ ___
 
 • **news\_added**: *null* \| *string*
 
-Defined in: types/index.ts:174
+Defined in: [types/index.ts:174](https://github.com/wamburu/fpl-ts/blob/7bc5b83/src/types/index.ts#L174)
 
 ___
 
@@ -317,7 +317,7 @@ ___
 
 • **now\_cost**: *number*
 
-Defined in: types/index.ts:175
+Defined in: [types/index.ts:175](https://github.com/wamburu/fpl-ts/blob/7bc5b83/src/types/index.ts#L175)
 
 ___
 
@@ -325,7 +325,7 @@ ___
 
 • **own\_goals**: *number*
 
-Defined in: types/index.ts:198
+Defined in: [types/index.ts:198](https://github.com/wamburu/fpl-ts/blob/7bc5b83/src/types/index.ts#L198)
 
 ___
 
@@ -333,7 +333,7 @@ ___
 
 • **penalties\_missed**: *number*
 
-Defined in: types/index.ts:200
+Defined in: [types/index.ts:200](https://github.com/wamburu/fpl-ts/blob/7bc5b83/src/types/index.ts#L200)
 
 ___
 
@@ -341,7 +341,7 @@ ___
 
 • **penalties\_saved**: *number*
 
-Defined in: types/index.ts:199
+Defined in: [types/index.ts:199](https://github.com/wamburu/fpl-ts/blob/7bc5b83/src/types/index.ts#L199)
 
 ___
 
@@ -349,7 +349,7 @@ ___
 
 • **photo**: *string*
 
-Defined in: types/index.ts:176
+Defined in: [types/index.ts:176](https://github.com/wamburu/fpl-ts/blob/7bc5b83/src/types/index.ts#L176)
 
 ___
 
@@ -357,7 +357,7 @@ ___
 
 • **points\_per\_game**: *string*
 
-Defined in: types/index.ts:177
+Defined in: [types/index.ts:177](https://github.com/wamburu/fpl-ts/blob/7bc5b83/src/types/index.ts#L177)
 
 ___
 
@@ -365,7 +365,7 @@ ___
 
 • **red\_cards**: *number*
 
-Defined in: types/index.ts:202
+Defined in: [types/index.ts:202](https://github.com/wamburu/fpl-ts/blob/7bc5b83/src/types/index.ts#L202)
 
 ___
 
@@ -373,7 +373,7 @@ ___
 
 • **round**: *null* \| *number*
 
-Defined in: types/index.ts:310
+Defined in: [types/index.ts:310](https://github.com/wamburu/fpl-ts/blob/7bc5b83/src/types/index.ts#L310)
 
 ___
 
@@ -381,7 +381,7 @@ ___
 
 • **saves**: *number*
 
-Defined in: types/index.ts:203
+Defined in: [types/index.ts:203](https://github.com/wamburu/fpl-ts/blob/7bc5b83/src/types/index.ts#L203)
 
 ___
 
@@ -389,7 +389,7 @@ ___
 
 • **second\_name**: *null* \| *string*
 
-Defined in: types/index.ts:178
+Defined in: [types/index.ts:178](https://github.com/wamburu/fpl-ts/blob/7bc5b83/src/types/index.ts#L178)
 
 ___
 
@@ -397,7 +397,7 @@ ___
 
 • **selected**: *null* \| *number*
 
-Defined in: types/index.ts:313
+Defined in: [types/index.ts:313](https://github.com/wamburu/fpl-ts/blob/7bc5b83/src/types/index.ts#L313)
 
 ___
 
@@ -405,7 +405,7 @@ ___
 
 • **selected\_by\_percent**: *string*
 
-Defined in: types/index.ts:179
+Defined in: [types/index.ts:179](https://github.com/wamburu/fpl-ts/blob/7bc5b83/src/types/index.ts#L179)
 
 ___
 
@@ -413,7 +413,7 @@ ___
 
 • **special**: *false*
 
-Defined in: types/index.ts:180
+Defined in: [types/index.ts:180](https://github.com/wamburu/fpl-ts/blob/7bc5b83/src/types/index.ts#L180)
 
 ___
 
@@ -421,7 +421,7 @@ ___
 
 • **squad\_number**: *null* \| *number*
 
-Defined in: types/index.ts:181
+Defined in: [types/index.ts:181](https://github.com/wamburu/fpl-ts/blob/7bc5b83/src/types/index.ts#L181)
 
 ___
 
@@ -429,7 +429,7 @@ ___
 
 • `Optional` **stats**: *undefined* \| *null* \| [*PlayerStatsDelegate*](../modules/types.md#playerstatsdelegate)
 
-Defined in: types/index.ts:219
+Defined in: [types/index.ts:219](https://github.com/wamburu/fpl-ts/blob/7bc5b83/src/types/index.ts#L219)
 
 ___
 
@@ -437,7 +437,7 @@ ___
 
 • **status**: *null* \| *string*
 
-Defined in: types/index.ts:182
+Defined in: [types/index.ts:182](https://github.com/wamburu/fpl-ts/blob/7bc5b83/src/types/index.ts#L182)
 
 ___
 
@@ -445,7 +445,7 @@ ___
 
 • `Optional` **summary**: *undefined* \| *null* \| [*PlayerSummaryDelegate*](../modules/types.md#playersummarydelegate)
 
-Defined in: types/index.ts:218
+Defined in: [types/index.ts:218](https://github.com/wamburu/fpl-ts/blob/7bc5b83/src/types/index.ts#L218)
 
 ___
 
@@ -453,7 +453,7 @@ ___
 
 • **team**: *number*
 
-Defined in: types/index.ts:183
+Defined in: [types/index.ts:183](https://github.com/wamburu/fpl-ts/blob/7bc5b83/src/types/index.ts#L183)
 
 ___
 
@@ -461,7 +461,7 @@ ___
 
 • **team\_a\_score**: *null* \| *number*
 
-Defined in: types/index.ts:309
+Defined in: [types/index.ts:309](https://github.com/wamburu/fpl-ts/blob/7bc5b83/src/types/index.ts#L309)
 
 ___
 
@@ -469,7 +469,7 @@ ___
 
 • **team\_code**: *number*
 
-Defined in: types/index.ts:184
+Defined in: [types/index.ts:184](https://github.com/wamburu/fpl-ts/blob/7bc5b83/src/types/index.ts#L184)
 
 ___
 
@@ -477,7 +477,7 @@ ___
 
 • **team\_h\_score**: *null* \| *number*
 
-Defined in: types/index.ts:308
+Defined in: [types/index.ts:308](https://github.com/wamburu/fpl-ts/blob/7bc5b83/src/types/index.ts#L308)
 
 ___
 
@@ -485,7 +485,7 @@ ___
 
 • **threat**: *null* \| *string*
 
-Defined in: types/index.ts:208
+Defined in: [types/index.ts:208](https://github.com/wamburu/fpl-ts/blob/7bc5b83/src/types/index.ts#L208)
 
 ___
 
@@ -493,7 +493,7 @@ ___
 
 • **threat\_rank**: *number*
 
-Defined in: types/index.ts:214
+Defined in: [types/index.ts:214](https://github.com/wamburu/fpl-ts/blob/7bc5b83/src/types/index.ts#L214)
 
 ___
 
@@ -501,7 +501,7 @@ ___
 
 • **threat\_rank\_type**: *number*
 
-Defined in: types/index.ts:215
+Defined in: [types/index.ts:215](https://github.com/wamburu/fpl-ts/blob/7bc5b83/src/types/index.ts#L215)
 
 ___
 
@@ -509,7 +509,7 @@ ___
 
 • **total\_points**: *number*
 
-Defined in: types/index.ts:185
+Defined in: [types/index.ts:185](https://github.com/wamburu/fpl-ts/blob/7bc5b83/src/types/index.ts#L185)
 
 ___
 
@@ -517,7 +517,7 @@ ___
 
 • **transfers\_balance**: *null* \| *number*
 
-Defined in: types/index.ts:312
+Defined in: [types/index.ts:312](https://github.com/wamburu/fpl-ts/blob/7bc5b83/src/types/index.ts#L312)
 
 ___
 
@@ -525,7 +525,7 @@ ___
 
 • **transfers\_in**: *number*
 
-Defined in: types/index.ts:186
+Defined in: [types/index.ts:186](https://github.com/wamburu/fpl-ts/blob/7bc5b83/src/types/index.ts#L186)
 
 ___
 
@@ -533,7 +533,7 @@ ___
 
 • **transfers\_in\_event**: *number*
 
-Defined in: types/index.ts:187
+Defined in: [types/index.ts:187](https://github.com/wamburu/fpl-ts/blob/7bc5b83/src/types/index.ts#L187)
 
 ___
 
@@ -541,7 +541,7 @@ ___
 
 • **transfers\_out**: *number*
 
-Defined in: types/index.ts:188
+Defined in: [types/index.ts:188](https://github.com/wamburu/fpl-ts/blob/7bc5b83/src/types/index.ts#L188)
 
 ___
 
@@ -549,7 +549,7 @@ ___
 
 • **transfers\_out\_event**: *number*
 
-Defined in: types/index.ts:189
+Defined in: [types/index.ts:189](https://github.com/wamburu/fpl-ts/blob/7bc5b83/src/types/index.ts#L189)
 
 ___
 
@@ -557,7 +557,7 @@ ___
 
 • **value**: *null* \| *number*
 
-Defined in: types/index.ts:311
+Defined in: [types/index.ts:311](https://github.com/wamburu/fpl-ts/blob/7bc5b83/src/types/index.ts#L311)
 
 ___
 
@@ -565,7 +565,7 @@ ___
 
 • **value\_form**: *null* \| *string*
 
-Defined in: types/index.ts:190
+Defined in: [types/index.ts:190](https://github.com/wamburu/fpl-ts/blob/7bc5b83/src/types/index.ts#L190)
 
 ___
 
@@ -573,7 +573,7 @@ ___
 
 • **value\_season**: *null* \| *string*
 
-Defined in: types/index.ts:191
+Defined in: [types/index.ts:191](https://github.com/wamburu/fpl-ts/blob/7bc5b83/src/types/index.ts#L191)
 
 ___
 
@@ -581,7 +581,7 @@ ___
 
 • **was\_home**: *boolean*
 
-Defined in: types/index.ts:306
+Defined in: [types/index.ts:306](https://github.com/wamburu/fpl-ts/blob/7bc5b83/src/types/index.ts#L306)
 
 ___
 
@@ -589,7 +589,7 @@ ___
 
 • **web\_name**: *string*
 
-Defined in: types/index.ts:192
+Defined in: [types/index.ts:192](https://github.com/wamburu/fpl-ts/blob/7bc5b83/src/types/index.ts#L192)
 
 ___
 
@@ -597,4 +597,4 @@ ___
 
 • **yellow\_cards**: *number*
 
-Defined in: types/index.ts:201
+Defined in: [types/index.ts:201](https://github.com/wamburu/fpl-ts/blob/7bc5b83/src/types/index.ts#L201)

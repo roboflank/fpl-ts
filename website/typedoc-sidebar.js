@@ -5,14 +5,11 @@ module.exports = [
     "type": "category",
     "label": "Classes",
     "items": [
-      "api/classes/models/classic-league.classicleague",
-      "api/classes/models/fixture.fixture",
-      "api/classes/models/fpl.default",
-      "api/classes/models/gameweek.gameweek",
-      "api/classes/models/h2h-league.h2hleague",
-      "api/classes/models/player.player",
-      "api/classes/models/team.team",
-      "api/classes/models/user.user"
+      "api/classes/index.fixture",
+      "api/classes/index.gameweek",
+      "api/classes/index.player",
+      "api/classes/index.team",
+      "api/classes/index.user"
     ]
   },
   {

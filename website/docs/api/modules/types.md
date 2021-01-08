@@ -31,7 +31,7 @@ Name | Type |
 `event` | *number* |
 `name?` | [*ChipTypesDelegate*](types.md#chiptypesdelegate) |
 
-Defined in: types/index.ts:92
+Defined in: [types/index.ts:92](https://github.com/wamburu/fpl-ts/blob/7bc5b83/src/types/index.ts#L92)
 
 ___
 
@@ -39,7 +39,7 @@ ___
 
 Ƭ **ActiveChipsDelegate**: [*ActiveChipDelegate*](types.md#activechipdelegate)[]
 
-Defined in: types/index.ts:97
+Defined in: [types/index.ts:97](https://github.com/wamburu/fpl-ts/blob/7bc5b83/src/types/index.ts#L97)
 
 ___
 
@@ -47,7 +47,7 @@ ___
 
 Ƭ **AutomaticSubsDelegate**: { [key: number]: [*SubstitutionDelegate*](types.md#substitutiondelegate)[];  }
 
-Defined in: types/index.ts:103
+Defined in: [types/index.ts:103](https://github.com/wamburu/fpl-ts/blob/7bc5b83/src/types/index.ts#L103)
 
 ___
 
@@ -62,7 +62,7 @@ Name | Type |
 `element?` | *number* |
 `value?` | *number* |
 
-Defined in: types/index.ts:241
+Defined in: [types/index.ts:241](https://github.com/wamburu/fpl-ts/blob/7bc5b83/src/types/index.ts#L241)
 
 ___
 
@@ -78,7 +78,7 @@ Name | Type |
 `name` | [*ChipTypesDelegate*](types.md#chiptypesdelegate) |
 `time` | Date \| *null* |
 
-Defined in: types/index.ts:84
+Defined in: [types/index.ts:84](https://github.com/wamburu/fpl-ts/blob/7bc5b83/src/types/index.ts#L84)
 
 ___
 
@@ -86,7 +86,7 @@ ___
 
 Ƭ **ChipTypesDelegate**: keyof *typeof* ChipTypes
 
-Defined in: types/index.ts:70
+Defined in: [types/index.ts:70](https://github.com/wamburu/fpl-ts/blob/7bc5b83/src/types/index.ts#L70)
 
 ___
 
@@ -94,7 +94,7 @@ ___
 
 Ƭ **ChipsHistoryDelegate**: [*ChipHistoryDelegate*](types.md#chiphistorydelegate)[]
 
-Defined in: types/index.ts:90
+Defined in: [types/index.ts:90](https://github.com/wamburu/fpl-ts/blob/7bc5b83/src/types/index.ts#L90)
 
 ___
 
@@ -109,7 +109,7 @@ Name | Type |
 `chip_name?` | [*ChipTypesDelegate*](types.md#chiptypesdelegate) |
 `num_played?` | *number* |
 
-Defined in: types/index.ts:343
+Defined in: [types/index.ts:343](https://github.com/wamburu/fpl-ts/blob/7bc5b83/src/types/index.ts#L343)
 
 ___
 
@@ -144,7 +144,7 @@ Name | Type |
 `tiebreak` | *string* \| *null* |
 `winner` | *string* \| *null* |
 
-Defined in: types/index.ts:114
+Defined in: [types/index.ts:114](https://github.com/wamburu/fpl-ts/blob/7bc5b83/src/types/index.ts#L114)
 
 ___
 
@@ -152,7 +152,7 @@ ___
 
 Ƭ **CupMatchesDelegate**: { [key: number]: [*CupMatchDelegate*](types.md#cupmatchdelegate);  }
 
-Defined in: types/index.ts:139
+Defined in: [types/index.ts:139](https://github.com/wamburu/fpl-ts/blob/7bc5b83/src/types/index.ts#L139)
 
 ___
 
@@ -167,7 +167,7 @@ Name | Type |
 `cup_matches` | [*CupMatchDelegate*](types.md#cupmatchdelegate)[] |
 `cup_status` | [*CupStatusDelegate*](types.md#cupstatusdelegate) |
 
-Defined in: types/index.ts:143
+Defined in: [types/index.ts:143](https://github.com/wamburu/fpl-ts/blob/7bc5b83/src/types/index.ts#L143)
 
 ___
 
@@ -184,7 +184,7 @@ Name | Type |
 `qualification_rank` | *number* |
 `qualification_state` | *string* |
 
-Defined in: types/index.ts:107
+Defined in: [types/index.ts:107](https://github.com/wamburu/fpl-ts/blob/7bc5b83/src/types/index.ts#L107)
 
 ___
 
@@ -200,7 +200,7 @@ Name | Type |
 `h` | [*AwayHomeStatType*](types.md#awayhomestattype)[] |
 `identifier?` | [*IdentifiersDelegate*](types.md#identifiersdelegate) |
 
-Defined in: types/index.ts:246
+Defined in: [types/index.ts:246](https://github.com/wamburu/fpl-ts/blob/7bc5b83/src/types/index.ts#L246)
 
 ___
 
@@ -214,7 +214,7 @@ Name | Type |
 ------ | ------ |
 `data` | [*FixtureDelegate*](../interfaces/types.fixturedelegate.md)[] |
 
-Defined in: types/index.ts:336
+Defined in: [types/index.ts:336](https://github.com/wamburu/fpl-ts/blob/7bc5b83/src/types/index.ts#L336)
 
 ___
 
@@ -238,7 +238,7 @@ Name | Type |
 `total_points` | *number* |
 `value` | *number* |
 
-Defined in: types/index.ts:30
+Defined in: [types/index.ts:30](https://github.com/wamburu/fpl-ts/blob/7bc5b83/src/types/index.ts#L30)
 
 ___
 
@@ -255,7 +255,7 @@ Name | Type |
 `entry_history` | [*GWHistoryDelegate*](types.md#gwhistorydelegate) |
 `picks` | [*PickDelegate*](types.md#pickdelegate)[] |
 
-Defined in: types/index.ts:73
+Defined in: [types/index.ts:73](https://github.com/wamburu/fpl-ts/blob/7bc5b83/src/types/index.ts#L73)
 
 ___
 
@@ -263,7 +263,7 @@ ___
 
 Ƭ **GamesPlayedDelegate**: { [key: number]: [*PlayerHistDelegate*](../interfaces/types.playerhistdelegate.md)[];  }
 
-Defined in: types/index.ts:326
+Defined in: [types/index.ts:326](https://github.com/wamburu/fpl-ts/blob/7bc5b83/src/types/index.ts#L326)
 
 ___
 
@@ -297,7 +297,7 @@ Name | Type |
 `top_element_info` | { `id`: *number* ; `points`: *number*  } \| *null* |
 `transfers_made` | *number* \| *null* |
 
-Defined in: types/index.ts:347
+Defined in: [types/index.ts:347](https://github.com/wamburu/fpl-ts/blob/7bc5b83/src/types/index.ts#L347)
 
 ___
 
@@ -305,7 +305,7 @@ ___
 
 Ƭ **IdentifiersDelegate**: keyof *typeof* IdentifierOpts \| *null*
 
-Defined in: types/index.ts:239
+Defined in: [types/index.ts:239](https://github.com/wamburu/fpl-ts/blob/7bc5b83/src/types/index.ts#L239)
 
 ___
 
@@ -323,7 +323,7 @@ Name | Type |
 `multiplier` | *number* |
 `position` | *number* |
 
-Defined in: types/index.ts:54
+Defined in: [types/index.ts:54](https://github.com/wamburu/fpl-ts/blob/7bc5b83/src/types/index.ts#L54)
 
 ___
 
@@ -331,7 +331,7 @@ ___
 
 Ƭ **PickHistoryDelegate**: { [key: number]: [*PickDelegate*](types.md#pickdelegate)[];  }
 
-Defined in: types/index.ts:80
+Defined in: [types/index.ts:80](https://github.com/wamburu/fpl-ts/blob/7bc5b83/src/types/index.ts#L80)
 
 ___
 
@@ -407,7 +407,7 @@ Name | Type |
 `web_name` | *string* |
 `yellow_cards` | *number* |
 
-Defined in: types/index.ts:156
+Defined in: [types/index.ts:156](https://github.com/wamburu/fpl-ts/blob/7bc5b83/src/types/index.ts#L156)
 
 ___
 
@@ -442,7 +442,7 @@ Name | Type |
 `total_points` | *number* |
 `yellow_cards` | *number* |
 
-Defined in: types/index.ts:278
+Defined in: [types/index.ts:278](https://github.com/wamburu/fpl-ts/blob/7bc5b83/src/types/index.ts#L278)
 
 ___
 
@@ -458,7 +458,7 @@ Name | Type |
 `pp90` | *number* \| *null* |
 `vapm` | *number* \| *null* |
 
-Defined in: types/index.ts:330
+Defined in: [types/index.ts:330](https://github.com/wamburu/fpl-ts/blob/7bc5b83/src/types/index.ts#L330)
 
 ___
 
@@ -474,7 +474,7 @@ Name | Type |
 `history` | [*PlayerHistDelegate*](../interfaces/types.playerhistdelegate.md)[] |
 `history_past` | [*PlayerHistPastDelegate*](types.md#playerhistpastdelegate) |
 
-Defined in: types/index.ts:316
+Defined in: [types/index.ts:316](https://github.com/wamburu/fpl-ts/blob/7bc5b83/src/types/index.ts#L316)
 
 ___
 
@@ -482,7 +482,7 @@ ___
 
 Ƭ **PlayerTeamDelegate**: { [key: number]: [*PlayerDelegate*](types.md#playerdelegate)[];  }
 
-Defined in: types/index.ts:222
+Defined in: [types/index.ts:222](https://github.com/wamburu/fpl-ts/blob/7bc5b83/src/types/index.ts#L222)
 
 ___
 
@@ -496,7 +496,7 @@ Name | Type |
 ------ | ------ |
 `data` | [*GWPicksDelegate*](types.md#gwpicksdelegate) |
 
-Defined in: types/index.ts:99
+Defined in: [types/index.ts:99](https://github.com/wamburu/fpl-ts/blob/7bc5b83/src/types/index.ts#L99)
 
 ___
 
@@ -512,7 +512,7 @@ Name | Type |
 `season_name` | *string* |
 `total_points` | *number* |
 
-Defined in: types/index.ts:148
+Defined in: [types/index.ts:148](https://github.com/wamburu/fpl-ts/blob/7bc5b83/src/types/index.ts#L148)
 
 ___
 
@@ -520,7 +520,7 @@ ___
 
 Ƭ **SeasonsHistoryDelegate**: [*SeasonHistoryDelegate*](types.md#seasonhistorydelegate)[]
 
-Defined in: types/index.ts:154
+Defined in: [types/index.ts:154](https://github.com/wamburu/fpl-ts/blob/7bc5b83/src/types/index.ts#L154)
 
 ___
 
@@ -534,7 +534,7 @@ Name | Type |
 ------ | ------ |
 `data` | [*StaticDelegate*](../interfaces/types.staticdelegate.md) |
 
-Defined in: types/index.ts:531
+Defined in: [types/index.ts:531](https://github.com/wamburu/fpl-ts/blob/7bc5b83/src/types/index.ts#L531)
 
 ___
 
@@ -551,7 +551,7 @@ Name | Type |
 `entry` | *number* |
 `event` | *number* |
 
-Defined in: types/index.ts:62
+Defined in: [types/index.ts:62](https://github.com/wamburu/fpl-ts/blob/7bc5b83/src/types/index.ts#L62)
 
 ___
 
@@ -565,7 +565,7 @@ Name | Type |
 ------ | ------ |
 `data` | [*PlayerSummaryDelegate*](types.md#playersummarydelegate) |
 
-Defined in: types/index.ts:322
+Defined in: [types/index.ts:322](https://github.com/wamburu/fpl-ts/blob/7bc5b83/src/types/index.ts#L322)
 
 ___
 
@@ -599,7 +599,7 @@ Name | Type |
 `unavailable` | *boolean* |
 `win` | *number* |
 
-Defined in: types/index.ts:374
+Defined in: [types/index.ts:374](https://github.com/wamburu/fpl-ts/blob/7bc5b83/src/types/index.ts#L374)
 
 ___
 
@@ -607,7 +607,7 @@ ___
 
 Ƭ **TeamFixturesDelegate**: { [key: number]: [*FixtureDelegate*](../interfaces/types.fixturedelegate.md)[];  }
 
-Defined in: types/index.ts:340
+Defined in: [types/index.ts:340](https://github.com/wamburu/fpl-ts/blob/7bc5b83/src/types/index.ts#L340)
 
 ___
 
@@ -627,4 +627,4 @@ Name | Type |
 `event` | *number* |
 `time` | Date |
 
-Defined in: types/index.ts:44
+Defined in: [types/index.ts:44](https://github.com/wamburu/fpl-ts/blob/7bc5b83/src/types/index.ts#L44)
