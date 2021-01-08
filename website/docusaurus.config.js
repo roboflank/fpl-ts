@@ -2,7 +2,7 @@ module.exports = {
   title: 'FPL TS',
   tagline: 'JS/TS wrapper for FPL API',
   url: 'https://wamburu.github.io',
-  baseUrl: '/fpl-ts',
+  baseUrl: '/fpl-ts/',
   onBrokenLinks: 'throw',
   onBrokenMarkdownLinks: 'warn',
   favicon: 'img/favicon.ico',
