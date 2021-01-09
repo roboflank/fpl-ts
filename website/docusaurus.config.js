@@ -1,12 +1,12 @@
 module.exports = {
   title: 'FPL TS',
   tagline: 'JS/TS wrapper for FPL API',
-  url: 'https://wamburu.github.io',
+  url: 'https://roboflank.github.io',
   baseUrl: '/fpl-ts/',
   onBrokenLinks: 'throw',
   onBrokenMarkdownLinks: 'warn',
   favicon: 'img/favicon.ico',
-  organizationName: 'wamburu', // Usually your GitHub org/user name.
+  organizationName: 'roboflank', // Usually your GitHub org/user name.
   projectName: 'fpl-ts', // Usually your repo name.
   themeConfig: {
     prism: {
@@ -38,7 +38,7 @@ module.exports = {
           position: 'left',
         },
         {
-          href: 'https://github.com/wamburu/fpl-ts',
+          href: 'https://github.com/roboflank/fpl-ts',
           label: 'GitHub',
           position: 'right',
         },
@@ -69,7 +69,7 @@ module.exports = {
             },
             {
               label: 'Twitter',
-              href: 'https://twitter.com/wamburu',
+              href: 'https://twitter.com/roboflank',
             },
           ],
         },
@@ -82,7 +82,7 @@ module.exports = {
             },
             {
               label: 'GitHub',
-              href: 'https://github.com/wamburu/fpl-ts',
+              href: 'https://github.com/roboflank/fpl-ts',
             },
           ],
         },
@@ -98,7 +98,7 @@ module.exports = {
           routeBasePath: '/',
           sidebarPath: require.resolve('./sidebars.js'),
           // Please change this to your repo.
-          editUrl: 'https://github.com/wamburu/fpl-ts/edit/master/website/',
+          editUrl: 'https://github.com/roboflank/fpl-ts/edit/master/website/',
         },
         theme: {
           customCss: require.resolve('./src/css/custom.css'),
