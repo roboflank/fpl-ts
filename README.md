@@ -1,6 +1,13 @@
-## fpl-ts
+<p align="center">
+  <a href="https://roboflank.github.io/fpl-ts/api">
+    <img src="https://raw.githubusercontent.com/roboflank/fpl-ts/build/website/static/img/fpl-ts.png">
+  </a>
+</p>
 
-A JS/TS wrapper for FPL API
+<p align="center">
+  A JS/TS wrapper for FPL API
+    <br>
+</p>
 
 ### Installing fpl-ts
 
@@ -10,10 +17,13 @@ npm i fpl-ts
 
 ### Documentation
 
+- [Guide](https://roboflank.github.io/fpl-ts/guide)
+- [Classes, Methods & Interfaces](https://roboflank.github.io/fpl-ts/api/classes/index.fixture)
+
 ### Example
 
 ```js
-import { User, Player, Fixture, Gameweek, Team } from 'fpl-ts'
+import { User, Player, Fixture, Team } from 'fpl-ts'
 
 //  Get Fixture
 const getFixtureDetails = async () => {
