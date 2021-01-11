@@ -58,3 +58,5 @@ const getUser = async () => {
   }
 }
 ```
+
+Inspired by [FPL](https://fpl.readthedocs.io/)

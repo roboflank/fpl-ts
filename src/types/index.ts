@@ -16,7 +16,7 @@ export interface UserDelegate {
   summary_overall_rank: number | null
   summary_event_points: number | null
   summary_event_rank: number | null
-  kit: any | null
+  kit: string | null
   last_deadline_bank: number | null
   last_deadline_value: number | null
   last_deadline_total_transfers: number | null
@@ -530,4 +530,66 @@ export interface StaticDelegate {
 
 export type StaticResponse = {
   data: StaticDelegate
+}
+
+export type LeagueEntryDelegate = {
+  id: number
+  event_total: number
+  player_name: string
+  rank: number
+  last_rank: number
+  rank_sort: number
+  total: number
+  entry: number
+  entry_name: string
+}
+
+export type LeagueDetailDelegate = {
+  id: number
+  name: string
+  created: Date
+  closed: boolean
+  max_entries: number | null
+  league_type: string
+  scoring: string
+  admin_entry: number
+  start_event: number
+  code_privacy: string
+  rank: number | null
+}
+
+export type NewEntryDelegate = {
+  entry: number
+  entry_name: string
+  joined_time: Date
+  player_first_name: string
+  player_last_name: string
+}
+
+export type NewEntriesDelegate = {
+  has_next: boolean
+  page: number
+  results: NewEntryDelegate[]
+}
+
+export type LeagueStandingDelegate = {
+  has_next: boolean
+  page: number
+  results: LeagueEntryDelegate[]
+}
+export type LeagueStandingsDelegate = {
+  [key: number]: LeagueStandingDelegate
+}
+export type ClassicLeagueDelegate = {
+  league: LeagueDetailDelegate
+  new_entries: NewEntryDelegate
+  standings: LeagueStandingDelegate
+}
+
+export type ClassicLeagueResp = {
+  data: ClassicLeagueDelegate
+}
+
+export type ClassicLeaugesDelegate = {
+  [key: number]: ClassicLeagueDelegate
 }

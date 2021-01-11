@@ -5,6 +5,8 @@ export const API_URLS = {
   GAMEWEEK_FIXTURES: 'fixtures/?event={}',
   GAMEWEEK_LIVE: 'event/{}/live',
   LEAGUE_CLASSIC: 'leagues-classic/{}/standings/',
+  LEAGUE_CLASSIC_RANK:
+    'leagues-classic/{}/standings/?page_standings={}&page_new_entries={}&phase={}',
   LEAGUE_H2H: 'leagues-h2h/{}/standings/',
   LEAGUE_H2H_FIXTURES: 'leagues-h2h-matches/league/{}/?{}page={}',
   PLAYER_SUMMARY: 'element-summary/{}/',
