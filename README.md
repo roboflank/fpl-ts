@@ -23,8 +23,8 @@ npm i fpl-ts
 - [Player](https://roboflank.github.io/fpl-ts/api/classes/index.player)
 - [Team](https://roboflank.github.io/fpl-ts/api/classes/index.team)
 - [User](https://roboflank.github.io/fpl-ts/api/classes/index.user)
-- [Classic League](https://roboflank.github.io/fpl-ts/api/classes/index.classic-league)
-- [H2H League](https://roboflank.github.io/fpl-ts/api/classes/index.h2h-league)
+- [Classic League](https://roboflank.github.io/fpl-ts/api/classes/index.classicleague)
+- [H2H League](https://roboflank.github.io/fpl-ts/api/classes/index.index.h2hleague)
 
 ### 2. Types
 
