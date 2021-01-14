@@ -1,6 +1,6 @@
 module.exports = {
   someSidebar: {
-    Introduction: ['doc1', 'guide', 'examples'],
+    Introduction: ['doc1', 'examples'],
     API: require('./typedoc-sidebar.js'),
   },
 }

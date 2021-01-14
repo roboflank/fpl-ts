@@ -36,7 +36,7 @@ Name | Type |
 
 **Returns:** [*Fixture*](index.fixture.md)
 
-Defined in: [models/fixture.ts:18](https://github.com/wamburu/fpl-ts/blob/7bc5b83/src/models/fixture.ts#L18)
+Defined in: [models/fixture.ts:18](https://github.com/wamburu/fpl-ts/blob/3b599ec/src/models/fixture.ts#L18)
 
 ## Properties
 
@@ -44,7 +44,7 @@ Defined in: [models/fixture.ts:18](https://github.com/wamburu/fpl-ts/blob/7bc5b8
 
 • **id**: *number*
 
-Defined in: [models/fixture.ts:18](https://github.com/wamburu/fpl-ts/blob/7bc5b83/src/models/fixture.ts#L18)
+Defined in: [models/fixture.ts:18](https://github.com/wamburu/fpl-ts/blob/3b599ec/src/models/fixture.ts#L18)
 
 ## Methods
 
@@ -54,7 +54,7 @@ Defined in: [models/fixture.ts:18](https://github.com/wamburu/fpl-ts/blob/7bc5b8
 
 **Returns:** *Promise*<[*FixStatsItemDelegate*](../modules/types.md#fixstatsitemdelegate)\>
 
-Defined in: [models/fixture.ts:38](https://github.com/wamburu/fpl-ts/blob/7bc5b83/src/models/fixture.ts#L38)
+Defined in: [models/fixture.ts:38](https://github.com/wamburu/fpl-ts/blob/3b599ec/src/models/fixture.ts#L38)
 
 ___
 
@@ -64,7 +64,7 @@ ___
 
 **Returns:** *Promise*<[*FixStatsItemDelegate*](../modules/types.md#fixstatsitemdelegate)\>
 
-Defined in: [models/fixture.ts:78](https://github.com/wamburu/fpl-ts/blob/7bc5b83/src/models/fixture.ts#L78)
+Defined in: [models/fixture.ts:78](https://github.com/wamburu/fpl-ts/blob/3b599ec/src/models/fixture.ts#L78)
 
 ___
 
@@ -74,7 +74,7 @@ ___
 
 **Returns:** *Promise*<[*FixStatsItemDelegate*](../modules/types.md#fixstatsitemdelegate)\>
 
-Defined in: [models/fixture.ts:58](https://github.com/wamburu/fpl-ts/blob/7bc5b83/src/models/fixture.ts#L58)
+Defined in: [models/fixture.ts:58](https://github.com/wamburu/fpl-ts/blob/3b599ec/src/models/fixture.ts#L58)
 
 ___
 
@@ -84,7 +84,7 @@ ___
 
 **Returns:** *Promise*<*null* \| [*FixtureDelegate*](../interfaces/types.fixturedelegate.md)\>
 
-Defined in: [models/fixture.ts:23](https://github.com/wamburu/fpl-ts/blob/7bc5b83/src/models/fixture.ts#L23)
+Defined in: [models/fixture.ts:23](https://github.com/wamburu/fpl-ts/blob/3b599ec/src/models/fixture.ts#L23)
 
 ___
 
@@ -94,7 +94,7 @@ ___
 
 **Returns:** *Promise*<[*FixStatsItemDelegate*](../modules/types.md#fixstatsitemdelegate)\>
 
-Defined in: [models/fixture.ts:98](https://github.com/wamburu/fpl-ts/blob/7bc5b83/src/models/fixture.ts#L98)
+Defined in: [models/fixture.ts:98](https://github.com/wamburu/fpl-ts/blob/3b599ec/src/models/fixture.ts#L98)
 
 ___
 
@@ -104,7 +104,7 @@ ___
 
 **Returns:** *Promise*<[*FixStatsItemDelegate*](../modules/types.md#fixstatsitemdelegate)\>
 
-Defined in: [models/fixture.ts:117](https://github.com/wamburu/fpl-ts/blob/7bc5b83/src/models/fixture.ts#L117)
+Defined in: [models/fixture.ts:117](https://github.com/wamburu/fpl-ts/blob/3b599ec/src/models/fixture.ts#L117)
 
 ___
 
@@ -114,7 +114,7 @@ ___
 
 **Returns:** *Promise*<[*FixStatsItemDelegate*](../modules/types.md#fixstatsitemdelegate)\>
 
-Defined in: [models/fixture.ts:136](https://github.com/wamburu/fpl-ts/blob/7bc5b83/src/models/fixture.ts#L136)
+Defined in: [models/fixture.ts:136](https://github.com/wamburu/fpl-ts/blob/3b599ec/src/models/fixture.ts#L136)
 
 ___
 
@@ -124,7 +124,7 @@ ___
 
 **Returns:** *Promise*<[*FixStatsItemDelegate*](../modules/types.md#fixstatsitemdelegate)\>
 
-Defined in: [models/fixture.ts:156](https://github.com/wamburu/fpl-ts/blob/7bc5b83/src/models/fixture.ts#L156)
+Defined in: [models/fixture.ts:156](https://github.com/wamburu/fpl-ts/blob/3b599ec/src/models/fixture.ts#L156)
 
 ___
 
@@ -134,7 +134,7 @@ ___
 
 **Returns:** *Promise*<[*FixStatsItemDelegate*](../modules/types.md#fixstatsitemdelegate)\>
 
-Defined in: [models/fixture.ts:175](https://github.com/wamburu/fpl-ts/blob/7bc5b83/src/models/fixture.ts#L175)
+Defined in: [models/fixture.ts:175](https://github.com/wamburu/fpl-ts/blob/3b599ec/src/models/fixture.ts#L175)
 
 ___
 
@@ -144,7 +144,7 @@ ___
 
 **Returns:** *Promise*<[*FixStatsItemDelegate*](../modules/types.md#fixstatsitemdelegate)\>
 
-Defined in: [models/fixture.ts:213](https://github.com/wamburu/fpl-ts/blob/7bc5b83/src/models/fixture.ts#L213)
+Defined in: [models/fixture.ts:213](https://github.com/wamburu/fpl-ts/blob/3b599ec/src/models/fixture.ts#L213)
 
 ___
 
@@ -154,4 +154,4 @@ ___
 
 **Returns:** *Promise*<[*FixStatsItemDelegate*](../modules/types.md#fixstatsitemdelegate)\>
 
-Defined in: [models/fixture.ts:194](https://github.com/wamburu/fpl-ts/blob/7bc5b83/src/models/fixture.ts#L194)
+Defined in: [models/fixture.ts:194](https://github.com/wamburu/fpl-ts/blob/3b599ec/src/models/fixture.ts#L194)

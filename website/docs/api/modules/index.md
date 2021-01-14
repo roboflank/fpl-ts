@@ -11,8 +11,10 @@ hide_title: true
 
 ### Classes
 
+- [ClassicLeague](../classes/index.classicleague.md)
 - [Fixture](../classes/index.fixture.md)
 - [Gameweek](../classes/index.gameweek.md)
+- [H2HLeague](../classes/index.h2hleague.md)
 - [Player](../classes/index.player.md)
 - [Team](../classes/index.team.md)
 - [User](../classes/index.user.md)
@@ -31,7 +33,7 @@ Name | Type |
 
 **Returns:** *Promise*<*AxiosResponse*<*any*\>\>
 
-Defined in: [models/fpl.ts:14](https://github.com/wamburu/fpl-ts/blob/7bc5b83/src/models/fpl.ts#L14)
+Defined in: [models/fpl.ts:14](https://github.com/wamburu/fpl-ts/blob/3b599ec/src/models/fpl.ts#L14)
 
 ___
 
@@ -47,4 +49,4 @@ Name | Type |
 
 **Returns:** *Promise*<*AxiosResponse*<*any*\>[]\>
 
-Defined in: [models/fpl.ts:21](https://github.com/wamburu/fpl-ts/blob/7bc5b83/src/models/fpl.ts#L21)
+Defined in: [models/fpl.ts:21](https://github.com/wamburu/fpl-ts/blob/3b599ec/src/models/fpl.ts#L21)

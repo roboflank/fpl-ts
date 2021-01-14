@@ -34,7 +34,7 @@ Name | Type |
 
 **Returns:** [*Player*](index.player.md)
 
-Defined in: [models/player.ts:17](https://github.com/wamburu/fpl-ts/blob/7bc5b83/src/models/player.ts#L17)
+Defined in: [models/player.ts:17](https://github.com/wamburu/fpl-ts/blob/3b599ec/src/models/player.ts#L17)
 
 ## Properties
 
@@ -42,7 +42,7 @@ Defined in: [models/player.ts:17](https://github.com/wamburu/fpl-ts/blob/7bc5b83
 
 • **playersId**: *number*[]
 
-Defined in: [models/player.ts:17](https://github.com/wamburu/fpl-ts/blob/7bc5b83/src/models/player.ts#L17)
+Defined in: [models/player.ts:17](https://github.com/wamburu/fpl-ts/blob/3b599ec/src/models/player.ts#L17)
 
 ## Methods
 
@@ -81,7 +81,7 @@ Name | Type |
 
 PlayerDelegate[]
 
-Defined in: [models/player.ts:74](https://github.com/wamburu/fpl-ts/blob/7bc5b83/src/models/player.ts#L74)
+Defined in: [models/player.ts:74](https://github.com/wamburu/fpl-ts/blob/3b599ec/src/models/player.ts#L74)
 
 ___
 
@@ -100,4 +100,4 @@ const player = await new Player([302]).getSummary()
 
 PlayerSummaryDelegate[]
 
-Defined in: [models/player.ts:33](https://github.com/wamburu/fpl-ts/blob/7bc5b83/src/models/player.ts#L33)
+Defined in: [models/player.ts:33](https://github.com/wamburu/fpl-ts/blob/3b599ec/src/models/player.ts#L33)

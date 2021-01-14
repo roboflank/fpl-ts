@@ -31,7 +31,7 @@ Name | Type |
 `event` | *number* |
 `name?` | [*ChipTypesDelegate*](types.md#chiptypesdelegate) |
 
-Defined in: [types/index.ts:92](https://github.com/wamburu/fpl-ts/blob/7bc5b83/src/types/index.ts#L92)
+Defined in: [types/index.ts:92](https://github.com/wamburu/fpl-ts/blob/3b599ec/src/types/index.ts#L92)
 
 ___
 
@@ -39,7 +39,7 @@ ___
 
 Ƭ **ActiveChipsDelegate**: [*ActiveChipDelegate*](types.md#activechipdelegate)[]
 
-Defined in: [types/index.ts:97](https://github.com/wamburu/fpl-ts/blob/7bc5b83/src/types/index.ts#L97)
+Defined in: [types/index.ts:97](https://github.com/wamburu/fpl-ts/blob/3b599ec/src/types/index.ts#L97)
 
 ___
 
@@ -47,7 +47,7 @@ ___
 
 Ƭ **AutomaticSubsDelegate**: { [key: number]: [*SubstitutionDelegate*](types.md#substitutiondelegate)[];  }
 
-Defined in: [types/index.ts:103](https://github.com/wamburu/fpl-ts/blob/7bc5b83/src/types/index.ts#L103)
+Defined in: [types/index.ts:103](https://github.com/wamburu/fpl-ts/blob/3b599ec/src/types/index.ts#L103)
 
 ___
 
@@ -62,7 +62,7 @@ Name | Type |
 `element?` | *number* |
 `value?` | *number* |
 
-Defined in: [types/index.ts:241](https://github.com/wamburu/fpl-ts/blob/7bc5b83/src/types/index.ts#L241)
+Defined in: [types/index.ts:241](https://github.com/wamburu/fpl-ts/blob/3b599ec/src/types/index.ts#L241)
 
 ___
 
@@ -78,7 +78,7 @@ Name | Type |
 `name` | [*ChipTypesDelegate*](types.md#chiptypesdelegate) |
 `time` | Date \| *null* |
 
-Defined in: [types/index.ts:84](https://github.com/wamburu/fpl-ts/blob/7bc5b83/src/types/index.ts#L84)
+Defined in: [types/index.ts:84](https://github.com/wamburu/fpl-ts/blob/3b599ec/src/types/index.ts#L84)
 
 ___
 
@@ -86,7 +86,7 @@ ___
 
 Ƭ **ChipTypesDelegate**: keyof *typeof* ChipTypes
 
-Defined in: [types/index.ts:70](https://github.com/wamburu/fpl-ts/blob/7bc5b83/src/types/index.ts#L70)
+Defined in: [types/index.ts:70](https://github.com/wamburu/fpl-ts/blob/3b599ec/src/types/index.ts#L70)
 
 ___
 
@@ -94,7 +94,7 @@ ___
 
 Ƭ **ChipsHistoryDelegate**: [*ChipHistoryDelegate*](types.md#chiphistorydelegate)[]
 
-Defined in: [types/index.ts:90](https://github.com/wamburu/fpl-ts/blob/7bc5b83/src/types/index.ts#L90)
+Defined in: [types/index.ts:90](https://github.com/wamburu/fpl-ts/blob/3b599ec/src/types/index.ts#L90)
 
 ___
 
@@ -109,7 +109,45 @@ Name | Type |
 `chip_name?` | [*ChipTypesDelegate*](types.md#chiptypesdelegate) |
 `num_played?` | *number* |
 
-Defined in: [types/index.ts:343](https://github.com/wamburu/fpl-ts/blob/7bc5b83/src/types/index.ts#L343)
+Defined in: [types/index.ts:343](https://github.com/wamburu/fpl-ts/blob/3b599ec/src/types/index.ts#L343)
+
+___
+
+### ClassicLeagueDelegate
+
+Ƭ **ClassicLeagueDelegate**: { `league`: [*LeagueDetailDelegate*](types.md#leaguedetaildelegate) ; `new_entries`: [*NewEntryDelegate*](types.md#newentrydelegate) ; `standings`: [*LeagueStandingDelegate*](types.md#leaguestandingdelegate)  }
+
+#### Type declaration:
+
+Name | Type |
+------ | ------ |
+`league` | [*LeagueDetailDelegate*](types.md#leaguedetaildelegate) |
+`new_entries` | [*NewEntryDelegate*](types.md#newentrydelegate) |
+`standings` | [*LeagueStandingDelegate*](types.md#leaguestandingdelegate) |
+
+Defined in: [types/index.ts:585](https://github.com/wamburu/fpl-ts/blob/3b599ec/src/types/index.ts#L585)
+
+___
+
+### ClassicLeagueResp
+
+Ƭ **ClassicLeagueResp**: { `data`: [*ClassicLeagueDelegate*](types.md#classicleaguedelegate)  }
+
+#### Type declaration:
+
+Name | Type |
+------ | ------ |
+`data` | [*ClassicLeagueDelegate*](types.md#classicleaguedelegate) |
+
+Defined in: [types/index.ts:591](https://github.com/wamburu/fpl-ts/blob/3b599ec/src/types/index.ts#L591)
+
+___
+
+### ClassicLeaugesDelegate
+
+Ƭ **ClassicLeaugesDelegate**: { [key: number]: [*ClassicLeagueDelegate*](types.md#classicleaguedelegate);  }
+
+Defined in: [types/index.ts:595](https://github.com/wamburu/fpl-ts/blob/3b599ec/src/types/index.ts#L595)
 
 ___
 
@@ -144,7 +182,7 @@ Name | Type |
 `tiebreak` | *string* \| *null* |
 `winner` | *string* \| *null* |
 
-Defined in: [types/index.ts:114](https://github.com/wamburu/fpl-ts/blob/7bc5b83/src/types/index.ts#L114)
+Defined in: [types/index.ts:114](https://github.com/wamburu/fpl-ts/blob/3b599ec/src/types/index.ts#L114)
 
 ___
 
@@ -152,7 +190,7 @@ ___
 
 Ƭ **CupMatchesDelegate**: { [key: number]: [*CupMatchDelegate*](types.md#cupmatchdelegate);  }
 
-Defined in: [types/index.ts:139](https://github.com/wamburu/fpl-ts/blob/7bc5b83/src/types/index.ts#L139)
+Defined in: [types/index.ts:139](https://github.com/wamburu/fpl-ts/blob/3b599ec/src/types/index.ts#L139)
 
 ___
 
@@ -167,7 +205,7 @@ Name | Type |
 `cup_matches` | [*CupMatchDelegate*](types.md#cupmatchdelegate)[] |
 `cup_status` | [*CupStatusDelegate*](types.md#cupstatusdelegate) |
 
-Defined in: [types/index.ts:143](https://github.com/wamburu/fpl-ts/blob/7bc5b83/src/types/index.ts#L143)
+Defined in: [types/index.ts:143](https://github.com/wamburu/fpl-ts/blob/3b599ec/src/types/index.ts#L143)
 
 ___
 
@@ -184,7 +222,7 @@ Name | Type |
 `qualification_rank` | *number* |
 `qualification_state` | *string* |
 
-Defined in: [types/index.ts:107](https://github.com/wamburu/fpl-ts/blob/7bc5b83/src/types/index.ts#L107)
+Defined in: [types/index.ts:107](https://github.com/wamburu/fpl-ts/blob/3b599ec/src/types/index.ts#L107)
 
 ___
 
@@ -200,7 +238,7 @@ Name | Type |
 `h` | [*AwayHomeStatType*](types.md#awayhomestattype)[] |
 `identifier?` | [*IdentifiersDelegate*](types.md#identifiersdelegate) |
 
-Defined in: [types/index.ts:246](https://github.com/wamburu/fpl-ts/blob/7bc5b83/src/types/index.ts#L246)
+Defined in: [types/index.ts:246](https://github.com/wamburu/fpl-ts/blob/3b599ec/src/types/index.ts#L246)
 
 ___
 
@@ -214,7 +252,7 @@ Name | Type |
 ------ | ------ |
 `data` | [*FixtureDelegate*](../interfaces/types.fixturedelegate.md)[] |
 
-Defined in: [types/index.ts:336](https://github.com/wamburu/fpl-ts/blob/7bc5b83/src/types/index.ts#L336)
+Defined in: [types/index.ts:336](https://github.com/wamburu/fpl-ts/blob/3b599ec/src/types/index.ts#L336)
 
 ___
 
@@ -238,7 +276,7 @@ Name | Type |
 `total_points` | *number* |
 `value` | *number* |
 
-Defined in: [types/index.ts:30](https://github.com/wamburu/fpl-ts/blob/7bc5b83/src/types/index.ts#L30)
+Defined in: [types/index.ts:30](https://github.com/wamburu/fpl-ts/blob/3b599ec/src/types/index.ts#L30)
 
 ___
 
@@ -255,7 +293,7 @@ Name | Type |
 `entry_history` | [*GWHistoryDelegate*](types.md#gwhistorydelegate) |
 `picks` | [*PickDelegate*](types.md#pickdelegate)[] |
 
-Defined in: [types/index.ts:73](https://github.com/wamburu/fpl-ts/blob/7bc5b83/src/types/index.ts#L73)
+Defined in: [types/index.ts:73](https://github.com/wamburu/fpl-ts/blob/3b599ec/src/types/index.ts#L73)
 
 ___
 
@@ -263,7 +301,7 @@ ___
 
 Ƭ **GamesPlayedDelegate**: { [key: number]: [*PlayerHistDelegate*](../interfaces/types.playerhistdelegate.md)[];  }
 
-Defined in: [types/index.ts:326](https://github.com/wamburu/fpl-ts/blob/7bc5b83/src/types/index.ts#L326)
+Defined in: [types/index.ts:326](https://github.com/wamburu/fpl-ts/blob/3b599ec/src/types/index.ts#L326)
 
 ___
 
@@ -297,7 +335,177 @@ Name | Type |
 `top_element_info` | { `id`: *number* ; `points`: *number*  } \| *null* |
 `transfers_made` | *number* \| *null* |
 
-Defined in: [types/index.ts:347](https://github.com/wamburu/fpl-ts/blob/7bc5b83/src/types/index.ts#L347)
+Defined in: [types/index.ts:347](https://github.com/wamburu/fpl-ts/blob/3b599ec/src/types/index.ts#L347)
+
+___
+
+### H2HEntryDelegate
+
+Ƭ **H2HEntryDelegate**: { `entry`: *number* ; `entry_name`: *string* ; `event_total`: *number* ; `id`: *number* ; `last_rank`: *number* ; `matches_drawn`: *number* ; `matches_lost`: *number* ; `matches_played`: *number* ; `matches_won`: *number* ; `player_name`: *string* ; `points_for`: *number* ; `rank`: *number* ; `rank_sort`: *number* ; `total`: *number*  }
+
+#### Type declaration:
+
+Name | Type |
+------ | ------ |
+`entry` | *number* |
+`entry_name` | *string* |
+`event_total` | *number* |
+`id` | *number* |
+`last_rank` | *number* |
+`matches_drawn` | *number* |
+`matches_lost` | *number* |
+`matches_played` | *number* |
+`matches_won` | *number* |
+`player_name` | *string* |
+`points_for` | *number* |
+`rank` | *number* |
+`rank_sort` | *number* |
+`total` | *number* |
+
+Defined in: [types/index.ts:613](https://github.com/wamburu/fpl-ts/blob/3b599ec/src/types/index.ts#L613)
+
+___
+
+### H2HLeagueDelegate
+
+Ƭ **H2HLeagueDelegate**: { `league`: [*H2HLeagueDetailsDelegate*](types.md#h2hleaguedetailsdelegate) ; `new_entries`: [*NewEntryDelegate*](types.md#newentrydelegate) ; `standings`: [*H2HStandingDelegate*](types.md#h2hstandingdelegate)  }
+
+#### Type declaration:
+
+Name | Type |
+------ | ------ |
+`league` | [*H2HLeagueDetailsDelegate*](types.md#h2hleaguedetailsdelegate) |
+`new_entries` | [*NewEntryDelegate*](types.md#newentrydelegate) |
+`standings` | [*H2HStandingDelegate*](types.md#h2hstandingdelegate) |
+
+Defined in: [types/index.ts:640](https://github.com/wamburu/fpl-ts/blob/3b599ec/src/types/index.ts#L640)
+
+___
+
+### H2HLeagueDetailsDelegate
+
+Ƭ **H2HLeagueDetailsDelegate**: { `admin_entry`: *number* ; `closed`: *boolean* ; `code_privacy`: *string* ; `created`: Date ; `id`: *number* ; `ko_rounds`: *number* \| *null* ; `league_type`: *string* ; `max_entries`: *number* \| *null* ; `name`: *string* ; `scoring`: *string* ; `start_event`: *number*  }
+
+#### Type declaration:
+
+Name | Type |
+------ | ------ |
+`admin_entry` | *number* |
+`closed` | *boolean* |
+`code_privacy` | *string* |
+`created` | Date |
+`id` | *number* |
+`ko_rounds` | *number* \| *null* |
+`league_type` | *string* |
+`max_entries` | *number* \| *null* |
+`name` | *string* |
+`scoring` | *string* |
+`start_event` | *number* |
+
+Defined in: [types/index.ts:599](https://github.com/wamburu/fpl-ts/blob/3b599ec/src/types/index.ts#L599)
+
+___
+
+### H2HLeaguesDelegate
+
+Ƭ **H2HLeaguesDelegate**: { [key: number]: [*H2HLeagueDelegate*](types.md#h2hleaguedelegate);  }
+
+Defined in: [types/index.ts:646](https://github.com/wamburu/fpl-ts/blob/3b599ec/src/types/index.ts#L646)
+
+___
+
+### H2HMatchDelegate
+
+Ƭ **H2HMatchDelegate**: { `entry_1_draw`: *number* ; `entry_1_entry`: *number* ; `entry_1_loss`: *number* ; `entry_1_name`: *string* ; `entry_1_player_name`: *string* ; `entry_1_points`: *number* ; `entry_1_total`: *number* ; `entry_1_win`: *number* ; `entry_2_draw`: *number* ; `entry_2_entry`: *number* ; `entry_2_loss`: *number* ; `entry_2_name`: *string* ; `entry_2_player_name`: *string* ; `entry_2_points`: *number* ; `entry_2_total`: *number* ; `entry_2_win`: *number* ; `event`: *number* ; `id`: *number* ; `is_knockout`: *boolean* ; `seed_value`: *null* ; `tiebreak`: *null* ; `winner`: *number* \| *null*  }
+
+#### Type declaration:
+
+Name | Type |
+------ | ------ |
+`entry_1_draw` | *number* |
+`entry_1_entry` | *number* |
+`entry_1_loss` | *number* |
+`entry_1_name` | *string* |
+`entry_1_player_name` | *string* |
+`entry_1_points` | *number* |
+`entry_1_total` | *number* |
+`entry_1_win` | *number* |
+`entry_2_draw` | *number* |
+`entry_2_entry` | *number* |
+`entry_2_loss` | *number* |
+`entry_2_name` | *string* |
+`entry_2_player_name` | *string* |
+`entry_2_points` | *number* |
+`entry_2_total` | *number* |
+`entry_2_win` | *number* |
+`event` | *number* |
+`id` | *number* |
+`is_knockout` | *boolean* |
+`seed_value` | *null* |
+`tiebreak` | *null* |
+`winner` | *number* \| *null* |
+
+Defined in: [types/index.ts:654](https://github.com/wamburu/fpl-ts/blob/3b599ec/src/types/index.ts#L654)
+
+___
+
+### H2HMatchesDelegate
+
+Ƭ **H2HMatchesDelegate**: { [key: number]: [*H2HMatchDelegate*](types.md#h2hmatchdelegate);  }
+
+Defined in: [types/index.ts:679](https://github.com/wamburu/fpl-ts/blob/3b599ec/src/types/index.ts#L679)
+
+___
+
+### H2HMatchesResp
+
+Ƭ **H2HMatchesResp**: { `data`: [*H2HMatchDelegate*](types.md#h2hmatchdelegate)  }
+
+#### Type declaration:
+
+Name | Type |
+------ | ------ |
+`data` | [*H2HMatchDelegate*](types.md#h2hmatchdelegate) |
+
+Defined in: [types/index.ts:683](https://github.com/wamburu/fpl-ts/blob/3b599ec/src/types/index.ts#L683)
+
+___
+
+### H2HResp
+
+Ƭ **H2HResp**: { `data`: [*H2HLeagueDelegate*](types.md#h2hleaguedelegate)  }
+
+#### Type declaration:
+
+Name | Type |
+------ | ------ |
+`data` | [*H2HLeagueDelegate*](types.md#h2hleaguedelegate) |
+
+Defined in: [types/index.ts:650](https://github.com/wamburu/fpl-ts/blob/3b599ec/src/types/index.ts#L650)
+
+___
+
+### H2HStandingDelegate
+
+Ƭ **H2HStandingDelegate**: { `has_next`: *boolean* ; `page`: *number* ; `results`: [*H2HEntryDelegate*](types.md#h2hentrydelegate)[]  }
+
+#### Type declaration:
+
+Name | Type |
+------ | ------ |
+`has_next` | *boolean* |
+`page` | *number* |
+`results` | [*H2HEntryDelegate*](types.md#h2hentrydelegate)[] |
+
+Defined in: [types/index.ts:630](https://github.com/wamburu/fpl-ts/blob/3b599ec/src/types/index.ts#L630)
+
+___
+
+### H2HStandingsDelegate
+
+Ƭ **H2HStandingsDelegate**: { [key: number]: [*H2HStandingDelegate*](types.md#h2hstandingdelegate);  }
+
+Defined in: [types/index.ts:636](https://github.com/wamburu/fpl-ts/blob/3b599ec/src/types/index.ts#L636)
 
 ___
 
@@ -305,7 +513,111 @@ ___
 
 Ƭ **IdentifiersDelegate**: keyof *typeof* IdentifierOpts \| *null*
 
-Defined in: [types/index.ts:239](https://github.com/wamburu/fpl-ts/blob/7bc5b83/src/types/index.ts#L239)
+Defined in: [types/index.ts:239](https://github.com/wamburu/fpl-ts/blob/3b599ec/src/types/index.ts#L239)
+
+___
+
+### LeagueDetailDelegate
+
+Ƭ **LeagueDetailDelegate**: { `admin_entry`: *number* ; `closed`: *boolean* ; `code_privacy`: *string* ; `created`: Date ; `id`: *number* ; `league_type`: *string* ; `max_entries`: *number* \| *null* ; `name`: *string* ; `rank`: *number* \| *null* ; `scoring`: *string* ; `start_event`: *number*  }
+
+#### Type declaration:
+
+Name | Type |
+------ | ------ |
+`admin_entry` | *number* |
+`closed` | *boolean* |
+`code_privacy` | *string* |
+`created` | Date |
+`id` | *number* |
+`league_type` | *string* |
+`max_entries` | *number* \| *null* |
+`name` | *string* |
+`rank` | *number* \| *null* |
+`scoring` | *string* |
+`start_event` | *number* |
+
+Defined in: [types/index.ts:547](https://github.com/wamburu/fpl-ts/blob/3b599ec/src/types/index.ts#L547)
+
+___
+
+### LeagueEntryDelegate
+
+Ƭ **LeagueEntryDelegate**: { `entry`: *number* ; `entry_name`: *string* ; `event_total`: *number* ; `id`: *number* ; `last_rank`: *number* ; `player_name`: *string* ; `rank`: *number* ; `rank_sort`: *number* ; `total`: *number*  }
+
+#### Type declaration:
+
+Name | Type |
+------ | ------ |
+`entry` | *number* |
+`entry_name` | *string* |
+`event_total` | *number* |
+`id` | *number* |
+`last_rank` | *number* |
+`player_name` | *string* |
+`rank` | *number* |
+`rank_sort` | *number* |
+`total` | *number* |
+
+Defined in: [types/index.ts:535](https://github.com/wamburu/fpl-ts/blob/3b599ec/src/types/index.ts#L535)
+
+___
+
+### LeagueStandingDelegate
+
+Ƭ **LeagueStandingDelegate**: { `has_next`: *boolean* ; `page`: *number* ; `results`: [*LeagueEntryDelegate*](types.md#leagueentrydelegate)[]  }
+
+#### Type declaration:
+
+Name | Type |
+------ | ------ |
+`has_next` | *boolean* |
+`page` | *number* |
+`results` | [*LeagueEntryDelegate*](types.md#leagueentrydelegate)[] |
+
+Defined in: [types/index.ts:575](https://github.com/wamburu/fpl-ts/blob/3b599ec/src/types/index.ts#L575)
+
+___
+
+### LeagueStandingsDelegate
+
+Ƭ **LeagueStandingsDelegate**: { [key: number]: [*LeagueStandingDelegate*](types.md#leaguestandingdelegate);  }
+
+Defined in: [types/index.ts:581](https://github.com/wamburu/fpl-ts/blob/3b599ec/src/types/index.ts#L581)
+
+___
+
+### NewEntriesDelegate
+
+Ƭ **NewEntriesDelegate**: { `has_next`: *boolean* ; `page`: *number* ; `results`: [*NewEntryDelegate*](types.md#newentrydelegate)[]  }
+
+#### Type declaration:
+
+Name | Type |
+------ | ------ |
+`has_next` | *boolean* |
+`page` | *number* |
+`results` | [*NewEntryDelegate*](types.md#newentrydelegate)[] |
+
+Defined in: [types/index.ts:569](https://github.com/wamburu/fpl-ts/blob/3b599ec/src/types/index.ts#L569)
+
+___
+
+### NewEntryDelegate
+
+Ƭ **NewEntryDelegate**: { `entry`: *number* ; `entry_name`: *string* ; `joined_time`: Date ; `player_first_name`: *string* ; `player_last_name`: *string*  }
+
+#### Type declaration:
+
+Name | Type |
+------ | ------ |
+`entry` | *number* |
+`entry_name` | *string* |
+`joined_time` | Date |
+`player_first_name` | *string* |
+`player_last_name` | *string* |
+
+Defined in: [types/index.ts:561](https://github.com/wamburu/fpl-ts/blob/3b599ec/src/types/index.ts#L561)
 
 ___
 
@@ -323,7 +635,7 @@ Name | Type |
 `multiplier` | *number* |
 `position` | *number* |
 
-Defined in: [types/index.ts:54](https://github.com/wamburu/fpl-ts/blob/7bc5b83/src/types/index.ts#L54)
+Defined in: [types/index.ts:54](https://github.com/wamburu/fpl-ts/blob/3b599ec/src/types/index.ts#L54)
 
 ___
 
@@ -331,7 +643,7 @@ ___
 
 Ƭ **PickHistoryDelegate**: { [key: number]: [*PickDelegate*](types.md#pickdelegate)[];  }
 
-Defined in: [types/index.ts:80](https://github.com/wamburu/fpl-ts/blob/7bc5b83/src/types/index.ts#L80)
+Defined in: [types/index.ts:80](https://github.com/wamburu/fpl-ts/blob/3b599ec/src/types/index.ts#L80)
 
 ___
 
@@ -407,7 +719,7 @@ Name | Type |
 `web_name` | *string* |
 `yellow_cards` | *number* |
 
-Defined in: [types/index.ts:156](https://github.com/wamburu/fpl-ts/blob/7bc5b83/src/types/index.ts#L156)
+Defined in: [types/index.ts:156](https://github.com/wamburu/fpl-ts/blob/3b599ec/src/types/index.ts#L156)
 
 ___
 
@@ -442,7 +754,7 @@ Name | Type |
 `total_points` | *number* |
 `yellow_cards` | *number* |
 
-Defined in: [types/index.ts:278](https://github.com/wamburu/fpl-ts/blob/7bc5b83/src/types/index.ts#L278)
+Defined in: [types/index.ts:278](https://github.com/wamburu/fpl-ts/blob/3b599ec/src/types/index.ts#L278)
 
 ___
 
@@ -458,7 +770,7 @@ Name | Type |
 `pp90` | *number* \| *null* |
 `vapm` | *number* \| *null* |
 
-Defined in: [types/index.ts:330](https://github.com/wamburu/fpl-ts/blob/7bc5b83/src/types/index.ts#L330)
+Defined in: [types/index.ts:330](https://github.com/wamburu/fpl-ts/blob/3b599ec/src/types/index.ts#L330)
 
 ___
 
@@ -474,7 +786,7 @@ Name | Type |
 `history` | [*PlayerHistDelegate*](../interfaces/types.playerhistdelegate.md)[] |
 `history_past` | [*PlayerHistPastDelegate*](types.md#playerhistpastdelegate) |
 
-Defined in: [types/index.ts:316](https://github.com/wamburu/fpl-ts/blob/7bc5b83/src/types/index.ts#L316)
+Defined in: [types/index.ts:316](https://github.com/wamburu/fpl-ts/blob/3b599ec/src/types/index.ts#L316)
 
 ___
 
@@ -482,7 +794,7 @@ ___
 
 Ƭ **PlayerTeamDelegate**: { [key: number]: [*PlayerDelegate*](types.md#playerdelegate)[];  }
 
-Defined in: [types/index.ts:222](https://github.com/wamburu/fpl-ts/blob/7bc5b83/src/types/index.ts#L222)
+Defined in: [types/index.ts:222](https://github.com/wamburu/fpl-ts/blob/3b599ec/src/types/index.ts#L222)
 
 ___
 
@@ -496,7 +808,7 @@ Name | Type |
 ------ | ------ |
 `data` | [*GWPicksDelegate*](types.md#gwpicksdelegate) |
 
-Defined in: [types/index.ts:99](https://github.com/wamburu/fpl-ts/blob/7bc5b83/src/types/index.ts#L99)
+Defined in: [types/index.ts:99](https://github.com/wamburu/fpl-ts/blob/3b599ec/src/types/index.ts#L99)
 
 ___
 
@@ -512,7 +824,7 @@ Name | Type |
 `season_name` | *string* |
 `total_points` | *number* |
 
-Defined in: [types/index.ts:148](https://github.com/wamburu/fpl-ts/blob/7bc5b83/src/types/index.ts#L148)
+Defined in: [types/index.ts:148](https://github.com/wamburu/fpl-ts/blob/3b599ec/src/types/index.ts#L148)
 
 ___
 
@@ -520,7 +832,7 @@ ___
 
 Ƭ **SeasonsHistoryDelegate**: [*SeasonHistoryDelegate*](types.md#seasonhistorydelegate)[]
 
-Defined in: [types/index.ts:154](https://github.com/wamburu/fpl-ts/blob/7bc5b83/src/types/index.ts#L154)
+Defined in: [types/index.ts:154](https://github.com/wamburu/fpl-ts/blob/3b599ec/src/types/index.ts#L154)
 
 ___
 
@@ -534,7 +846,7 @@ Name | Type |
 ------ | ------ |
 `data` | [*StaticDelegate*](../interfaces/types.staticdelegate.md) |
 
-Defined in: [types/index.ts:531](https://github.com/wamburu/fpl-ts/blob/7bc5b83/src/types/index.ts#L531)
+Defined in: [types/index.ts:531](https://github.com/wamburu/fpl-ts/blob/3b599ec/src/types/index.ts#L531)
 
 ___
 
@@ -551,7 +863,7 @@ Name | Type |
 `entry` | *number* |
 `event` | *number* |
 
-Defined in: [types/index.ts:62](https://github.com/wamburu/fpl-ts/blob/7bc5b83/src/types/index.ts#L62)
+Defined in: [types/index.ts:62](https://github.com/wamburu/fpl-ts/blob/3b599ec/src/types/index.ts#L62)
 
 ___
 
@@ -565,7 +877,7 @@ Name | Type |
 ------ | ------ |
 `data` | [*PlayerSummaryDelegate*](types.md#playersummarydelegate) |
 
-Defined in: [types/index.ts:322](https://github.com/wamburu/fpl-ts/blob/7bc5b83/src/types/index.ts#L322)
+Defined in: [types/index.ts:322](https://github.com/wamburu/fpl-ts/blob/3b599ec/src/types/index.ts#L322)
 
 ___
 
@@ -599,7 +911,7 @@ Name | Type |
 `unavailable` | *boolean* |
 `win` | *number* |
 
-Defined in: [types/index.ts:374](https://github.com/wamburu/fpl-ts/blob/7bc5b83/src/types/index.ts#L374)
+Defined in: [types/index.ts:374](https://github.com/wamburu/fpl-ts/blob/3b599ec/src/types/index.ts#L374)
 
 ___
 
@@ -607,7 +919,7 @@ ___
 
 Ƭ **TeamFixturesDelegate**: { [key: number]: [*FixtureDelegate*](../interfaces/types.fixturedelegate.md)[];  }
 
-Defined in: [types/index.ts:340](https://github.com/wamburu/fpl-ts/blob/7bc5b83/src/types/index.ts#L340)
+Defined in: [types/index.ts:340](https://github.com/wamburu/fpl-ts/blob/3b599ec/src/types/index.ts#L340)
 
 ___
 
@@ -627,4 +939,4 @@ Name | Type |
 `event` | *number* |
 `time` | Date |
 
-Defined in: [types/index.ts:44](https://github.com/wamburu/fpl-ts/blob/7bc5b83/src/types/index.ts#L44)
+Defined in: [types/index.ts:44](https://github.com/wamburu/fpl-ts/blob/3b599ec/src/types/index.ts#L44)
