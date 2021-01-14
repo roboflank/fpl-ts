@@ -62,7 +62,15 @@ jobs:
           node-version: 12.x
 
       - name: Install
-        run: npm ci
+        run: |
+          if [ -e yarn.lock ]; then
+          yarn install --frozen-lockfile
+          elif [ -e package-lock.json ]; then
+          npm ci
+          else
+          npm i
+          fi
+          npm run build
 
       - name: Release
         run: npx semantic-release
