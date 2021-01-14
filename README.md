@@ -5,7 +5,7 @@
 </p>
 
 <p align="center">
-  A JS/TS wrapper for FPL API
+  A JS/TS wrapper for FPL API.
     <br>
 </p>
 
@@ -33,7 +33,7 @@ npm i fpl-ts
 
 ### 3. Guides & Examples
 
-- [Guide & Examples](https://roboflank.github.io/fpl-ts/guide)
+- [Guide & Examples](https://roboflank.github.io/fpl-ts/examples)
 
 ### Example
 
