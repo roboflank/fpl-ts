@@ -34,7 +34,7 @@ Name | Type |
 
 **Returns:** [*Team*](index.team.md)
 
-Defined in: [models/team.ts:22](https://github.com/wamburu/fpl-ts/blob/7bc5b83/src/models/team.ts#L22)
+Defined in: [models/team.ts:22](https://github.com/wamburu/fpl-ts/blob/3b599ec/src/models/team.ts#L22)
 
 ## Properties
 
@@ -42,7 +42,7 @@ Defined in: [models/team.ts:22](https://github.com/wamburu/fpl-ts/blob/7bc5b83/s
 
 • **id**: *number* \| *number*[]
 
-Defined in: [models/team.ts:22](https://github.com/wamburu/fpl-ts/blob/7bc5b83/src/models/team.ts#L22)
+Defined in: [models/team.ts:22](https://github.com/wamburu/fpl-ts/blob/3b599ec/src/models/team.ts#L22)
 
 ## Methods
 
@@ -68,7 +68,7 @@ const teams = await new Team([1]).getDetails()
 
 TeamDelegate
 
-Defined in: [models/team.ts:42](https://github.com/wamburu/fpl-ts/blob/7bc5b83/src/models/team.ts#L42)
+Defined in: [models/team.ts:42](https://github.com/wamburu/fpl-ts/blob/3b599ec/src/models/team.ts#L42)
 
 ___
 
@@ -94,7 +94,7 @@ const players = await new Team([1]).getFixtures()
 
 PlayerDelegate[]
 
-Defined in: [models/team.ts:129](https://github.com/wamburu/fpl-ts/blob/7bc5b83/src/models/team.ts#L129)
+Defined in: [models/team.ts:129](https://github.com/wamburu/fpl-ts/blob/3b599ec/src/models/team.ts#L129)
 
 ___
 
@@ -120,4 +120,4 @@ const players = await new Team([1]).getPlayers()
 
 PlayerDelegate[]
 
-Defined in: [models/team.ts:84](https://github.com/wamburu/fpl-ts/blob/7bc5b83/src/models/team.ts#L84)
+Defined in: [models/team.ts:84](https://github.com/wamburu/fpl-ts/blob/3b599ec/src/models/team.ts#L84)

@@ -39,7 +39,7 @@ Name | Type |
 
 **Returns:** [*User*](index.user.md)
 
-Defined in: [models/user.ts:33](https://github.com/wamburu/fpl-ts/blob/7bc5b83/src/models/user.ts#L33)
+Defined in: [models/user.ts:33](https://github.com/wamburu/fpl-ts/blob/3b599ec/src/models/user.ts#L33)
 
 ## Properties
 
@@ -49,7 +49,7 @@ Defined in: [models/user.ts:33](https://github.com/wamburu/fpl-ts/blob/7bc5b83/s
 
 Implementation of: [UserProperties](../interfaces/types.userproperties.md).[userId](../interfaces/types.userproperties.md#userid)
 
-Defined in: [models/user.ts:33](https://github.com/wamburu/fpl-ts/blob/7bc5b83/src/models/user.ts#L33)
+Defined in: [models/user.ts:33](https://github.com/wamburu/fpl-ts/blob/3b599ec/src/models/user.ts#L33)
 
 ## Methods
 
@@ -72,7 +72,7 @@ Name | Type |
 
 **Returns:** *Promise*<[*ActiveChipsDelegate*](../modules/types.md#activechipsdelegate)\>
 
-Defined in: [models/user.ts:203](https://github.com/wamburu/fpl-ts/blob/7bc5b83/src/models/user.ts#L203)
+Defined in: [models/user.ts:203](https://github.com/wamburu/fpl-ts/blob/3b599ec/src/models/user.ts#L203)
 
 ___
 
@@ -96,7 +96,7 @@ Name | Type |
 
 **Returns:** *Promise*<[*AutomaticSubsDelegate*](../modules/types.md#automaticsubsdelegate)\>
 
-Defined in: [models/user.ts:266](https://github.com/wamburu/fpl-ts/blob/7bc5b83/src/models/user.ts#L266)
+Defined in: [models/user.ts:266](https://github.com/wamburu/fpl-ts/blob/3b599ec/src/models/user.ts#L266)
 
 ___
 
@@ -113,7 +113,7 @@ const team = new User(1).getChipsHistory()
 
 **Returns:** *Promise*<[*ChipsHistoryDelegate*](../modules/types.md#chipshistorydelegate)[]\>
 
-Defined in: [models/user.ts:186](https://github.com/wamburu/fpl-ts/blob/7bc5b83/src/models/user.ts#L186)
+Defined in: [models/user.ts:186](https://github.com/wamburu/fpl-ts/blob/3b599ec/src/models/user.ts#L186)
 
 ___
 
@@ -136,7 +136,7 @@ Name | Type |
 
 **Returns:** *Promise*<[*CupMatchesDelegate*](../modules/types.md#cupmatchesdelegate)\>
 
-Defined in: [models/user.ts:344](https://github.com/wamburu/fpl-ts/blob/7bc5b83/src/models/user.ts#L344)
+Defined in: [models/user.ts:344](https://github.com/wamburu/fpl-ts/blob/3b599ec/src/models/user.ts#L344)
 
 ___
 
@@ -153,7 +153,7 @@ const cupStatus = new User(1).getCupStatus()
 
 **Returns:** *Promise*<[*CupStatusDelegate*](../modules/types.md#cupstatusdelegate)\>
 
-Defined in: [models/user.ts:322](https://github.com/wamburu/fpl-ts/blob/7bc5b83/src/models/user.ts#L322)
+Defined in: [models/user.ts:322](https://github.com/wamburu/fpl-ts/blob/3b599ec/src/models/user.ts#L322)
 
 ___
 
@@ -170,7 +170,7 @@ const team = new User(1).getDetails()
 
 **Returns:** *Promise*<[*UserDelegate*](../interfaces/types.userdelegate.md)[]\>
 
-Defined in: [models/user.ts:45](https://github.com/wamburu/fpl-ts/blob/7bc5b83/src/models/user.ts#L45)
+Defined in: [models/user.ts:45](https://github.com/wamburu/fpl-ts/blob/3b599ec/src/models/user.ts#L45)
 
 ___
 
@@ -195,7 +195,7 @@ Name | Type |
 
 **Returns:** *Promise*<[*PickHistoryDelegate*](../modules/types.md#pickhistorydelegate)\>
 
-Defined in: [models/user.ts:134](https://github.com/wamburu/fpl-ts/blob/7bc5b83/src/models/user.ts#L134)
+Defined in: [models/user.ts:134](https://github.com/wamburu/fpl-ts/blob/3b599ec/src/models/user.ts#L134)
 
 ___
 
@@ -212,7 +212,7 @@ const team = new User(1).getChipsHistory()
 
 **Returns:** *Promise*<[*SeasonsHistoryDelegate*](../modules/types.md#seasonshistorydelegate)[]\>
 
-Defined in: [models/user.ts:384](https://github.com/wamburu/fpl-ts/blob/7bc5b83/src/models/user.ts#L384)
+Defined in: [models/user.ts:384](https://github.com/wamburu/fpl-ts/blob/3b599ec/src/models/user.ts#L384)
 
 ___
 
@@ -235,7 +235,7 @@ Name | Type |
 
 **Returns:** *Promise*<[*TransferDelegate*](../modules/types.md#transferdelegate)[]\>
 
-Defined in: [models/user.ts:97](https://github.com/wamburu/fpl-ts/blob/7bc5b83/src/models/user.ts#L97)
+Defined in: [models/user.ts:97](https://github.com/wamburu/fpl-ts/blob/3b599ec/src/models/user.ts#L97)
 
 ___
 
@@ -258,4 +258,4 @@ Name | Type |
 
 **Returns:** *Promise*<[*GWHistoryDelegate*](../modules/types.md#gwhistorydelegate)[]\>
 
-Defined in: [models/user.ts:62](https://github.com/wamburu/fpl-ts/blob/7bc5b83/src/models/user.ts#L62)
+Defined in: [models/user.ts:62](https://github.com/wamburu/fpl-ts/blob/3b599ec/src/models/user.ts#L62)

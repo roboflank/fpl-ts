@@ -1,12 +1,11 @@
 <p align="center">
   <a href="https://roboflank.github.io/fpl-ts/api">
-    <img src="https://raw.githubusercontent.com/roboflank/fpl-ts/build/website/static/img/fpl-ts.png">
+    <img src="https://raw.githubusercontent.com/roboflank/fpl-ts/build/website/static/img/fpl-ts.png"/>
   </a>
 </p>
 
 <p align="center">
   A JS/TS wrapper for FPL API.
-    <br>
 </p>
 
 ### Installing fpl-ts

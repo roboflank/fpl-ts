@@ -34,7 +34,7 @@ Name | Type |
 
 **Returns:** [*Gameweek*](index.gameweek.md)
 
-Defined in: [models/gameweek.ts:18](https://github.com/wamburu/fpl-ts/blob/7bc5b83/src/models/gameweek.ts#L18)
+Defined in: [models/gameweek.ts:18](https://github.com/wamburu/fpl-ts/blob/3b599ec/src/models/gameweek.ts#L18)
 
 ## Properties
 
@@ -42,7 +42,7 @@ Defined in: [models/gameweek.ts:18](https://github.com/wamburu/fpl-ts/blob/7bc5b
 
 • **id**: *number* \| *number*[]
 
-Defined in: [models/gameweek.ts:18](https://github.com/wamburu/fpl-ts/blob/7bc5b83/src/models/gameweek.ts#L18)
+Defined in: [models/gameweek.ts:18](https://github.com/wamburu/fpl-ts/blob/3b599ec/src/models/gameweek.ts#L18)
 
 ## Methods
 
@@ -64,7 +64,7 @@ const gameweeks = await new Gameweek([1, 2]).getDetails()
 
 **Returns:** *Promise*<[*GameweekDelegate*](../modules/types.md#gameweekdelegate) \| [*GameweekDelegate*](../modules/types.md#gameweekdelegate)[]\>
 
-Defined in: [models/gameweek.ts:35](https://github.com/wamburu/fpl-ts/blob/7bc5b83/src/models/gameweek.ts#L35)
+Defined in: [models/gameweek.ts:35](https://github.com/wamburu/fpl-ts/blob/3b599ec/src/models/gameweek.ts#L35)
 
 ___
 
@@ -81,4 +81,4 @@ const fixtures = await new Gameweek(1).getFixtures()
 
 **Returns:** *Promise*<[*FixtureDelegate*](../interfaces/types.fixturedelegate.md)[]\>
 
-Defined in: [models/gameweek.ts:71](https://github.com/wamburu/fpl-ts/blob/7bc5b83/src/models/gameweek.ts#L71)
+Defined in: [models/gameweek.ts:71](https://github.com/wamburu/fpl-ts/blob/3b599ec/src/models/gameweek.ts#L71)
