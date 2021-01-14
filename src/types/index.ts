@@ -577,9 +577,11 @@ export type LeagueStandingDelegate = {
   page: number
   results: LeagueEntryDelegate[]
 }
+
 export type LeagueStandingsDelegate = {
   [key: number]: LeagueStandingDelegate
 }
+
 export type ClassicLeagueDelegate = {
   league: LeagueDetailDelegate
   new_entries: NewEntryDelegate
@@ -592,4 +594,55 @@ export type ClassicLeagueResp = {
 
 export type ClassicLeaugesDelegate = {
   [key: number]: ClassicLeagueDelegate
+}
+
+export type H2HLeagueDetailsDelegate = {
+  id: number
+  name: string
+  created: Date
+  closed: boolean
+  max_entries: number | null
+  league_type: string
+  scoring: string
+  admin_entry: number
+  start_event: number
+  code_privacy: string
+  ko_rounds: number | null
+}
+
+export type H2HEntryDelegate = {
+  id: number
+  event_total: number
+  player_name: string
+  rank: number
+  last_rank: number
+  rank_sort: number
+  total: number
+  entry: number
+  entry_name: string
+  matches_played: number
+  matches_won: number
+  matches_drawn: number
+  matches_lost: number
+  points_for: number
+}
+
+export type H2HStandingDelegate = {
+  has_next: boolean
+  page: number
+  results: H2HEntryDelegate[]
+}
+
+export type H2HLeagueDelegate = {
+  league: H2HLeagueDetailsDelegate
+  new_entries: NewEntryDelegate
+  standings: H2HStandingDelegate
+}
+
+export type H2HLeaguesDelegate = {
+  [key: number]: H2HLeagueDelegate
+}
+
+export type H2HResp = {
+  data: H2HLeagueDelegate
 }

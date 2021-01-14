@@ -1,4 +1,4 @@
-import { ClassicLeague } from 'fpl-ts'
+import { ClassicLeague } from '../src'
 const league = new ClassicLeague(592)
 
 const getLeagues = async () => {
