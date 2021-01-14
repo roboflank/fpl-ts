@@ -38,7 +38,7 @@ export class Gameweek {
       const { data }: StaticResponse = await fetchAPI(API_URLS.STATIC)
       if (Array.isArray(this.id)) {
         const gws: GameweekDelegate[] = []
-        const ids = new Set(this.id)
+        const ids = this.id.filter((v, i, a) => a.indexOf(v) === i)
         data.events.forEach((gw) => {
           ids.forEach((id) => {
             if (gw.id === id) {
@@ -74,7 +74,7 @@ export class Gameweek {
       const { data }: FixturesRespDelegate = await fetchAPI(API_URLS.FIXTURES)
 
       if (Array.isArray(this.id)) {
-        const ids = new Set(this.id)
+        const ids = this.id.filter((v, i, a) => a.indexOf(v) === i)
         data.forEach((gw) => {
           ids.forEach((res) => {
             if (gw.event === res) {

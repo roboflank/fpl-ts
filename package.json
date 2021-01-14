@@ -2,11 +2,27 @@
   "name": "fpl-ts",
   "version": "1.0.0",
   "description": "",
-  "main": "src/index.js",
+  "main": "./lib/index.js",
+  "types": "./lib/index.d.ts",
+  "files": [
+    "lib/"
+  ],
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "tsc -p tsconfig.json",
+    "prepare": "npm run build"
   },
-  "keywords": [],
+  "homepage": "https://roboflank.github.io/fpl-ts",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/roboflank/fpl-ts.git"
+  },
+  "keywords": [
+    "fpl",
+    "fpl-api",
+    "fantasy-football",
+    "epl-api"
+  ],
   "author": "",
   "license": "MIT",
   "devDependencies": {

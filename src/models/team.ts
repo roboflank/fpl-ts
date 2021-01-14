@@ -45,7 +45,7 @@ export class Team {
       const { data }: StaticResponse = await fetchAPI(API_URLS.STATIC)
       if (Array.isArray(this.id)) {
         const filteredTeams: TeamDelegate[] = []
-        const ids = new Set(this.id)
+        const ids = this.id.filter((v, i, a) => a.indexOf(v) === i)
         data.teams.forEach((team) => {
           ids.forEach((id) => {
             if (team.id === id) {
@@ -86,7 +86,7 @@ export class Team {
       const { data }: StaticResponse = await fetchAPI(API_URLS.STATIC)
       if (Array.isArray(this.id)) {
         const players: PlayerTeamDelegate = {}
-        const ids = new Set(this.id)
+        const ids = this.id.filter((v, i, a) => a.indexOf(v) === i)
         ids.forEach((id) => {
           players[id] = []
         })
@@ -133,7 +133,7 @@ export class Team {
       const { data }: FixturesRespDelegate = await fetchAPI(API_URLS.FIXTURES)
       if (Array.isArray(this.id)) {
         const fixtures: TeamFixturesDelegate = {}
-        const ids = new Set(this.id)
+        const ids = this.id.filter((v, i, a) => a.indexOf(v) === i)
         ids.forEach((id) => {
           fixtures[id] = []
         })

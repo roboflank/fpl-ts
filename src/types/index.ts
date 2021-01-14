@@ -16,7 +16,7 @@ export interface UserDelegate {
   summary_overall_rank: number | null
   summary_event_points: number | null
   summary_event_rank: number | null
-  kit: any | null
+  kit: string | null
   last_deadline_bank: number | null
   last_deadline_value: number | null
   last_deadline_total_transfers: number | null
@@ -530,4 +530,156 @@ export interface StaticDelegate {
 
 export type StaticResponse = {
   data: StaticDelegate
+}
+
+export type LeagueEntryDelegate = {
+  id: number
+  event_total: number
+  player_name: string
+  rank: number
+  last_rank: number
+  rank_sort: number
+  total: number
+  entry: number
+  entry_name: string
+}
+
+export type LeagueDetailDelegate = {
+  id: number
+  name: string
+  created: Date
+  closed: boolean
+  max_entries: number | null
+  league_type: string
+  scoring: string
+  admin_entry: number
+  start_event: number
+  code_privacy: string
+  rank: number | null
+}
+
+export type NewEntryDelegate = {
+  entry: number
+  entry_name: string
+  joined_time: Date
+  player_first_name: string
+  player_last_name: string
+}
+
+export type NewEntriesDelegate = {
+  has_next: boolean
+  page: number
+  results: NewEntryDelegate[]
+}
+
+export type LeagueStandingDelegate = {
+  has_next: boolean
+  page: number
+  results: LeagueEntryDelegate[]
+}
+
+export type LeagueStandingsDelegate = {
+  [key: number]: LeagueStandingDelegate
+}
+
+export type ClassicLeagueDelegate = {
+  league: LeagueDetailDelegate
+  new_entries: NewEntryDelegate
+  standings: LeagueStandingDelegate
+}
+
+export type ClassicLeagueResp = {
+  data: ClassicLeagueDelegate
+}
+
+export type ClassicLeaugesDelegate = {
+  [key: number]: ClassicLeagueDelegate
+}
+
+export type H2HLeagueDetailsDelegate = {
+  id: number
+  name: string
+  created: Date
+  closed: boolean
+  max_entries: number | null
+  league_type: string
+  scoring: string
+  admin_entry: number
+  start_event: number
+  code_privacy: string
+  ko_rounds: number | null
+}
+
+export type H2HEntryDelegate = {
+  id: number
+  event_total: number
+  player_name: string
+  rank: number
+  last_rank: number
+  rank_sort: number
+  total: number
+  entry: number
+  entry_name: string
+  matches_played: number
+  matches_won: number
+  matches_drawn: number
+  matches_lost: number
+  points_for: number
+}
+
+export type H2HStandingDelegate = {
+  has_next: boolean
+  page: number
+  results: H2HEntryDelegate[]
+}
+
+export type H2HStandingsDelegate = {
+  [key: number]: H2HStandingDelegate
+}
+
+export type H2HLeagueDelegate = {
+  league: H2HLeagueDetailsDelegate
+  new_entries: NewEntryDelegate
+  standings: H2HStandingDelegate
+}
+
+export type H2HLeaguesDelegate = {
+  [key: number]: H2HLeagueDelegate
+}
+
+export type H2HResp = {
+  data: H2HLeagueDelegate
+}
+
+export type H2HMatchDelegate = {
+  id: number
+  entry_1_entry: number
+  entry_1_name: string
+  entry_1_player_name: string
+  entry_1_points: number
+  entry_1_win: number
+  entry_1_draw: number
+  entry_1_loss: number
+  entry_1_total: number
+  entry_2_entry: number
+  entry_2_name: string
+  entry_2_player_name: string
+  entry_2_points: number
+  entry_2_win: number
+  entry_2_draw: number
+  entry_2_loss: number
+  entry_2_total: number
+  is_knockout: boolean
+  winner: number | null
+  seed_value: null
+  event: number
+  tiebreak: null
+}
+
+export type H2HMatchesDelegate = {
+  [key: number]: H2HMatchDelegate
+}
+
+export type H2HMatchesResp = {
+  data: H2HMatchDelegate
 }
