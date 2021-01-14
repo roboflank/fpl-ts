@@ -15,10 +15,25 @@
 npm i fpl-ts
 ```
 
-### Documentation
+## Docs
 
-- [Guide](https://roboflank.github.io/fpl-ts/guide)
-- [Classes, Methods & Interfaces](https://roboflank.github.io/fpl-ts/api/classes/index.fixture)
+### 1. Classes & Methods
+
+- [Fixture](https://roboflank.github.io/fpl-ts/api/classes/index.fixture)
+- [Gameweek](https://roboflank.github.io/fpl-ts/api/classes/index.gameweek)
+- [Player](https://roboflank.github.io/fpl-ts/api/classes/index.player)
+- [Team](https://roboflank.github.io/fpl-ts/api/classes/index.team)
+- [User](https://roboflank.github.io/fpl-ts/api/classes/index.user)
+- [Classic League](https://roboflank.github.io/fpl-ts/api/classes/index.classic-league)
+- [H2H League](https://roboflank.github.io/fpl-ts/api/classes/index.h2h-league)
+
+### 2. Types
+
+- [index](https://roboflank.github.io/fpl-ts/api/modules/types)
+
+### 3. Guides & Examples
+
+- [Guide & Examples](https://roboflank.github.io/fpl-ts/guide)
 
 ### Example
 
