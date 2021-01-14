@@ -30,10 +30,21 @@ jobs:
           else
           npm i
           fi
+
       # Run tests
       # - name: Test
       #  run: npm test
+
       - name: Build
+        run: |
+          if [ -e yarn.lock ]; then
+          yarn install --frozen-lockfile
+          elif [ -e package-lock.json ]; then
+          npm ci
+          else
+          npm i
+          fi
+          npm run build
 
   release:
     # Only release on push to main
