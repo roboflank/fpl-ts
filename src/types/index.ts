@@ -633,6 +633,10 @@ export type H2HStandingDelegate = {
   results: H2HEntryDelegate[]
 }
 
+export type H2HStandingsDelegate = {
+  [key: number]: H2HStandingDelegate
+}
+
 export type H2HLeagueDelegate = {
   league: H2HLeagueDetailsDelegate
   new_entries: NewEntryDelegate
@@ -645,4 +649,37 @@ export type H2HLeaguesDelegate = {
 
 export type H2HResp = {
   data: H2HLeagueDelegate
+}
+
+export type H2HMatchDelegate = {
+  id: number
+  entry_1_entry: number
+  entry_1_name: string
+  entry_1_player_name: string
+  entry_1_points: number
+  entry_1_win: number
+  entry_1_draw: number
+  entry_1_loss: number
+  entry_1_total: number
+  entry_2_entry: number
+  entry_2_name: string
+  entry_2_player_name: string
+  entry_2_points: number
+  entry_2_win: number
+  entry_2_draw: number
+  entry_2_loss: number
+  entry_2_total: number
+  is_knockout: boolean
+  winner: number | null
+  seed_value: null
+  event: number
+  tiebreak: null
+}
+
+export type H2HMatchesDelegate = {
+  [key: number]: H2HMatchDelegate
+}
+
+export type H2HMatchesResp = {
+  data: H2HMatchDelegate
 }

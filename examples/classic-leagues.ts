@@ -11,7 +11,7 @@ const getLeagues = async () => {
 }
 const getLeaguesStandings = async () => {
   try {
-    const standings = await league.getStandings(1)
+    const standings = await league.getDetails()
     console.log(standings)
   } catch (err) {
     console.error('error ->', err.message)

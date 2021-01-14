@@ -25,7 +25,7 @@ export class ClassicLeague extends FPL {
     phase = 1,
   ): Promise<ClassicLeagueDelegate | ClassicLeaugesDelegate> {
     if (Array.isArray(this.id)) {
-      const ids = new Set(this.id)
+      const ids = this.id.filter((v, i, a) => a.indexOf(v) === i)
       const gwURL: string[] = []
       ids.forEach((id) => {
         const endpoint: string = API_URLS.LEAGUE_CLASSIC_RANK.replace(
